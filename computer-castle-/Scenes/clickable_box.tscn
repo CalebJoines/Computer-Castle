@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://chduusndy8aig"]
+
+[ext_resource type="Script" uid="uid://cbk03om8a10hy" path="res://Scripts/clickable_box.gd" id="1_xshpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc6vq"]
+size = Vector2(40, 40)
+
+[node name="ClickableBox" type="Area2D" unique_id=584798666]
+script = ExtResource("1_xshpr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=754441236]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1219721794]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_lc6vq")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

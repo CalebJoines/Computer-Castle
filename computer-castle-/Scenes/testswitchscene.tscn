@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkk2t0psixknw"]
+
+[ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="1_qgbw5"]
+
+[node name="Testswitchscene" type="Node2D" unique_id=1341280389]
+
+[node name="ClickableBox" parent="." unique_id=584798666 instance=ExtResource("1_qgbw5")]
+scene_path = "res://Scenes/game.tscn"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1438694627]
