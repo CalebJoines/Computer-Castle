@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://ggan4sqa8e3n"]
+
+[ext_resource type="Texture2D" uid="uid://bie1x8g2dyomf" path="res://Sprites/menuSprites/bgsprite.png" id="1_fru62"]
+[ext_resource type="Script" uid="uid://bg7eyk030yb5j" path="res://Scripts/answer_controller.gd" id="2_nojmr"]
+[ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="2_t7qk5"]
+[ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="3_ntbrc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0yn7"]
+atlas = ExtResource("2_t7qk5")
+region = Rect2(0, 144, 544, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk8gh"]
+atlas = ExtResource("2_t7qk5")
+region = Rect2(0, 0, 544, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fru62"]
+atlas = ExtResource("2_t7qk5")
+region = Rect2(0, 144, 544, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfn73"]
+atlas = ExtResource("2_t7qk5")
+region = Rect2(0, 144, 544, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5b5r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0yn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk8gh")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fru62")
+}],
+"loop": true,
+"name": &"Startup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfn73")
+}],
+"loop": false,
+"name": &"Unclicked",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqmg1"]
+size = Vector2(543.75, 142.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
+atlas = ExtResource("3_ntbrc")
+region = Rect2(0, 0, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
+atlas = ExtResource("3_ntbrc")
+region = Rect2(0, 48, 256, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qmu4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mstrt")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fru62"]
+size = Vector2(256, 48)
+
+[node name="Question" type="Node2D" unique_id=1482724301]
+
+[node name="PopupBackground" type="Sprite2D" parent="." unique_id=2128939606]
+texture_filter = 1
+position = Vector2(-1, 1)
+texture = ExtResource("1_fru62")
+
+[node name="Question Text" type="Label" parent="PopupBackground" unique_id=1281579116]
+offset_left = -558.0
+offset_top = -274.0
+offset_right = 558.0
+offset_bottom = -45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "This is sample text mean to demonstrate where  a question will appear to the player. It autowraps and centers so when different questions are displayed they won't run out of the boundaries"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=451233767]
+
+[node name="Answer Buttons" type="Node" parent="." unique_id=559163922]
+
+[node name="AnswerController" type="Control" parent="Answer Buttons" unique_id=1818618955]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_nojmr")
+
+[node name="AnswerButton A" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=430882022]
+unique_name_in_owner = true
+position = Vector2(-280, 32)
+sprite_frames = SubResource("SpriteFrames_g5b5r")
+animation = &"Unclicked"
+autoplay = "Startup"
+
+[node name="A" type="Label" parent="Answer Buttons/AnswerButton A" unique_id=1205870659]
+offset_left = -241.0
+offset_top = -23.0
+offset_right = -201.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "A."
+
+[node name="ChoiceA" type="Label" parent="Answer Buttons/AnswerButton A" unique_id=1372472845]
+offset_left = -193.0
+offset_top = -44.0
+offset_right = 242.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "This is sample text for the  answer choice"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D_A" type="Area2D" parent="Answer Buttons/AnswerButton A" unique_id=1815993076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/AnswerButton A/Area2D_A" unique_id=1469357799]
+shape = SubResource("RectangleShape2D_qqmg1")
+
+[node name="AnswerButton B" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=649579750]
+unique_name_in_owner = true
+position = Vector2(280, 32)
+sprite_frames = SubResource("SpriteFrames_g5b5r")
+animation = &"Unclicked"
+autoplay = "Startup"
+
+[node name="B" type="Label" parent="Answer Buttons/AnswerButton B" unique_id=943896523]
+offset_left = -241.0
+offset_top = -23.0
+offset_right = -201.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "B."
+
+[node name="ChoiceB" type="Label" parent="Answer Buttons/AnswerButton B" unique_id=1513801716]
+offset_left = -193.0
+offset_top = -44.0
+offset_right = 242.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "This is sample text for the  answer choice"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D_B" type="Area2D" parent="Answer Buttons/AnswerButton B" unique_id=916843927]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/AnswerButton B/Area2D_B" unique_id=595345598]
+shape = SubResource("RectangleShape2D_qqmg1")
+
+[node name="AnswerButton C" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=1197871711]
+unique_name_in_owner = true
+position = Vector2(-280, 192)
+sprite_frames = SubResource("SpriteFrames_g5b5r")
+animation = &"Unclicked"
+autoplay = "Startup"
+
+[node name="C" type="Label" parent="Answer Buttons/AnswerButton C" unique_id=1787145326]
+offset_left = -241.0
+offset_top = -23.0
+offset_right = -201.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "C."
+
+[node name="ChoiceC" type="Label" parent="Answer Buttons/AnswerButton C" unique_id=739448857]
+offset_left = -193.0
+offset_top = -44.0
+offset_right = 242.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "This is sample text for the  answer choice"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D_C" type="Area2D" parent="Answer Buttons/AnswerButton C" unique_id=1767855378]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/AnswerButton C/Area2D_C" unique_id=1280719035]
+shape = SubResource("RectangleShape2D_qqmg1")
+
+[node name="AnswerButton D" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=352937721]
+unique_name_in_owner = true
+position = Vector2(280, 192)
+sprite_frames = SubResource("SpriteFrames_g5b5r")
+animation = &"Startup"
+autoplay = "Startup"
+
+[node name="D" type="Label" parent="Answer Buttons/AnswerButton D" unique_id=1924152009]
+offset_left = -241.0
+offset_top = -23.0
+offset_right = -201.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "D."
+
+[node name="ChoiceD" type="Label" parent="Answer Buttons/AnswerButton D" unique_id=1613546802]
+offset_left = -193.0
+offset_top = -44.0
+offset_right = 242.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "This is sample text for the  answer choice"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D_D" type="Area2D" parent="Answer Buttons/AnswerButton D" unique_id=2122310892]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/AnswerButton D/Area2D_D" unique_id=72674622]
+shape = SubResource("RectangleShape2D_qqmg1")
+
+[node name="SubmitButton" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=75833143]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 296)
+sprite_frames = SubResource("SpriteFrames_8qmu4")
+animation = &"Clicked"
+
+[node name="Submit" type="Label" parent="Answer Buttons/SubmitButton" unique_id=20230711]
+offset_left = -26.0
+offset_top = -11.0
+offset_right = 29.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Submit"
+
+[node name="Area2D" type="Area2D" parent="Answer Buttons/SubmitButton" unique_id=756166908]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2D" unique_id=376302596]
+shape = SubResource("RectangleShape2D_fru62")
+
+[connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
+[connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
+[connection signal="input_event" from="Answer Buttons/AnswerButton C/Area2D_C" to="Answer Buttons/AnswerController" method="_on_area_2d_c_input_event"]
+[connection signal="input_event" from="Answer Buttons/AnswerButton D/Area2D_D" to="Answer Buttons/AnswerController" method="_on_area_2d_d_input_event"]
