@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bg7eyk030yb5j" path="res://Scripts/answer_controller.gd" id="2_nojmr"]
 [ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="2_t7qk5"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="3_ntbrc"]
+[ext_resource type="Texture2D" uid="uid://c1kf4txs8tbet" path="res://Sprites/menuSprites/x.png" id="5_t7qk5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0yn7"]
 atlas = ExtResource("2_t7qk5")
@@ -78,6 +79,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fru62"]
 size = Vector2(256, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbrc"]
+size = Vector2(48, 30)
 
 [node name="Question" type="Node2D" unique_id=1482724301]
 
@@ -256,6 +260,16 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2D" unique_id=376302596]
 shape = SubResource("RectangleShape2D_fru62")
+
+[node name="XButton" type="Sprite2D" parent="." unique_id=1234055157]
+texture_filter = 1
+position = Vector2(535, -299)
+texture = ExtResource("5_t7qk5")
+
+[node name="XButtonArea2d" type="Area2D" parent="XButton" unique_id=1127760142]
+
+[node name="CollisionShapeX" type="CollisionShape2D" parent="XButton/XButtonArea2d" unique_id=322561034]
+shape = SubResource("RectangleShape2D_ntbrc")
 
 [connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
