@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="2_t7qk5"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="3_ntbrc"]
 [ext_resource type="Texture2D" uid="uid://c1kf4txs8tbet" path="res://Sprites/menuSprites/x.png" id="5_t7qk5"]
+[ext_resource type="Script" uid="uid://cpxeoixei7w40" path="res://Scenes/x_button_area_2d.gd" id="6_ntbrc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0yn7"]
 atlas = ExtResource("2_t7qk5")
@@ -85,6 +86,8 @@ size = Vector2(48, 30)
 
 [node name="Question" type="Node2D" unique_id=1482724301]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=451233767]
+
 [node name="PopupBackground" type="Sprite2D" parent="." unique_id=2128939606]
 texture_filter = 1
 position = Vector2(-1, 1)
@@ -100,8 +103,6 @@ theme_override_font_sizes/font_size = 40
 text = "This is sample text mean to demonstrate where  a question will appear to the player. It autowraps and centers so when different questions are displayed they won't run out of the boundaries"
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=451233767]
 
 [node name="Answer Buttons" type="Node" parent="." unique_id=559163922]
 
@@ -242,7 +243,6 @@ shape = SubResource("RectangleShape2D_qqmg1")
 
 [node name="SubmitButton" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=75833143]
 unique_name_in_owner = true
-visible = false
 position = Vector2(0, 296)
 sprite_frames = SubResource("SpriteFrames_8qmu4")
 animation = &"Clicked"
@@ -255,10 +255,9 @@ offset_bottom = 12.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Submit"
 
-[node name="Area2D" type="Area2D" parent="Answer Buttons/SubmitButton" unique_id=756166908]
-visible = false
+[node name="Area2d_Submit" type="Area2D" parent="Answer Buttons/SubmitButton" unique_id=756166908]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2D" unique_id=376302596]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2d_Submit" unique_id=376302596]
 shape = SubResource("RectangleShape2D_fru62")
 
 [node name="XButton" type="Sprite2D" parent="." unique_id=1234055157]
@@ -267,6 +266,7 @@ position = Vector2(535, -299)
 texture = ExtResource("5_t7qk5")
 
 [node name="XButtonArea2d" type="Area2D" parent="XButton" unique_id=1127760142]
+script = ExtResource("6_ntbrc")
 
 [node name="CollisionShapeX" type="CollisionShape2D" parent="XButton/XButtonArea2d" unique_id=322561034]
 shape = SubResource("RectangleShape2D_ntbrc")
@@ -275,3 +275,6 @@ shape = SubResource("RectangleShape2D_ntbrc")
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton C/Area2D_C" to="Answer Buttons/AnswerController" method="_on_area_2d_c_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton D/Area2D_D" to="Answer Buttons/AnswerController" method="_on_area_2d_d_input_event"]
+[connection signal="input_event" from="Answer Buttons/SubmitButton/Area2d_Submit" to="Answer Buttons/AnswerController" method="_on_area_2d_submit_input_event"]
+[connection signal="input_event" from="XButton/XButtonArea2d" to="Answer Buttons/AnswerController" method="_on_x_button_area_2d_input_event"]
+[connection signal="input_event" from="XButton/XButtonArea2d" to="XButton/XButtonArea2d" method="_on_input_event"]

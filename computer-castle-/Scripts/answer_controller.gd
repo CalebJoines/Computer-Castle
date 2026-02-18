@@ -4,7 +4,8 @@ extends Control
 @onready var answerB: AnimatedSprite2D = %"AnswerButton B"
 @onready var answerC: AnimatedSprite2D = %"AnswerButton C"
 @onready var answerD: AnimatedSprite2D = %"AnswerButton D"
-@onready var subbutton: AnimatedSprite2D = %SubmitButton
+@onready var subbutton: AnimatedSprite2D = %"SubmitButton"
+@onready var scenepath: String = "res://Scenes/resource_picker.tscn"
 @onready var achecked : bool = false
 @onready var bchecked : bool = false
 @onready var cchecked : bool = false
@@ -94,3 +95,22 @@ func _on_area_2d_d_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				answerD.play("Unclicked")
 				dchecked = false
 				subbutton.visible = false
+	
+
+func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			if achecked == true:
+				print("Answered A")
+			if bchecked == true:
+				print("Answered B")
+			if cchecked == true:
+				print("Answered C")
+			if dchecked == true:
+				print("Answered D")
+			print("Submitting. Switching scenes...")	
+			achecked = false
+			bchecked = false
+			cchecked = false
+			dchecked = false
+			get_tree().change_scene_to_file(scenepath)
