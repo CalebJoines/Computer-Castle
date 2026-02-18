@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ch3fckar38htm"]
+
+[ext_resource type="Texture2D" uid="uid://dveluokyt1ylc" path="res://Sprites/Environment Sprites/Resource-background.png" id="1_53bys"]
+[ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
+
+[node name="ResourcePicker" type="Node2D" unique_id=1574587499]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2120483794]
+
+[node name="ResourceBackground" type="Sprite2D" parent="." unique_id=798987420]
+position = Vector2(0, -1)
+texture = ExtResource("1_53bys")
+
+[node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
+
+[node name="ClickableBox" parent="ClickableBoxes" unique_id=584798666 instance=ExtResource("2_ywnrd")]
+position = Vector2(-266, -13)
+scene_path = "res://Scenes/question.tscn"
+
+[node name="ClickableBox2" parent="ClickableBoxes" unique_id=120710478 instance=ExtResource("2_ywnrd")]
+position = Vector2(-35, -12)
+scene_path = "res://Scenes/question.tscn"
+
+[node name="ClickableBox3" parent="ClickableBoxes" unique_id=798968945 instance=ExtResource("2_ywnrd")]
+position = Vector2(195, -10)
+scene_path = "res://Scenes/question.tscn"
+
+[node name="ClickableBox4" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
+position = Vector2(449, -276)
+scene_path = "res://Scenes/game.tscn"
