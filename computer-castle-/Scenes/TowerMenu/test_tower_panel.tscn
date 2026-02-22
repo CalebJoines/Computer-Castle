@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dyhehx74ejbwb"]
+
+[ext_resource type="Script" uid="uid://dl0ymcsrabmt1" path="res://Scripts/test_tower_panel.gd" id="1_uxlnp"]
+[ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="2_76q86"]
+
+[node name="TestTowerPanel" type="Panel" unique_id=1788125950]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uxlnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2063676164]
+texture_filter = 1
+position = Vector2(-7, -6)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_76q86")
+centered = false
