@@ -12,7 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -88.0
 offset_top = -308.0
-offset_right = 64.0
 offset_bottom = 316.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -26,15 +25,12 @@ anchor_right = 0.056
 anchor_bottom = 0.013
 offset_left = -0.51200104
 offset_top = -4.1120005
-offset_right = 135.488
+offset_right = 75.07198
 offset_bottom = 603.888
-theme_override_constants/h_separation = 160
+theme_override_constants/h_separation = 132
 theme_override_constants/v_separation = 64
+last_wrap_alignment = 3
+vertical = true
 
 [node name="TestTowerPanel" parent="Panel/FlowContainer" unique_id=1788125950 instance=ExtResource("1_3u5pw")]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TestTowerPanel2" parent="Panel/FlowContainer" unique_id=2055303051 instance=ExtResource("1_3u5pw")]
-layout_mode = 2
-size_flags_horizontal = 3
