@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cpefxcv7hbp3e"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ne65n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
+size = Vector2(15.5, 14.5)
+
+[node name="Enemy" type="Area2D" unique_id=1902402437]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1276315250]
+scale = Vector2(15.249999, 15.249999)
+texture = SubResource("PlaceholderTexture2D_ne65n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698986685]
+shape = SubResource("RectangleShape2D_ne65n")

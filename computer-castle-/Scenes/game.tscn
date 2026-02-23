@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
+[ext_resource type="Script" uid="uid://cjs23krcy71yw" path="res://Scripts/path_follow_2d.gd" id="5_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
+[ext_resource type="PackedScene" uid="uid://cpefxcv7hbp3e" path="res://Scenes/enemy.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
@@ -39,6 +41,12 @@ sources/0 = SubResource("TileSetAtlasSource_3dryh")
 sources/1 = SubResource("TileSetAtlasSource_wowpa")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3dryh"]
+
+[sub_resource type="Curve2D" id="Curve2D_i6g32"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 175, 7, 0, 0, 0, 0, 177, 148, 0, 0, 0, 0, 303, 152, 0, 0, 0, 0, 305, 341, 0, 0, 0, 0, 460, 345, 0, 0, 0, 0, 462, 627, 0, 0, 0, 0, 205, 631, 0, 0, 0, 0, 205, 571, 0, 0, 0, 0, 4, 563)
+}
+point_count = 9
 
 [node name="Game" type="Node2D" unique_id=228898979]
 
@@ -126,3 +134,16 @@ position = Vector2(672, 168)
 
 [node name="Slot16" parent="towerslots" unique_id=1382307671 groups=["slots"] instance=ExtResource("6_1l0tm")]
 position = Vector2(768, 168)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=340484906]
+curve = SubResource("Curve2D_i6g32")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1130770435]
+position = Vector2(175, 7)
+rotation = 1.5566128
+loop = false
+script = ExtResource("5_1l0tm")
+
+[node name="Enemy" parent="Path2D/PathFollow2D" unique_id=1902402437 instance=ExtResource("5_wowpa")]
+position = Vector2(-3.971232, -2.0565338)
+rotation = -1.5566128
