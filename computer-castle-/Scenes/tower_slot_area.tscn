@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://1wmo8smiwhii"]
+
+[ext_resource type="Script" uid="uid://yadoxet0k4gn" path="res://Scripts/tower_slot_area.gd" id="1_81m5x"]
+[ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="1_bxpw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81m5x"]
+size = Vector2(64, 64)
+
+[node name="TowerSlotArea" type="Area2D" unique_id=1382307671]
+script = ExtResource("1_81m5x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1627276067]
+texture_filter = 1
+texture = ExtResource("1_bxpw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715173360]
+shape = SubResource("RectangleShape2D_81m5x")

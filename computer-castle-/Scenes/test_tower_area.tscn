@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpup33lh2kg7o"]
+
+[ext_resource type="Script" uid="uid://ddyc8lkelnrej" path="res://Scripts/test_tower_area.gd" id="1_7bet4"]
+[ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="1_lfqyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bet4"]
+size = Vector2(64, 64)
+
+[node name="TestTowerArea" type="Area2D" unique_id=1143239560]
+script = ExtResource("1_7bet4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473779165]
+shape = SubResource("RectangleShape2D_7bet4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1305771618]
+texture_filter = 1
+texture = ExtResource("1_lfqyg")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

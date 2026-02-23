@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Computer Castle"
-run/main_scene="uid://ch3fckar38htm"
+run/main_scene="uid://bsa054fnwnjwx"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

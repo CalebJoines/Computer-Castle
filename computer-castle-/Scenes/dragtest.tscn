@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsa054fnwnjwx"]
+
+[ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="1_y1lcs"]
+[ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="2_klqms"]
+
+[node name="dragtest" type="Node2D" unique_id=148265052]
+position = Vector2(232, 72)
+
+[node name="TowerMenu" parent="." unique_id=1471395188 instance=ExtResource("1_y1lcs")]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TowerSlotArea" parent="." unique_id=1382307671 instance=ExtResource("2_klqms")]
+position = Vector2(-48, 32)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://27okq7sh52dx"]
+
+[ext_resource type="Script" uid="uid://cyeowlutw7fu1" path="res://Scripts/tower_menu.gd" id="1_on2a2"]
+[ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="2_i8h0h"]
+[ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="2_vhddo"]
+
+[node name="TowerMenu" type="Control" unique_id=1471395188]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_on2a2")
+tower_scene = ExtResource("2_i8h0h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1871581944]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TowerButon" type="TextureButton" parent="VBoxContainer" unique_id=1118031082]
+texture_filter = 1
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("2_vhddo")
+
+[connection signal="pressed" from="VBoxContainer/TowerButon" to="." method="_on_tower_buton_pressed"]
