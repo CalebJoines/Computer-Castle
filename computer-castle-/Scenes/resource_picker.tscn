@@ -37,8 +37,8 @@ offset_bottom = 36.0
 text = "Go to Tower Defense map"
 
 [node name="Label" type="Label" parent="ClickableBoxes" unique_id=1870096570]
-offset_left = -121.0
+offset_left = -255.0
 offset_top = -100.0
-offset_right = 91.0
+offset_right = 254.0
 offset_bottom = -77.0
-text = "\\/    To Question Scene      \\/"
+text = "\\/                    Click boxes to pull up question scene                    \\/"
