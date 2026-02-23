@@ -28,3 +28,17 @@ scene_path = "res://Scenes/question.tscn"
 [node name="ClickableBox4" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
 position = Vector2(449, -276)
 scene_path = "res://Scenes/game.tscn"
+
+[node name="Label" type="Label" parent="ClickableBoxes/ClickableBox4" unique_id=1923792619]
+offset_left = -209.0
+offset_top = 13.0
+offset_right = -9.0
+offset_bottom = 36.0
+text = "Go to Tower Defense map"
+
+[node name="Label" type="Label" parent="ClickableBoxes" unique_id=1870096570]
+offset_left = -121.0
+offset_top = -100.0
+offset_right = 91.0
+offset_bottom = -77.0
+text = "\\/    To Question Scene      \\/"

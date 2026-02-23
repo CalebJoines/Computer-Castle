@@ -9,5 +9,5 @@ func can_place_tower() -> bool:
 func place_tower(tower):
 	if can_place_tower():
 		current_tower = tower
-		tower.position = position  
+		tower.global_position = global_position  
 		is_occupied = true
