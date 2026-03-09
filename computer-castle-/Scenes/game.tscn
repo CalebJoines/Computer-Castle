@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
-[ext_resource type="Script" uid="uid://cjs23krcy71yw" path="res://Scripts/path_follow_2d.gd" id="5_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
-[ext_resource type="PackedScene" uid="uid://cpefxcv7hbp3e" path="res://Scenes/enemy.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://evmuvp8nw6ds" path="res://Scenes/spawner.tscn" id="7_v158k"]
+[ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1.tres" id="8_h4fw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")
@@ -138,12 +138,6 @@ position = Vector2(768, 168)
 [node name="Path2D" type="Path2D" parent="." unique_id=340484906]
 curve = SubResource("Curve2D_i6g32")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1130770435]
-position = Vector2(175, 7)
-rotation = 1.5566128
-loop = false
-script = ExtResource("5_1l0tm")
-
-[node name="Enemy" parent="Path2D/PathFollow2D" unique_id=1902402437 instance=ExtResource("5_wowpa")]
-position = Vector2(-3.971232, -2.0565338)
-rotation = -1.5566128
+[node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("7_v158k")]
+level_data = ExtResource("8_h4fw4")
+path = NodePath("../Path2D")

@@ -3,11 +3,17 @@
 [ext_resource type="Script" uid="uid://ddyc8lkelnrej" path="res://Scripts/test_tower_area.gd" id="1_7bet4"]
 [ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="1_lfqyg"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7bet4"]
+radius = 259.1563
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bet4"]
 size = Vector2(64, 64)
 
 [node name="TestTowerArea" type="Area2D" unique_id=1143239560]
 script = ExtResource("1_7bet4")
+
+[node name="TowerRange" type="CollisionShape2D" parent="." unique_id=589748191]
+shape = SubResource("CircleShape2D_7bet4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473779165]
 shape = SubResource("RectangleShape2D_7bet4")
@@ -16,4 +22,8 @@ shape = SubResource("RectangleShape2D_7bet4")
 texture_filter = 1
 texture = ExtResource("1_lfqyg")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
