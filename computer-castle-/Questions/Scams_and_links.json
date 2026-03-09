@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "You should ___ click on a link sent to you by a stranger.",
+      "choices": [
+        "Never",
+        "Sometimes",
+        "Usually",
+        "Always"
+      ],
+      "correct_index": 0,
+      "explanation": "Never click on links from people you don't recognize, no matter how legitimate they may seem."
+    },
+    {
+      "question": "If you see a popup that tells you you've won something for free, what should you do?",
+      "choices": [
+        "Click on it and get your free stuff",
+        "Send it to your friend",
+        "Don't trust it",
+        "Click on it to see if it's real"
+      ],
+      "correct_index": 2,
+      "explanation": "Free giveaways and raffles online are almost always scams. Any popup advertising that you've won something you don't recognize should be avoided."
+    },
+    {
+      "question": "If you get a popup telling you 'your device is infected with malware, click here', what should you do?",
+      "choices": [
+        "Send it to your friend to see what they think",
+        "Click on it and follow the instructions",
+        "Download antivirus software",
+        "Ignore the popup and close the website"
+      ],
+      "correct_index": 3,
+      "explanation": "Popups encouraging you to click them should always be treated as suspicious, even if they seem helpful. Never trust something encouraging you to click or download something you don't recognize."
+    },
+    {
+      "question": "If you get a text message from a number you don't know telling you your device has been hacked, what should you do?",
+      "choices": [
+        "Tell a trusted adult and don't follow any instructions",
+        "Do whatever it says",
+        "Delete your account",
+        "Ignore it and don't tell anyone"
+      ],
+      "correct_index": 0,
+      "explanation": "Scammers often try to make you panic by telling you you're in trouble and need to follow their instructions without thinking. Always talk to a trusted adult before doing anything."
+    },
+    {
+      "question": "Which of the following should you NOT do before clicking a website link?",
+      "choices": [
+        "Check if the link is spelled correctly",
+        "Make your friend click it first to see what happens",
+        "Make sure you recognize where the link is taking you and who sent it",
+        "Don't click it if it seems suspicious"
+      ],
+      "correct_index": 1,
+      "explanation": "Links can be helpful when navigating the web, but make sure you know who sent it and where it's taking you. Some websites try to trick people by using links spelled slightly differently from real sites."
+    },
+    {
+      "question": "If a game asks you for ___ before you can play, it's ok to give it to them.",
+      "choices": [
+        "Your computer password",
+        "A credit card number",
+        "Your real name",
+        "None of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Don't trust any games or sites that ask you for information they don't need. No game online needs personal information to work."
+    },
+    {
+      "question": "If you get an unusual message from a friend online telling you to click a link, you should NOT ___.",
+      "choices": [
+        "Trust your friend and click it",
+        "Contact them through some other method and ask about it",
+        "Tell people you know to be wary that this person may have been hacked",
+        "Block their account until you get more information"
+      ],
+      "correct_index": 0,
+      "explanation": "If someone you know sends you a strange message, their account may have been stolen. Let them know and warn others who might receive messages from that account."
+    },
+    {
+      "question": "Scammers often try to ___ so you follow their instructions.",
+      "choices": [
+        "Make you angry",
+        "Ignore you",
+        "Scare or confuse you",
+        "Educate you"
+      ],
+      "correct_index": 2,
+      "explanation": "Scammers often try to make you panic by telling you something scary so you follow instructions without thinking. Stay calm and ask a trusted adult if you're unsure what to do."
+    },
+    {
+      "question": "What's one way to tell if a website is legitimate?",
+      "choices": [
+        "If it looks fancy",
+        "If the URL starts with https://",
+        "If the URL starts with http://",
+        "If the site popped up when you searched something"
+      ],
+      "correct_index": 1,
+      "explanation": "A website starting with https:// has encryption enabled, which often indicates it is more secure. However, you should still be cautious because not all sites online are trustworthy."
+    },
+    {
+      "question": "Never give ___ to a website you don't trust.",
+      "choices": [
+        "A credit card number",
+        "Your real name",
+        "Your address",
+        "All of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Unless you know the website you're using is safe, don't give it personal information. It's important to protect your privacy at all times."
+    }
+  ]
+}

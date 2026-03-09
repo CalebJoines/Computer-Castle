@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "Which of these describes an advertisement?",
+      "choices": [
+        "A message that convinces you to buy or do something",
+        "A post that's intended to educate",
+        "A piece of media meant to entertain",
+        "A piece of news"
+      ],
+      "correct_index": 0,
+      "explanation": "Advertisements are created to persuade people to buy products, visit places, or try something. If something online is trying to get you to buy or do something, it might be an ad."
+    },
+    {
+      "question": "Which of these is a 'reputable source' (a source you can trust)?",
+      "choices": [
+        "A social media post",
+        "A quote from a movie star",
+        "A peer-reviewed science paper",
+        "A headline from an obscure (not well known) news site"
+      ],
+      "correct_index": 2,
+      "explanation": "It's important to keep in mind that even reputable looking platforms can lie. It's important to fact check the things you see online before trusting them."
+    },
+    {
+      "question": "Which of these best describes 'media intended to mislead or confuse the public'?",
+      "choices": [
+        "Spam",
+        "Misinformation",
+        "Phishing",
+        "Malware"
+      ],
+      "correct_index": 1,
+      "explanation": "Misinformation is media designed to trick, confuse, or anger people using deception (lies)."
+    },
+    {
+      "question": "What is a 'doctored photo'?",
+      "choices": [
+        "A photo that got sick and went to the doctor",
+        "A photo of a medical professional",
+        "A photo that has been edited somehow intended to trick people into believing it's real",
+        "A photo that is edited to be clearer and easier to see"
+      ],
+      "correct_index": 2,
+      "explanation": "A doctored photo is a photo that has been edited for the purpose of fooling people into believing something untrue. Always look closely at photos online for anything that doesn't seem right."
+    },
+    {
+      "question": "Why might two different news sites cover the same topic two different ways?",
+      "choices": [
+        "One of them is always lying",
+        "One of them is an advertisement",
+        "It's impossible for two news sites to disagree, they only tell the truth",
+        "Different people can present information in different ways"
+      ],
+      "correct_index": 3,
+      "explanation": "All media is subject to bias, and different people often have different opinions and reasons to explain a topic a certain way. Checking multiple news sites to see what they have in common is a good way to get closer to the truth."
+    },
+    {
+      "question": "Do people always tell the whole truth online?",
+      "choices": [
+        "Yes, they legally cannot lie",
+        "No, they are always lying",
+        "Yes, people have no reason to lie",
+        "No, not always, there's many reasons they may or may not lie"
+      ],
+      "correct_index": 3,
+      "explanation": "People online are people, and people lie all the time. It's important to consider where information is coming from and what proof the source is providing when fact checking information."
+    },
+    {
+      "question": "What does 'thinking critically' mean?",
+      "choices": [
+        "Asking questions about the media you see and hear",
+        "Ignoring all media that you see as fake",
+        "Criticizing media for being bad",
+        "Believing everything you read online"
+      ],
+      "correct_index": 0,
+      "explanation": "Critical thinking is important to navigating not just the internet, but life. It's important to always ask questions about why something is the way it is."
+    },
+    {
+      "question": "What is a good question to ask yourself when trying to fact check something online?",
+      "choices": [
+        "Does this look official?",
+        "Who wrote this and what else have they written online?",
+        "Why is this so bad?",
+        "Don't question the things you read"
+      ],
+      "correct_index": 1,
+      "explanation": "Understanding where media comes from and the bias that the creator has is an important part of figuring out if something is true. If the author is a known liar, they are likely not trustworthy."
+    },
+    {
+      "question": "What is 'clickbait'?",
+      "choices": [
+        "Something you use to catch fish",
+        "A type of malware designed to trick people",
+        "A headline or preview image that is exaggerated or attention grabbing to get more people to click on it",
+        "A piece of media that is spreading lies"
+      ],
+      "correct_index": 2,
+      "explanation": "Clickbait is anything meant to grab viewers' attention and get them to click on something. While not all clickbait spreads misinformation, many people use it to advertise or attract attention to something people might not otherwise click on."
+    },
+    {
+      "question": "If you see something online that makes you angry, what should you do?",
+      "choices": [
+        "Write a comment criticizing it",
+        "Ask yourself if it's really worth being upset and if it might be intended to make you feel this way",
+        "Stop using the internet",
+        "Try to get other people online to be angry at it too"
+      ],
+      "correct_index": 1,
+      "explanation": "Lots of content online is designed to make people angry because it's attention grabbing and easy to spread. It's important to stop and think about what you're looking at and why it might have been posted."
+    }
+  ]
+}

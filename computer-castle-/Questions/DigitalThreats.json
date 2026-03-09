@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "A digital attack which tricks people into giving up important information",
+      "choices": [
+        "Trojan Horse",
+        "Phishing",
+        "Scamming",
+        "Malware"
+      ],
+      "correct_index": 1,
+      "explanation": "Phishing is an attack where people pretend to be someone they're not to trick others into giving them information they shouldn't have access to."
+    },
+    {
+      "question": "A method of guessing a password by trying every possible password until one is correct",
+      "choices": [
+        "Brute force attack",
+        "Sequence guessing",
+        "Password cracking",
+        "Breaking in"
+      ],
+      "correct_index": 0,
+      "explanation": "A brute force attack is a method of guessing a password by trying every possible password until one is correct."
+    },
+    {
+      "question": "____ is a program designed to damage, destroy or steal data or computer systems",
+      "choices": [
+        "Hacker",
+        "Software",
+        "Malware",
+        "Creeper"
+      ],
+      "correct_index": 2,
+      "explanation": "Malware is a piece of software designed to damage, destroy or steal data or computer systems."
+    },
+    {
+      "question": "A type of software that is useless or annoying which takes up space on a computer while providing little function",
+      "choices": [
+        "Junk Mail",
+        "Virus",
+        "SpaceWaste",
+        "Bloatware"
+      ],
+      "correct_index": 3,
+      "explanation": "Bloatware is a type of software that is useless or annoying which takes up space on a computer while providing little function."
+    },
+    {
+      "question": "Annoying repeated messages or emails, often advertising",
+      "choices": [
+        "Adware",
+        "Spam",
+        "Scamware",
+        "Virus"
+      ],
+      "correct_index": 1,
+      "explanation": "Spam is useless or obnoxious messages sent on the internet repeatedly and to lots of people."
+    },
+    {
+      "question": "A type of malware which infects a computer to steal sensitive information and monitor the user",
+      "choices": [
+        "Virus",
+        "Secret Swiper",
+        "Trojan Horse",
+        "Spyware"
+      ],
+      "correct_index": 3,
+      "explanation": "Spyware is a type of malware which infects a computer to steal sensitive information and monitor the user, often to track personal information like passwords or location."
+    },
+    {
+      "question": "A ___ is a type of malware that hides itself from normal user level programs by infecting the Kernel, the core of the operating system",
+      "choices": [
+        "Rootkit",
+        "Sneakware",
+        "Spyware",
+        "Worm"
+      ],
+      "correct_index": 0,
+      "explanation": "Rootkits attack the Kernel, the core of your computer's operating system, to avoid detection by normal scans."
+    },
+    {
+      "question": "___ are hackers who work for a business or organization to hack their systems to find weaknesses and help them improve security",
+      "choices": [
+        "Black Hat",
+        "Hero Hacker",
+        "White hat",
+        "Computer Engineer"
+      ],
+      "correct_index": 2,
+      "explanation": "White hats are employed by organizations to help them find security flaws by trying to break in."
+    },
+    {
+      "question": "___ are hackers who attack businesses or organizations for their own personal gain",
+      "choices": [
+        "Black Hat",
+        "White hat",
+        "Villain Hacker",
+        "Spy"
+      ],
+      "correct_index": 0,
+      "explanation": "Black hats are malicious actors who exploit security flaws for their own gain."
+    },
+    {
+      "question": "A type of malware disguised as normal software to fool people into installing it",
+      "choices": [
+        "Phishing",
+        "Virus",
+        "Spyware",
+        "Trojan Horse"
+      ],
+      "correct_index": 3,
+      "explanation": "A Trojan Horse is malware disguised as a safe or normal program to trick people into downloading it."
+    }
+  ]
+}

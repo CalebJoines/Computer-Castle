@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is a good, strong password?",
+      "choices": [
+        "A word or phrase",
+        "Your last name",
+        "A series of numbers, letters, and special characters that you can remember",
+        "Your mother's birthday"
+      ],
+      "correct_index": 2,
+      "explanation": "A strong password should be difficult to guess but easy to remember. Include numbers and symbols, and remember that longer passwords are stronger."
+    },
+    {
+      "question": "Who should you share your password with?",
+      "choices": [
+        "No one",
+        "Your friends",
+        "Anyone who asks for it",
+        "Your favorite celebrity"
+      ],
+      "correct_index": 0,
+      "explanation": "Never share your passwords with anyone except trusted adults like your parents."
+    },
+    {
+      "question": "When browsing the internet, you should avoid which of the following?",
+      "choices": [
+        "Commenting on social media posts",
+        "Downloading files from a website you're not familiar with",
+        "Playing games",
+        "Reading articles on things you're interested in"
+      ],
+      "correct_index": 1,
+      "explanation": "Always be careful downloading files online, and ensure the place you're downloading from is safe and trustworthy."
+    },
+    {
+      "question": "Where is a safe place to download apps?",
+      "choices": [
+        "The official app store on your device",
+        "A site you were recommended by a friend",
+        "Something you were recommended by an ad",
+        "It's not safe to download any apps, stick with what you have"
+      ],
+      "correct_index": 0,
+      "explanation": "While not every app outside the app store is unsafe, generally you should stick to apps that have been approved by the official app store your device uses to stay secure."
+    },
+    {
+      "question": "Which of the following does NOT help keep your device secure?",
+      "choices": [
+        "Keeping your device regularly updated",
+        "Using a strong password",
+        "Logging out of your device when you aren't using it",
+        "Writing down your password so you remember it"
+      ],
+      "correct_index": 3,
+      "explanation": "It's generally not a good idea to write down passwords, as others might read them and figure out what your password is."
+    },
+    {
+      "question": "Which of the following helps add extra security to your device?",
+      "choices": [
+        "Use a weak password",
+        "Never turn on WiFi on your device",
+        "Use two factor authentication",
+        "Turn on auto fill for your passwords"
+      ],
+      "correct_index": 2,
+      "explanation": "Two-factor authentication adds an extra method of verifying your identity on top of a password and helps keep your device extra secure."
+    },
+    {
+      "question": "Which of the following should you be careful connecting to?",
+      "choices": [
+        "A public WiFi router at a restaurant",
+        "A hotspot you don't own",
+        "An online server",
+        "Everything"
+      ],
+      "correct_index": 3,
+      "explanation": "You should always be careful connecting to networks you don't recognize, as many are insecure and can expose your device to danger."
+    },
+    {
+      "question": "What is the process of making data unreadable by humans to protect it called?",
+      "choices": [
+        "Coding",
+        "Encryption",
+        "Scrambling",
+        "Obscuring"
+      ],
+      "correct_index": 1,
+      "explanation": "Encryption uses mathematical processes to turn readable text and data into unreadable strings of characters so it stays protected while being sent."
+    },
+    {
+      "question": "What should you do when you're done using a public computer on your account?",
+      "choices": [
+        "Log out",
+        "Uninstall everything",
+        "Just walk away",
+        "Turn the computer off"
+      ],
+      "correct_index": 0,
+      "explanation": "Always log out of all your accounts when you're done using public computers, as anyone can sit down and gain access to your account if you don't."
+    },
+    {
+      "question": "What should you do when your device is not currently using WiFi or Bluetooth?",
+      "choices": [
+        "Shut your device down and don't use it",
+        "Leave WiFi or Bluetooth on all the time",
+        "Turn off WiFi or Bluetooth when they aren't being used",
+        "Log out of all accounts"
+      ],
+      "correct_index": 2,
+      "explanation": "Leaving Bluetooth and WiFi on while you're not using them can expose your device to threats, so turn them off when they're not being used."
+    }
+  ]
+}
