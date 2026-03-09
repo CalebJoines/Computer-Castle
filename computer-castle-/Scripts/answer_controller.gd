@@ -33,24 +33,29 @@ func _ready():
 func load_question():
 	current_question = QuestionManager.get_question()
 	if current_question.is_empty():
-		question_label.text = "Out of questions, you need to fix that Wyatt"
+		question_label.text = "Error, question bank empty"
+		answerA.visible = false
+		answerB.visible = false
+		answerC.visible = false
+		answerD.visible = false
+		subbutton.visible = false
 		return
 	question_label.text = current_question["question"]
-	answer_a_text.text = current_question["answers"]["A"]
-	answer_b_text.text = current_question["answers"]["B"]
-	answer_c_text.text = current_question["answers"]["C"]
-	answer_d_text.text = current_question["answers"]["D"]
+	answer_a_text.text = current_question["choices"][0]
+	answer_b_text.text = current_question["choices"][1]
+	answer_c_text.text = current_question["choices"][2]
+	answer_d_text.text = current_question["choices"][3]
 	
-func get_selected_answer():
+func get_selected_answer() -> int:
 	if achecked:
-		return "A"
+		return 0
 	if bchecked:
-		return "B"
+		return 1
 	if cchecked:
-		return "C"
+		return 2
 	if dchecked:
-		return "D"
-	return ""
+		return 3
+	return -1
 
 func reset_selection():
 	achecked = false
@@ -65,6 +70,7 @@ func reset_selection():
 	
 func show_explanation():
 	explanation_label.text = current_question["explanation"]
+	question_label.text = "Incorrect!"
 	explanation_label.visible = true
 	continue_button.visible = true
 	answerA.visible = false
@@ -75,9 +81,9 @@ func show_explanation():
 	
 func check_answer():
 	selected_answer = get_selected_answer()
-	if selected_answer == "":
+	if selected_answer == -1:
 		return
-	if selected_answer == current_question["correct"]:
+	if selected_answer == current_question["correct_index"]:
 		print("Correct!")
 		QuestionManager.remove_question(current_question)
 	else:

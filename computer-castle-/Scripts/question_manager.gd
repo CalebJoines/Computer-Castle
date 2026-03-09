@@ -7,6 +7,7 @@ var current_questions = []
 func _ready():
 	load_all_banks()	
 	print(question_banks.keys()) #for debugging
+	set_bank("MediaLiteracy")
 
 func load_all_banks():
 	var dir = DirAccess.open("res://Questions")
