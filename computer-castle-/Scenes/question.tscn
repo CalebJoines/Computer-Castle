@@ -293,6 +293,7 @@ text = "Submit"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2d_Submit" unique_id=376302596]
 shape = SubResource("RectangleShape2D_fru62")
 
+[connection signal="input_event" from="PopupBackground/ContinueButton/Area2D_Continue" to="Answer Buttons/AnswerController" method="_on_area_2d_continue_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton C/Area2D_C" to="Answer Buttons/AnswerController" method="_on_area_2d_c_input_event"]

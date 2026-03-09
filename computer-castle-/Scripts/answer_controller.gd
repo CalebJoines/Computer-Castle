@@ -68,9 +68,20 @@ func reset_selection():
 	answerD.play("Unclicked")
 	subbutton.visible = false
 	
-func show_explanation():
+func show_explanationI():
 	explanation_label.text = current_question["explanation"]
 	question_label.text = "Incorrect!"
+	explanation_label.visible = true
+	continue_button.visible = true
+	answerA.visible = false
+	answerB.visible = false
+	answerC.visible = false
+	answerD.visible = false
+	subbutton.visible = false
+	
+func show_explanationC():
+	explanation_label.text = current_question["explanation"]
+	question_label.text = "Correct!"
 	explanation_label.visible = true
 	continue_button.visible = true
 	answerA.visible = false
@@ -86,9 +97,10 @@ func check_answer():
 	if selected_answer == current_question["correct_index"]:
 		print("Correct!")
 		QuestionManager.remove_question(current_question)
+		show_explanationC()
 	else:
 		print("Incorrect!")
-		show_explanation()
+		show_explanationI()
 
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -171,7 +183,6 @@ func _on_area_2d_d_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				dchecked = false
 				subbutton.visible = false
 	
-
 func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -184,3 +195,8 @@ func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx
 			if dchecked == true:
 				print("Answered D")
 			check_answer()
+
+func _on_area_2d_continue_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			get_tree().change_scene_to_file(scenepath)
