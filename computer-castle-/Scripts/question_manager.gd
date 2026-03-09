@@ -6,10 +6,10 @@ var current_questions = []
 
 var bank_rewards = {
 	"MediaLiteracy": "volts",
-	"CyberSecurity": "data",
-	"Programming": "circuits",
-	"Networking": "bandwidth",
-	"AI": "ai_cores"
+	"DigitalFootprint": "data",
+	"DigitalThreats": "circuits",
+	"Scams_and_links": "bandwidth",
+	"Security": "ai_cores"
 }
 
 
