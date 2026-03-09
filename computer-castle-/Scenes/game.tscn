@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 [ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1.tres" id="6_v158k"]
+[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")
@@ -141,3 +142,9 @@ curve = SubResource("Curve2D_i6g32")
 [node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("5_1l0tm")]
 level_data = ExtResource("6_v158k")
 path = NodePath("../Path2D")
+
+[node name="Resource_Counters" parent="." unique_id=654333457 instance=ExtResource("7_1l0tm")]
+offset_left = 507.0
+offset_top = 570.0
+offset_right = 507.0
+offset_bottom = 570.0
