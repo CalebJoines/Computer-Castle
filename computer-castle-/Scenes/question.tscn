@@ -4,8 +4,31 @@
 [ext_resource type="Script" uid="uid://bg7eyk030yb5j" path="res://Scripts/answer_controller.gd" id="2_nojmr"]
 [ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="2_t7qk5"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="3_ntbrc"]
-[ext_resource type="Texture2D" uid="uid://c1kf4txs8tbet" path="res://Sprites/menuSprites/x.png" id="5_t7qk5"]
-[ext_resource type="Script" uid="uid://cpxeoixei7w40" path="res://Scripts/x_button_area_2d.gd" id="6_ntbrc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
+atlas = ExtResource("3_ntbrc")
+region = Rect2(0, 0, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
+atlas = ExtResource("3_ntbrc")
+region = Rect2(0, 48, 256, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qmu4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mstrt")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fru62"]
+size = Vector2(256, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0yn7"]
 atlas = ExtResource("2_t7qk5")
@@ -56,34 +79,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqmg1"]
 size = Vector2(543.75, 142.5)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
-atlas = ExtResource("3_ntbrc")
-region = Rect2(0, 0, 256, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
-atlas = ExtResource("3_ntbrc")
-region = Rect2(0, 48, 256, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8qmu4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g00bq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mstrt")
-}],
-"loop": false,
-"name": &"Clicked",
-"speed": 1.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fru62"]
-size = Vector2(256, 48)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbrc"]
-size = Vector2(48, 30)
-
 [node name="Question" type="Node2D" unique_id=1482724301]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=451233767]
@@ -93,7 +88,8 @@ texture_filter = 1
 position = Vector2(-1, 1)
 texture = ExtResource("1_fru62")
 
-[node name="Question Text" type="Label" parent="PopupBackground" unique_id=1281579116]
+[node name="QuestionText" type="Label" parent="PopupBackground" unique_id=1281579116]
+unique_name_in_owner = true
 offset_left = -558.0
 offset_top = -274.0
 offset_right = 558.0
@@ -103,6 +99,39 @@ theme_override_font_sizes/font_size = 40
 text = "This is sample text mean to demonstrate where  a question will appear to the player. It autowraps and centers so when different questions are displayed they won't run out of the boundaries"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="ExplanationLabel" type="Label" parent="PopupBackground" unique_id=593306561]
+unique_name_in_owner = true
+visible = false
+offset_left = -555.0
+offset_top = -231.0
+offset_right = 561.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "This is the placeholder text for the question explanation."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueButton" type="AnimatedSprite2D" parent="PopupBackground" unique_id=530812278]
+unique_name_in_owner = true
+visible = false
+position = Vector2(1, 295)
+sprite_frames = SubResource("SpriteFrames_8qmu4")
+animation = &"Clicked"
+
+[node name="Continue" type="Label" parent="PopupBackground/ContinueButton" unique_id=493121336]
+offset_left = -26.0
+offset_top = -11.0
+offset_right = 29.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Continue"
+
+[node name="Area2D_Continue" type="Area2D" parent="PopupBackground/ContinueButton" unique_id=713460390]
+
+[node name="CollisionShape2DContinue" type="CollisionShape2D" parent="PopupBackground/ContinueButton/Area2D_Continue" unique_id=2095421615]
+shape = SubResource("RectangleShape2D_fru62")
 
 [node name="Answer Buttons" type="Node" parent="." unique_id=559163922]
 
@@ -130,6 +159,7 @@ theme_override_font_sizes/font_size = 36
 text = "A."
 
 [node name="ChoiceA" type="Label" parent="Answer Buttons/AnswerButton A" unique_id=1372472845]
+unique_name_in_owner = true
 offset_left = -193.0
 offset_top = -44.0
 offset_right = 242.0
@@ -162,6 +192,7 @@ theme_override_font_sizes/font_size = 36
 text = "B."
 
 [node name="ChoiceB" type="Label" parent="Answer Buttons/AnswerButton B" unique_id=1513801716]
+unique_name_in_owner = true
 offset_left = -193.0
 offset_top = -44.0
 offset_right = 242.0
@@ -194,6 +225,7 @@ theme_override_font_sizes/font_size = 36
 text = "C."
 
 [node name="ChoiceC" type="Label" parent="Answer Buttons/AnswerButton C" unique_id=739448857]
+unique_name_in_owner = true
 offset_left = -193.0
 offset_top = -44.0
 offset_right = 242.0
@@ -226,6 +258,7 @@ theme_override_font_sizes/font_size = 36
 text = "D."
 
 [node name="ChoiceD" type="Label" parent="Answer Buttons/AnswerButton D" unique_id=1613546802]
+unique_name_in_owner = true
 offset_left = -193.0
 offset_top = -44.0
 offset_right = 242.0
@@ -260,21 +293,8 @@ text = "Submit"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2d_Submit" unique_id=376302596]
 shape = SubResource("RectangleShape2D_fru62")
 
-[node name="XButton" type="Sprite2D" parent="." unique_id=1234055157]
-texture_filter = 1
-position = Vector2(535, -299)
-texture = ExtResource("5_t7qk5")
-
-[node name="XButtonArea2d" type="Area2D" parent="XButton" unique_id=1127760142]
-script = ExtResource("6_ntbrc")
-
-[node name="CollisionShapeX" type="CollisionShape2D" parent="XButton/XButtonArea2d" unique_id=322561034]
-shape = SubResource("RectangleShape2D_ntbrc")
-
 [connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton C/Area2D_C" to="Answer Buttons/AnswerController" method="_on_area_2d_c_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton D/Area2D_D" to="Answer Buttons/AnswerController" method="_on_area_2d_d_input_event"]
 [connection signal="input_event" from="Answer Buttons/SubmitButton/Area2d_Submit" to="Answer Buttons/AnswerController" method="_on_area_2d_submit_input_event"]
-[connection signal="input_event" from="XButton/XButtonArea2d" to="Answer Buttons/AnswerController" method="_on_x_button_area_2d_input_event"]
-[connection signal="input_event" from="XButton/XButtonArea2d" to="XButton/XButtonArea2d" method="_on_input_event"]

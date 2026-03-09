@@ -1,19 +1,88 @@
 extends Control
-
+#buttons
 @onready var answerA: AnimatedSprite2D = %"AnswerButton A"
 @onready var answerB: AnimatedSprite2D = %"AnswerButton B"
 @onready var answerC: AnimatedSprite2D = %"AnswerButton C"
 @onready var answerD: AnimatedSprite2D = %"AnswerButton D"
 @onready var subbutton: AnimatedSprite2D = %"SubmitButton"
-@onready var scenepath: String = "res://Scenes/resource_picker.tscn"
+@onready var continue_button: AnimatedSprite2D =%ContinueButton
+#
+@onready var question_label: Label = %QuestionText
+@onready var explanation_label: Label = %ExplanationLabel
+@onready var answer_a_text: Label = %ChoiceA
+@onready var answer_b_text: Label = %ChoiceB
+@onready var answer_c_text: Label = %ChoiceC
+@onready var answer_d_text: Label = %ChoiceD
+
+#button checks
 @onready var achecked : bool = false
 @onready var bchecked : bool = false
 @onready var cchecked : bool = false
 @onready var dchecked : bool = false
 
+@onready var scenepath: String = "res://Scenes/resource_picker.tscn"
+var current_question = {}
+var selected_answer = ""
+
 func _ready():
 	subbutton.visible = false
+	explanation_label.visible = false
+	continue_button.visible = false
+	load_question()
+
+func load_question():
+	current_question = QuestionManager.get_question()
+	if current_question.is_empty():
+		question_label.text = "Out of questions, you need to fix that Wyatt"
+		return
+	question_label.text = current_question["question"]
+	answer_a_text.text = current_question["answers"]["A"]
+	answer_b_text.text = current_question["answers"]["B"]
+	answer_c_text.text = current_question["answers"]["C"]
+	answer_d_text.text = current_question["answers"]["D"]
 	
+func get_selected_answer():
+	if achecked:
+		return "A"
+	if bchecked:
+		return "B"
+	if cchecked:
+		return "C"
+	if dchecked:
+		return "D"
+	return ""
+
+func reset_selection():
+	achecked = false
+	bchecked = false
+	cchecked = false
+	dchecked = false
+	answerA.play("Unclicked")
+	answerB.play("Unclicked")
+	answerC.play("Unclicked")
+	answerD.play("Unclicked")
+	subbutton.visible = false
+	
+func show_explanation():
+	explanation_label.text = current_question["explanation"]
+	explanation_label.visible = true
+	continue_button.visible = true
+	answerA.visible = false
+	answerB.visible = false
+	answerC.visible = false
+	answerD.visible = false
+	subbutton.visible = false
+	
+func check_answer():
+	selected_answer = get_selected_answer()
+	if selected_answer == "":
+		return
+	if selected_answer == current_question["correct"]:
+		print("Correct!")
+		QuestionManager.remove_question(current_question)
+	else:
+		print("Incorrect!")
+		show_explanation()
 
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -108,9 +177,4 @@ func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx
 				print("Answered C")
 			if dchecked == true:
 				print("Answered D")
-			print("Submitting. Switching scenes...")	
-			achecked = false
-			bchecked = false
-			cchecked = false
-			dchecked = false
-			get_tree().change_scene_to_file(scenepath)
+			check_answer()
