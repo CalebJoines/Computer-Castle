@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dveluokyt1ylc" path="res://Sprites/Environment Sprites/Resource-background.png" id="1_53bys"]
 [ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
+[ext_resource type="Texture2D" uid="uid://b23cno7sihbm1" path="res://Sprites/ResourceSprites/Energy.png" id="3_8usdw"]
+[ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
+[ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="5_sqw27"]
 
 [node name="ResourcePicker" type="Node2D" unique_id=1574587499]
 
@@ -13,17 +16,35 @@ texture = ExtResource("1_53bys")
 
 [node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
 
-[node name="ClickableBox" parent="ClickableBoxes" unique_id=584798666 instance=ExtResource("2_ywnrd")]
+[node name="Volts Button" parent="ClickableBoxes" unique_id=584798666 instance=ExtResource("2_ywnrd")]
 position = Vector2(-266, -13)
 scene_path = "res://Scenes/question.tscn"
+bank = "MediaLiteracy"
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Volts Button" unique_id=1102679792]
+position = Vector2(19.999996, 19.000002)
+scale = Vector2(0.6406249, 0.6406249)
+texture = ExtResource("3_8usdw")
 
 [node name="ClickableBox2" parent="ClickableBoxes" unique_id=120710478 instance=ExtResource("2_ywnrd")]
 position = Vector2(-35, -12)
 scene_path = "res://Scenes/question.tscn"
+bank = "Security"
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/ClickableBox2" unique_id=220409759]
+position = Vector2(20, 20)
+scale = Vector2(0.59375, 0.59375)
+texture = ExtResource("4_7857q")
 
 [node name="ClickableBox3" parent="ClickableBoxes" unique_id=798968945 instance=ExtResource("2_ywnrd")]
 position = Vector2(195, -10)
 scene_path = "res://Scenes/question.tscn"
+bank = "DigitalThreats"
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/ClickableBox3" unique_id=1971554782]
+position = Vector2(19.5, 19.5)
+scale = Vector2(0.609375, 0.609375)
+texture = ExtResource("5_sqw27")
 
 [node name="ClickableBox4" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
 position = Vector2(449, -276)
