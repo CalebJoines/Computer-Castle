@@ -1,5 +1,6 @@
 extends Area2D
 
+@export var projectile_scene: PackedScene
 @export var damage: int = 1
 @export var fire_rate: float = 1.0
 
@@ -42,17 +43,23 @@ func _get_first_valid_target():
 
 func shoot(target):
 	can_shoot = false
-	target.take_damage(damage)
+	
+	if projectile_scene:
+		print("firing projectile")
+		var projectile = projectile_scene.instantiate()
+		projectile.global_position = global_position
+		projectile.target = target
+		projectile.damage = damage
+		get_tree().current_scene.add_child(projectile)
+	
 	await get_tree().create_timer(fire_rate).timeout
 	can_shoot = true
 
 
 func _on_area_entered(body: Area2D) -> void:
 	if body.is_in_group("enemies"):
-		print("enemy in range")
 		enemies_in_range.append(body)
 
 func _on_area_exited(body: Area2D) -> void:
 	if body in enemies_in_range:
-		print("enemy out of range")
 		enemies_in_range.erase(body)

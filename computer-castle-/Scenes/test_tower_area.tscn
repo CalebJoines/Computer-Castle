@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddyc8lkelnrej" path="res://Scripts/test_tower_area.gd" id="1_7bet4"]
 [ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="1_lfqyg"]
+[ext_resource type="PackedScene" uid="uid://cpyyw3groinul" path="res://Scenes/tower_projectile.tscn" id="2_eowl1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7bet4"]
 radius = 259.1563
@@ -11,6 +12,7 @@ size = Vector2(64, 64)
 
 [node name="TestTowerArea" type="Area2D" unique_id=1143239560]
 script = ExtResource("1_7bet4")
+projectile_scene = ExtResource("2_eowl1")
 
 [node name="TowerRange" type="CollisionShape2D" parent="." unique_id=589748191]
 shape = SubResource("CircleShape2D_7bet4")
