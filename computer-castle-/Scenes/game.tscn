@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
-[ext_resource type="Script" uid="uid://cjs23krcy71yw" path="res://Scripts/path_follow_2d.gd" id="5_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
-[ext_resource type="PackedScene" uid="uid://cpefxcv7hbp3e" path="res://Scenes/enemy.tscn" id="5_wowpa"]
-[ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
+[ext_resource type="Script" path="res://Scripts/path_follow_2d.gd" id="5_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
+[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")

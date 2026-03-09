@@ -93,10 +93,25 @@ func show_explanationC():
 	
 func check_answer():
 	selected_answer = get_selected_answer()
-	if selected_answer == -1:
+	if selected_answer == -1:   
 		return
 	if selected_answer == current_question["correct_index"]:
 		print("Correct!")
+		
+		#matches current reward with bank and gives correct reward
+		var reward = QuestionManager.bank_rewards[QuestionManager.current_bank]
+		
+		match reward:
+			"volts":
+				ResourceManager.add_volts(5)
+			"data":
+				ResourceManager.add_data(5)
+			"circuits":
+				ResourceManager.add_circuits(5)
+			"bandwidth":
+				ResourceManager.add_bandwidth(5)
+			"AI":
+				ResourceManager.add_aicores(5)  # reward
 		QuestionManager.remove_question(current_question)
 		show_explanationC()
 	else:

@@ -1,11 +1,118 @@
 extends Node
 
+# RESOURCE VALUES
+var volts : int = 0
+var data : int = 0
+var circuits : int = 0
+var bandwidth : int = 0
+var ai_cores : int = 0
+var energy : int = 5
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+# ADD RESOURCES
+func add_volts(amount:int):
+	volts += amount
+	print("Volts:", volts)
+
+func add_data(amount:int):
+	data += amount
+	print("Data:", data)
+
+func add_circuits(amount:int):
+	circuits += amount
+	print("Circuits:", circuits)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func add_bandwidth(amount:int):
+	bandwidth += amount
+	print("Bandwidth:", bandwidth)
+
+
+func add_energy(amount:int):
+	energy += amount
+	print("Energy:", energy)
+
+func add_ai_cores(amount:int):
+	ai_cores += amount
+	print("AI Cores:", ai_cores)
+
+
+# SPEND / REMOVE RESOURCES
+func spend_volts(amount:int) -> bool:
+	if volts >= amount:
+		volts -= amount
+		print("Volts remaining:", volts)
+		return true
+	else:
+		print("Not enough volts")
+		return false
+
+
+func spend_data(amount:int) -> bool:
+	if data >= amount:
+		data -= amount
+		print("Data remaining:", data)
+		return true
+	else:
+		print("Not enough data")
+		return false
+
+
+func spend_circuits(amount:int) -> bool:
+	if circuits >= amount:
+		circuits -= amount
+		print("Circuits remaining:", circuits)
+		return true
+	else:
+		print("Not enough circuits")
+		return false
+
+
+func spend_bandwidth(amount:int) -> bool:
+	if bandwidth >= amount:
+		bandwidth -= amount
+		print("Bandwidth remaining:", bandwidth)
+		return true
+	else:
+		print("Not enough bandwidth")
+		return false
+
+
+func spend_energy(amount:int) -> bool:
+	if energy >= amount:
+		energy -= amount
+		print("Energy remaining:", energy)
+		return true
+	else:
+		print("Not enough energy")
+		return false
+		
+func spend_ai_cores(amount:int) -> bool:
+	if ai_cores >= amount:
+		ai_cores -= amount
+		return true
+	return false
+	
+	
+	# GETTERS
+func get_volts() -> int:
+	return volts
+
+
+func get_data() -> int:
+	return data
+
+
+func get_circuits() -> int:
+	return circuits
+
+
+func get_bandwidth() -> int:
+	return bandwidth
+
+
+func get_ai_cores() -> int:
+	return ai_cores
+
+
+func get_energy() -> int:
+	return energy
