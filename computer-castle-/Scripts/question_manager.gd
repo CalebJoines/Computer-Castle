@@ -4,8 +4,18 @@ var question_banks = {}
 var current_bank = ""
 var current_questions = []
 
+var bank_rewards = {
+	"MediaLiteracy": "volts",
+	"CyberSecurity": "data",
+	"Programming": "circuits",
+	"Networking": "bandwidth",
+	"AI": "ai_cores"
+}
+
+
 func _ready():
 	load_all_banks()	
+	ResourceManager.spend_energy(1)
 	print(question_banks.keys()) #for debugging
 	set_bank("MediaLiteracy")
 
