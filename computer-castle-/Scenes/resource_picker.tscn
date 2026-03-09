@@ -63,3 +63,13 @@ offset_top = -100.0
 offset_right = 254.0
 offset_bottom = -77.0
 text = "\\/                    Click boxes to pull up question scene                    \\/"
+
+[node name="Volts Button2" parent="ClickableBoxes" unique_id=896409586 instance=ExtResource("2_ywnrd")]
+position = Vector2(-266, -13)
+scene_path = "res://Scenes/question.tscn"
+bank = "MediaLiteracy"
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Volts Button2" unique_id=738725581]
+position = Vector2(19.999996, 19.000002)
+scale = Vector2(0.6406249, 0.6406249)
+texture = ExtResource("3_8usdw")
