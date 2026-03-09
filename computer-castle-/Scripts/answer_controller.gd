@@ -72,12 +72,13 @@ func show_explanationI():
 	explanation_label.text = current_question["explanation"]
 	question_label.text = "Incorrect!"
 	explanation_label.visible = true
-	continue_button.visible = true
 	answerA.visible = false
 	answerB.visible = false
 	answerC.visible = false
 	answerD.visible = false
 	subbutton.visible = false
+	await get_tree().create_timer(5.0).timeout
+	continue_button.visible = true
 	
 func show_explanationC():
 	explanation_label.text = current_question["explanation"]

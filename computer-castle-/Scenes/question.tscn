@@ -116,7 +116,8 @@ autowrap_mode = 3
 [node name="ContinueButton" type="AnimatedSprite2D" parent="PopupBackground" unique_id=530812278]
 unique_name_in_owner = true
 visible = false
-position = Vector2(1, 295)
+position = Vector2(0.9999943, 276)
+scale = Vector2(1.8046876, 1.7916666)
 sprite_frames = SubResource("SpriteFrames_8qmu4")
 animation = &"Clicked"
 
