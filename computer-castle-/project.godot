@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 QuestionManager="*uid://bj1hdmqnidl4e"
-ResourceManager="*uid://rt20dxlviblo"
+ResourceManager="*uid://dne6mc2viljvh"
 
 [physics]
 
