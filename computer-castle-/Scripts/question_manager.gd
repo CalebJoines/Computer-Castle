@@ -15,7 +15,6 @@ var bank_rewards = {
 
 func _ready():
 	load_all_banks()	
-	ResourceManager.spend_energy(1)
 	print(question_banks.keys()) #for debugging
 	set_bank("MediaLiteracy")
 
