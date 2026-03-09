@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cpefxcv7hbp3e"]
 
+[ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_hghv2"]
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ne65n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(15.5, 14.5)
 
 [node name="Enemy" type="Area2D" unique_id=1902402437]
+script = ExtResource("1_hghv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1276315250]
 scale = Vector2(15.249999, 15.249999)

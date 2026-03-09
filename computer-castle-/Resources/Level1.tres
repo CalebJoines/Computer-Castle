@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://1exdepnf04vf"]
+
+[ext_resource type="Script" uid="uid://ct34fp7dvyxri" path="res://Resources/LevelData.gd" id="1_fb478"]
+[ext_resource type="Script" uid="uid://d0ydva3gm4av0" path="res://Resources/WaveData.gd" id="2_v4rgq"]
+[ext_resource type="Resource" uid="uid://dih06fakdttx4" path="res://Resources/Wave1.tres" id="3_v4rgq"]
+
+[resource]
+script = ExtResource("1_fb478")
+waves = Array[ExtResource("2_v4rgq")]([ExtResource("3_v4rgq")])
+metadata/_custom_type_script = "uid://ct34fp7dvyxri"

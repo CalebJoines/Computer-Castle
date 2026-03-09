@@ -3,6 +3,9 @@ extends Area2D
 var is_occupied = false
 var current_tower = null
 
+func _ready():
+	add_to_group("slots")
+
 func can_place_tower() -> bool:
 	return not is_occupied
 
