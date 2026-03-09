@@ -9,7 +9,7 @@ var can_shoot = true
 
 var dragging := true
 
-func _process(delta):
+func _process(_delta):
 	if dragging:
 		global_position = get_global_mouse_position()
 	else:
