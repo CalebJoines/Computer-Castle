@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b23cno7sihbm1" path="res://Sprites/ResourceSprites/Energy.png" id="3_8usdw"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="5_sqw27"]
-[ext_resource type="Texture2D" uid="uid://okhm37mfcopt" path="res://Sprites/ResourceSprites/circuits.png" id="6_sqw27"]
+[ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="6_6okmw"]
 [ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="7_6okmw"]
 [ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="8_6okmw"]
 
@@ -78,7 +78,7 @@ bank = "MediaLiteracy"
 [node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Cables" unique_id=634485076]
 position = Vector2(19.999996, 19.000002)
 scale = Vector2(0.6406249, 0.6406249)
-texture = ExtResource("6_sqw27")
+texture = ExtResource("6_6okmw")
 
 [node name="Cables3" parent="ClickableBoxes" unique_id=1346519469 instance=ExtResource("2_ywnrd")]
 position = Vector2(83, -13)
