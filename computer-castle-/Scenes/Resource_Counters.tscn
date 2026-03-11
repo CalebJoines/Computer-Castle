@@ -110,4 +110,4 @@ layout_mode = 0
 offset_top = -5.0
 offset_right = 635.0
 offset_bottom = 72.0
-color = Color(0, 0, 1, 1)
+color = Color(0.43137255, 0.43137255, 0.43137255, 1)
