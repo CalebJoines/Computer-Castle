@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bv44snd02hlm0" path="res://Scripts/ResourceHUD.gd" id="1_0ru6n"]
 [ext_resource type="Texture2D" uid="uid://b23cno7sihbm1" path="res://Sprites/ResourceSprites/Energy.png" id="2_65vgh"]
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="3_65vgh"]
-[ext_resource type="Texture2D" uid="uid://okhm37mfcopt" path="res://Sprites/ResourceSprites/circuits.png" id="3_hgfry"]
 [ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="4_8ggkb"]
+[ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="4_hgfry"]
+[ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="5_8ggkb"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="5_fsk48"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="6_n0kt2"]
 
@@ -49,7 +50,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Volts" unique_id=664346160]
 layout_mode = 2
-texture = ExtResource("2_65vgh")
+texture = ExtResource("4_hgfry")
 
 [node name="VoltsValue" type="Label" parent="Panel/HBoxContainer/Volts" unique_id=1119038672]
 layout_mode = 2
@@ -61,7 +62,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Circuits" unique_id=578341048]
 layout_mode = 2
-texture = ExtResource("3_hgfry")
+texture = ExtResource("5_8ggkb")
 
 [node name="CircuitsValue" type="Label" parent="Panel/HBoxContainer/Circuits" unique_id=347474475]
 layout_mode = 2
