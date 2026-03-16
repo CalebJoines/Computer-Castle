@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="5_8ggkb"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="5_fsk48"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="6_n0kt2"]
+[ext_resource type="Texture2D" uid="uid://df2cqh08gmays" path="res://Sprites/menuSprites/simple_background_stretchable.png" id="9_8ggkb"]
 
 [node name="Resource_Counters" type="Control" unique_id=654333457]
 layout_mode = 3
@@ -32,6 +33,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="energy" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=2135780938]
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/energy" unique_id=652069780]
@@ -45,7 +47,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="Volts" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=1544147311]
-z_index = 1
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Volts" unique_id=664346160]
@@ -57,7 +59,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="Circuits" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=1574740888]
-z_index = 1
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Circuits" unique_id=578341048]
@@ -69,7 +71,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="Bandwidth" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=278599372]
-z_index = 1
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Bandwidth" unique_id=1066061864]
@@ -81,7 +83,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="Data" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=1723891751]
-z_index = 1
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Data" unique_id=818923947]
@@ -93,7 +95,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="Cores" type="HBoxContainer" parent="Panel/HBoxContainer" unique_id=1643963614]
-z_index = 1
+z_index = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Cores" unique_id=1853809822]
@@ -105,9 +107,16 @@ z_index = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_65vgh")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=590253560]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=225680477]
+z_index = 1
 layout_mode = 0
-offset_top = -5.0
-offset_right = 635.0
-offset_bottom = 72.0
-color = Color(0.43137255, 0.43137255, 0.43137255, 1)
+offset_left = -12.0
+offset_top = -18.0
+offset_right = 633.0
+offset_bottom = 82.0
+texture = ExtResource("9_8ggkb")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
