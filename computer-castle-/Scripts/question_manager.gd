@@ -11,7 +11,7 @@ var bank_rewards = {
 	"Scams_and_links": "bandwidth",
 	"Security": "ai_cores"
 }
-
+#add color coding to correct/incorrect
 
 func _ready():
 	load_all_banks()	
