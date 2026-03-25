@@ -5,18 +5,19 @@ extends Area2D
 @export var fire_rate: float = 1.0
 
 var enemies_in_range: Array[Node] = []
-var can_shoot = true
+var can_shoot = false
 
 var dragging := true
 
 func _process(_delta):
 	if dragging:
 		global_position = get_global_mouse_position()
-	else:
-		if can_shoot and enemies_in_range.size() > 0:
-			var target = _get_first_valid_target()
-			if target:
-				shoot(target)
+		return
+	
+	if can_shoot and enemies_in_range.size() > 0:
+		var target = _get_first_valid_target()
+		if target:
+			shoot(target)
 
 func try_place():
 	print("trying to place")
@@ -25,6 +26,7 @@ func try_place():
 			print("placed")
 			slot.place_tower(self)
 			dragging = false
+			can_shoot = true
 			modulate = Color(1,1,1,1)
 			return
 	

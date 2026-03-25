@@ -11,6 +11,9 @@ func can_place_tower() -> bool:
 
 func place_tower(tower):
 	if can_place_tower():
-		current_tower = tower
-		tower.global_position = global_position  
-		is_occupied = true
+		if ResourceManager.get_volts() >= 1:
+			current_tower = tower
+			tower.global_position = global_position  
+			is_occupied = true
+			ResourceManager.spend_volts(1)
+		
