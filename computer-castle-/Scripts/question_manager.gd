@@ -4,19 +4,9 @@ var question_banks = {}
 var current_bank = ""
 var current_questions = []
 
-var bank_rewards = {
-	"MediaLiteracy": "volts",
-	"DigitalFootprint": "data",
-	"DigitalThreats": "circuits",
-	"Scams_and_links": "bandwidth",
-	"Security": "ai_cores"
-}
-#add color coding to correct/incorrect
 
 func _ready():
 	load_all_banks()	
-	print(question_banks.keys()) #for debugging
-	set_bank("MediaLiteracy")
 
 func load_all_banks():
 	var dir = DirAccess.open("res://Questions")
@@ -56,7 +46,6 @@ func set_bank(bank_name):
 		current_questions = question_banks[bank_name].duplicate(true)
 		print("Bank selected:", bank_name)
 
-
 func get_question():
 	if current_questions.size() == 0:
 		return {}
@@ -66,3 +55,6 @@ func get_question():
 
 func remove_question(question):
 	current_questions.erase(question)
+	
+func get_bank():
+	return current_bank

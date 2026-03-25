@@ -70,6 +70,7 @@ func reset_selection():
 	
 func show_explanationI():
 	explanation_label.text = current_question["explanation"]
+	question_label.add_theme_color_override("font_color",Color("red"))
 	question_label.text = "Incorrect!"
 	explanation_label.visible = true
 	answerA.visible = false
@@ -82,6 +83,7 @@ func show_explanationI():
 	
 func show_explanationC():
 	explanation_label.text = current_question["explanation"]
+	question_label.add_theme_color_override("font_color",Color("dark green"))
 	question_label.text = "Correct!"
 	explanation_label.visible = true
 	continue_button.visible = true
@@ -90,32 +92,47 @@ func show_explanationC():
 	answerC.visible = false
 	answerD.visible = false
 	subbutton.visible = false
+
+'''
+	"MediaLiteracy": "volts",
+	"DigitalFootprint": "data",
+	"DigitalThreats": "circuits",
+	"Scams_and_links": "bandwidth",
+	"Security": "ai_cores"
+'''
 	
 func check_answer():
 	selected_answer = get_selected_answer()
+	var bank = QuestionManager.get_bank()
 	if selected_answer == -1:   
 		return
 	if selected_answer == current_question["correct_index"]:
 		print("Correct!")
-		
-		#matches current reward with bank and gives correct reward
-		var reward = QuestionManager.bank_rewards[QuestionManager.current_bank]
-		
-		match reward:
-			"volts":
-				ResourceManager.add_volts(5)
-			"data":
-				ResourceManager.add_data(5)
-			"circuits":
-				ResourceManager.add_circuits(5)
-			"bandwidth":
-				ResourceManager.add_bandwidth(5)
-			"AI":
-				ResourceManager.add_aicores(5)  # reward
+		if (bank == "DigitalFootprint"):
+			ResourceManager.add_data(10)
+		if (bank == "DigitalThreats"):
+			ResourceManager.add_circuits(10)
+		if (bank == "MediaLiteracy"):
+			ResourceManager.add_volts(10)
+		if (bank == "Scams_and_links"):
+			ResourceManager.add_bandwidth(10)
+		if (bank == "Security"):
+			ResourceManager.add_ai_cores(10)
+			
 		QuestionManager.remove_question(current_question)
 		show_explanationC()
 	else:
-		print("Incorrect!")
+		if (bank == "DigitalFootprint"):
+			ResourceManager.add_data(5)
+		if (bank == "DigitalThreats"):
+			ResourceManager.add_circuits(5)
+		if (bank == "MediaLiteracy"):
+			ResourceManager.add_volts(5)
+		if (bank == "Scams_and_links"):
+			ResourceManager.add_bandwidth(5)
+		if (bank == "Security"):
+			ResourceManager.add_ai_cores(5)
+		print("Incorrect! Try Reading the Explanation")
 		show_explanationI()
 
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	

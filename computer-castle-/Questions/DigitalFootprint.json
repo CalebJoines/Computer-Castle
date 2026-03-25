@@ -1,114 +1,114 @@
 {
   "questions": [
-    {
-      "question": "When making posts to social media, you should never share ___.",
-      "choices": [
-        "A photo of yourself",
-        "Your home address",
-        "Your opinion on a movie",
+	{
+	  "question": "When making posts to social media, you should never share ___.",
+	  "choices": [
+		"A photo of yourself",
+		"Your home address",
+		"Your opinion on a movie",
         "Your birthday"
-      ],
-      "correct_index": 1,
-      "explanation": "Sharing information like your address, phone number, or details about your life and family can be dangerous. Social media posts are public, so keep your personal information personal."
-    },
-    {
-      "question": "___ is the practice of using the internet to harass or threaten another person.",
-      "choices": [
-        "Cyberbullying",
-        "Stalking",
-        "Scamming",
+	  ],
+	  "correct_index": 1,
+	  "explanation": "Sharing information like your address, phone number, or details about your life and family can be dangerous. Social media posts are public, so keep your personal information personal."
+	},
+	{
+	  "question": "___ is the practice of using the internet to harass or threaten another person.",
+	  "choices": [
+		"Cyberbullying",
+		"Stalking",
+		"Scamming",
         "Phishing"
-      ],
-      "correct_index": 0,
-      "explanation": "Cyberbullying is an extension of bullying that uses the internet. Many forms of cyberbullying are considered criminal harassment, so it's important to treat others with respect online and report cyberbullying when you see it."
-    },
-    {
-      "question": "When using social media it's important to remember that the things you say are ____ and ____.",
-      "choices": [
-        "Safe and Secure",
-        "True and Accurate",
-        "Private and Personal",
+	  ],
+	  "correct_index": 0,
+	  "explanation": "Cyberbullying is an extension of bullying that uses the internet. Many forms of cyberbullying are considered criminal harassment, so it's important to treat others with respect online and report cyberbullying when you see it."
+	},
+	{
+	  "question": "When using social media it's important to remember that the things you say are ____ and ____.",
+	  "choices": [
+		"Safe and Secure",
+		"True and Accurate",
+		"Private and Personal",
         "Public and Permanent"
-      ],
-      "correct_index": 3,
-      "explanation": "Information that is shared online is visible to anyone and very difficult to erase, even if you delete it. Always be careful to keep private information private."
-    },
-    {
-      "question": "Which of the following would be an appropriate thing to send to strangers online?",
-      "choices": [
-        "A message talking about what school you go to",
-        "A photo of your friend at a baseball game",
-        "A question about where they live",
+	  ],
+	  "correct_index": 3,
+	  "explanation": "Information that is shared online is visible to anyone and very difficult to erase, even if you delete it. Always be careful to keep private information private."
+	},
+	{
+	  "question": "Which of the following would be an appropriate thing to send to strangers online?",
+	  "choices": [
+		"A message talking about what school you go to",
+		"A photo of your friend at a baseball game",
+		"A question about where they live",
         "Your thoughts on a TV show you watched"
-      ],
-      "correct_index": 3,
-      "explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal and respect that they do the same. Never share photos of others online without their permission."
-    },
-    {
-      "question": "When playing games or chatting online with strangers, you should always keep in mind that ____.",
-      "choices": [
-        "It's ok to say mean things because they don't know who you are",
-        "Being polite to strangers doesn't mean you need to share everything",
-        "You should exchange personal info to get to know each other better",
+	  ],
+	  "correct_index": 3,
+	  "explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal and respect that they do the same. Never share photos of others online without their permission."
+	},
+	{
+	  "question": "When playing games or chatting online with strangers, you should always keep in mind that ____.",
+	  "choices": [
+		"It's ok to say mean things because they don't know who you are",
+		"Being polite to strangers doesn't mean you need to share everything",
+		"You should exchange personal info to get to know each other better",
         "When they're unkind to you, you should deal with it because it's just how people online behave"
-      ],
-      "correct_index": 1,
-      "explanation": "When playing games or chatting online, being kind to others and expecting them to be respectful of you is an important way to avoid bad interactions. Try to be kind, but don't overshare or ask for personal information."
-    },
-    {
-      "question": "Which of the following would be an appropriate thing to ask strangers online?",
-      "choices": [
-        "Requesting they send you a picture of themselves",
-        "A message making fun of the way they speak",
-        "A compliment on a piece of artwork they posted",
+	  ],
+	  "correct_index": 1,
+	  "explanation": "When playing games or chatting online, being kind to others and expecting them to be respectful of you is an important way to avoid bad interactions. Try to be kind, but don't overshare or ask for personal information."
+	},
+	{
+	  "question": "Which of the following would be an appropriate thing to ask strangers online?",
+	  "choices": [
+		"Requesting they send you a picture of themselves",
+		"A message making fun of the way they speak",
+		"A compliment on a piece of artwork they posted",
         "Your full name"
-      ],
-      "correct_index": 2,
-      "explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal and respect that they do the same."
-    },
-    {
-      "question": "When online, it's safe to send personal information to who?",
-      "choices": [
-        "Strangers",
-        "Any website you're using",
-        "Someone you know at school",
+	  ],
+	  "correct_index": 2,
+	  "explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal and respect that they do the same."
+	},
+	{
+	  "question": "When online, it's safe to send personal information to who?",
+	  "choices": [
+		"Strangers",
+		"Any website you're using",
+		"Someone you know at school",
         "A trusted adult, if you're communicating privately"
-      ],
-      "correct_index": 3,
-      "explanation": "You should only send personal information online if you know and trust the person you're talking to. Even if you know someone in person, you can always tell them in person instead of taking the risk."
-    },
-    {
-      "question": "Which of the following would be an inappropriate thing to post to social media?",
-      "choices": [
-        "A comment complaining about someone you don't like at school",
-        "A screenshot of a game you were playing",
-        "A photo of you hiking with your family",
+	  ],
+	  "correct_index": 3,
+	  "explanation": "You should only send personal information online if you know and trust the person you're talking to. Even if you know someone in person, you can always tell them in person instead of taking the risk."
+	},
+	{
+	  "question": "Which of the following would be an inappropriate thing to post to social media?",
+	  "choices": [
+		"A comment complaining about someone you don't like at school",
+		"A screenshot of a game you were playing",
+		"A photo of you hiking with your family",
         "A post about your favorite sports team"
-      ],
-      "correct_index": 0,
-      "explanation": "The things you post online are public and permanent, so you should take care to speak kindly about others online."
-    },
-    {
-      "question": "Who is able to see the things you post online?",
-      "choices": [
-        "Your teachers",
-        "Your friends",
-        "Everyone",
+	  ],
+	  "correct_index": 0,
+	  "explanation": "The things you post online are public and permanent, so you should take care to speak kindly about others online."
+	},
+	{
+	  "question": "Who is able to see the things you post online?",
+	  "choices": [
+		"Your teachers",
+		"Your friends",
+		"Everyone",
         "Your parents"
-      ],
-      "correct_index": 2,
-      "explanation": "Anything you post online is public and permanent. Your reputation and relationships are always important to consider before saying something online."
-    },
-    {
-      "question": "Which of the following is a place you can make public statements online?",
-      "choices": [
-        "Social media posts",
-        "Online blogs and forum sites",
-        "Comment sections",
+	  ],
+	  "correct_index": 2,
+	  "explanation": "Anything you post online is public and permanent. Your reputation and relationships are always important to consider before saying something online."
+	},
+	{
+	  "question": "Which of the following is a place you can make public statements online?",
+	  "choices": [
+		"Social media posts",
+		"Online blogs and forum sites",
+		"Comment sections",
         "All of these"
-      ],
-      "correct_index": 3,
-      "explanation": "You can make public statements online in many places, and it's important to remember that others will see the things you say."
-    }
+	  ],
+	  "correct_index": 3,
+	  "explanation": "You can make public statements online in many places, and it's important to remember that others will see the things you say."
+	}
   ]
 }
