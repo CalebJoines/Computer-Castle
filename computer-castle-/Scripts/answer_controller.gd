@@ -23,12 +23,24 @@ extends Control
 @onready var scenepath: String = "res://Scenes/resource_picker.tscn"
 var current_question = {}
 var selected_answer = ""
+var sounds = {
+	"click": preload("res://Audio/Sound_effects/Question_SFX/Click.mp3"),
+	"correct": preload("res://Audio/Sound_effects/Question_SFX/CorrectDing.mp3"),
+	"incorrect":preload("res://Audio/Sound_effects/Question_SFX/IncorrectDing.mp3")
+}
 
 func _ready():
 	subbutton.visible = false
 	explanation_label.visible = false
 	continue_button.visible = false
 	load_question()
+
+func playsound(name):
+	var player = AudioStreamPlayer.new()
+	player.stream = sounds[name]
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
 
 func load_question():
 	current_question = QuestionManager.get_question()
@@ -69,6 +81,7 @@ func reset_selection():
 	subbutton.visible = false
 	
 func show_explanationI():
+	playsound("incorrect")
 	explanation_label.text = current_question["explanation"]
 	question_label.add_theme_color_override("font_color",Color("red"))
 	question_label.text = "Incorrect!"
@@ -82,6 +95,7 @@ func show_explanationI():
 	continue_button.visible = true
 	
 func show_explanationC():
+	playsound("correct")
 	explanation_label.text = current_question["explanation"]
 	question_label.add_theme_color_override("font_color",Color("dark green"))
 	question_label.text = "Correct!"
@@ -138,6 +152,7 @@ func check_answer():
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
 			if achecked == false :
 				print("Selecting A")
 				answerA.play("Clicked")
@@ -149,7 +164,7 @@ func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				cchecked= false
 				dchecked = false
 				subbutton.visible = true
-			else: 
+			else:
 				print("Unselecting A")
 				answerA.play("Unclicked")
 				achecked = false
@@ -159,6 +174,7 @@ func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int
 func _on_area_2d_b_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
 			if bchecked == false :
 				print("Selecting B")
 				answerA.play("Unclicked")
@@ -170,7 +186,7 @@ func _on_area_2d_b_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				cchecked= false
 				dchecked = false
 				subbutton.visible = true
-			else: 
+			else:
 				print("Unselecting B")
 				answerB.play("Unclicked")
 				bchecked = false
@@ -179,6 +195,7 @@ func _on_area_2d_b_input_event(viewport: Node, event: InputEvent, shape_idx: int
 func _on_area_2d_c_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
 			if cchecked == false :
 				print("Selecting C")
 				answerA.play("Unclicked")
@@ -199,6 +216,7 @@ func _on_area_2d_c_input_event(viewport: Node, event: InputEvent, shape_idx: int
 func _on_area_2d_d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
 			if dchecked == false :
 				print("Selecting D")
 				answerA.play("Unclicked")
@@ -219,6 +237,7 @@ func _on_area_2d_d_input_event(viewport: Node, event: InputEvent, shape_idx: int
 func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
 			if achecked == true:
 				print("Answered A")
 			if bchecked == true:
@@ -232,4 +251,6 @@ func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx
 func _on_area_2d_continue_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			playsound("click")
+			await get_tree().create_timer(0.7).timeout
 			get_tree().change_scene_to_file(scenepath)
