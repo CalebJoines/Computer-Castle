@@ -109,6 +109,171 @@
 	  ],
 	  "correct_index": 3,
 	  "explanation": "You can make public statements online in many places, and it's important to remember that others will see the things you say."
+	},
+	{
+		"question": "It's important to remember ___ can see the things you post online",
+		"choices": [
+		"People at school",
+		"Your boss at work",
+		"Your friends and neighboors",
+		"Everyone"
+		],
+		"correct_index": 3,
+		"explanation": "It's important to recognize that people at your school, job, or local community can see the things you say about them online"
+	},
+	{
+		"question": "Which of the following would be an appropriate thing to ask strangers online?",
+		"choices": [
+		"Where they are living right now",
+		"How their day is going",
+		"What their real name is",
+		"If they want to meet in person"
+		],
+		"correct_index": 1,
+		"explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal, and respect that they do the same."
+	},
+	{
+		"question": "When making posts to social media, you should never share ___.",
+		"choices": [
+		"Your personal contact information",
+		"A post celebrating a holiday",
+		"Your thoughts on a piece of music",
+		"Your first name"
+		],
+		"correct_index": 0,
+		"explanation": "Sharing information like your address, phone number, or details about your life an family can be dangerous! Social media posts are public, so keep your personal information personal."
+	},
+	{
+		"question": "When playing games or chatting online with strangers, you should always keep in mind that ____.",
+		"choices": [
+		"They are probably always lying to you",
+		"They are usually trustworthy, and you can tell them whatever you like",
+		"You don't know them, and you should talk to them just like you would any stranger in the real world",
+		"They are basically like your friends"
+		],
+		"correct_index": 2,
+		"explanation": "When playing games or chatting online, being kind to others and expecting them to be respectful of you is an important way to avoid bad interactions. Try to be kind, but don't overshare or ask for personal information."
+	},
+	{
+		"question": "The practice of using the internet to harrass, or threaten other people, often repeadedly.",
+		"choices": [
+		"Cyberbullying",
+		"Stalking",
+		"Phishing",
+		"Online harrassment"
+		],
+		"correct_index": 0,
+		"explanation": "Cyberbullying is an extension of bullying that uses the internet. Many forms of cyberbullying are considerd criminal harrassment, it's important to treat others with respect online and report cyberbullying when you see it."
+	},
+	{
+		"question": "Which of the following would be an inappropriate thing to post to social media?",
+		"choices": [
+		"A piece of art you like",
+		"Your opinion on a new song you heard",
+		"A happy birthday message for your friend",
+		"A picture of your in front of your house"
+		],
+		"correct_index": 3,
+		"explanation": "The things you post online are public and permanent, you should be very carefule what you choose to share."
+	},
+	{
+		"question": "All the information you leave behind when using the internet creates your ___.",
+		"choices": [
+		"Public record",
+		"Digital Footprint",
+		"Social media profile",
+		"Digital persona"
+		],
+		"correct_index": 1,
+		"explanation": "The digital footprint is trail of data and information you leave behind while using the internet, including social media posts, website visits, online purchases, and emails."
+	},
+	{
+		"question": "Which of these contributes to your digital footprint?",
+		"choices": [
+		"Social Media posts",
+		"Websits visits",
+		"Online purchases",
+		"All of these"
+		],
+		"correct_index": 3,
+		"explanation": "The digital footprint is trail of data and information you leave behind while using the internet, including social media posts, website visits, online purchases, and emails."
+	},
+	{
+		"question": "When you make an online purchase, the site you bought from ___.",
+		"choices": [
+		"Keeps track of what you bought and even shares what you like with advertisers",
+		"Has no record of the purchase",
+		"Deletes all of your information immediately",
+		"None of these"
+		],
+		"correct_index": 0,
+		"explanation": "Companies often save the purchasing habits of their customers and sell that information to advertisers to help them target you with ads you're more likely to click on."
+	},
+	{
+		"question": "The ads you see online are often ___.",
+		"choices": [
+		"Totally random",
+		"Based on your online activity",
+		"Based on the activity of people you know",
+		"Both B and C"
+		],
+		"correct_index": 3,
+		"explanation": "Online activity, both your own and people you contact via the internet, is data that advertisers use to send more personalized ads to you."
+	},
+	{
+		"question": "If someone online asks for your personal information what should you do?",
+		"choices": [
+		"Give them what they ask for",
+		"Block them and tell a trusted adult",
+		"Promise to share it if they share theirs with you",
+		"Threaten them so they don't do it again"
+		],
+		"correct_index": 1,
+		"explanation": "It's important when talking to people you're unfamiliar with online to keep information about your personal life personal, and respect that they do the same."
+	},
+	{
+		"question": "When you share things on social media, who can see it?",
+		"choices": [
+		"Your friends",
+		"Your neighboors",
+		"Future employers",
+		"Everyone"
+		],
+		"correct_index": 3,
+		"explanation": "It's important to recognize that people at your school, job, or local community can see the things you say about them online"
+	},
+	{
+		"question": "When trying to get a job, what is one of the first thing employers look at before hiring you?",
+		"choices": [
+		"Your social media pages",
+		"Your online shopping habits",
+		"Your browsing history",
+		"None of these"
+		],
+		"correct_index": 0,
+		"explanation": "Your social media presence is a public representation of you that everyone can see, including your future boss. Be careful what you share."
+	},
+	{
+		"question": "Adverstisers online will often buy and sell ___ to target ads to you better.",
+		"choices": [
+		"Your social media pages",
+		"Your browsing history",
+		"Your online shopping habits",
+		"Your medical records"
+		],
+		"correct_index": 2,
+		"explanation": "Companies often save the purchasing habits of their customers and sell that information to advertisers to help them target you with ads you're more likely to click on."
+	},
+	{
+		"question": "It's ok to post ___ online.",
+		"choices": [
+		"Information about your friend",
+		"A picture of your house",
+		"Your thoughts on a new game",
+		"All of these"
+		],
+		"correct_index": 3,
+		"explanation": "You should never share personal information about yourself or anyone else you know online. Be respectful of their privacy and protect your own."
 	}
   ]
 }

@@ -109,6 +109,171 @@
       ],
       "correct_index": 3,
       "explanation": "A Trojan Horse is malware disguised as a safe or normal program to trick people into downloading it."
-    }
+    },
+    {
+      "question": "A piece of malware that attatches itself to normal software and infects more of the computer once that program is run is called ___.",
+      "choices": [
+        "Phishing",
+        "Brute Force Attack",
+        "Spyware",
+        "Virus"
+      ],
+      "correct_index": 3,
+      "explanation": "A piece of malware that attatches itself to normal software and infects more of the computer once that program is run is called a virus."
+    },
+    {
+      "question": "___ is a digital attack that looks to trick people into giving up important information by lying or prentending to be someone they aren't.",
+      "choices": [
+        "Scamming",
+        "Virus",
+        "Phishing",
+        "Spyware"
+      ],
+      "correct_index": 2,
+      "explanation": "Phishing is an attack where people pretend to be someone they're not to trick others into giving them information they shouldn't have access to"
+    },
+    {
+      "question": "____ takes up space on your computer without doing any real harm besides slowing it down and being annoying.",
+      "choices": [
+        "Bloatware",
+        "Brute Force Attack",
+        "SpaceWaste",
+        "Spam"
+      ],
+      "correct_index": 0,
+      "explanation": "Bloatware is a type of software that is useless or annoying which takes up space on a computer while providing little function"
+    },
+    {
+      "question": "A ___ is malware which diguises itself as a saf program to trick people into downloading and running it.",
+      "choices": [
+        "Spam",
+        "Trojan Horse",
+        "Spyware",
+        "Phishing"
+      ],
+      "correct_index": 1,
+      "explanation": "Trojan Horse malware is hidden malware disguised as a safe and normal program to trick people into downloading it."
+    },
+    {
+      "question": "Hackers who try to break into a company or governments system to find security flaws.",
+      "choices": [
+        "White hat",
+        "Black Hat",
+        "Good Hacker",
+        "Grey Hat"
+      ],
+      "correct_index": 0,
+      "explanation": "White hat's are employed by organizations to help them find security flaws by trying to break in"
+    },
+    {
+      "question": "____ is a method of guessing a password by entering every possible password until the correct one is found.",
+      "choices": [
+        "Password Guessing",
+        "Virus",
+        "Sequence Cracking",
+        "Brute force attack"
+      ],
+      "correct_index": 3,
+      "explanation": "A Brute force is a method of guessing a password by trying every possible password until one is correct"
+    },
+    {
+      "question": "___ are annoying advertisements or messages, often sent via email or through websites.",
+      "choices": [
+        "Phishing",
+        "Spam",
+        "Adware",
+        "Virus"
+      ],
+      "correct_index": 1,
+      "explanation": "Spam is useless or obnoxious messages sent on the internet repeatedly and to lots of people"
+    },
+    {
+      "question": "This type of malware hides itself from your computer's antivirus inside the operating system kernel.",
+      "choices": [
+        "Spyware",
+        "Trojan Horse",
+        "Rootkit",
+        "Sneakware"
+      ],
+      "correct_index": 2,
+      "explanation": "Rootkit's attack the Kernel, the core of your computers operating system to avoid detection by normal scans"
+    },
+    {
+      "question": "These hackers attempt to break into other's computers and systems for profit or to cause damage.",
+      "choices": [
+        "White hat",
+        "Black hat",
+        "Grey Hat",
+        "Computer Cracker"
+      ],
+      "correct_index": 1,
+      "explanation": "Black hats are malicious (bad/dangerous) actors who are looking to exploit security flaws for their own gain"
+    },
+    {
+      "question": "___ infects your computer to monitor what you do and steal sensitive information.",
+      "choices": [
+        "Spyware",
+        "Secret Swiper",
+        "Trojan Horse",
+        "Sneakware"
+      ],
+      "correct_index": 0,
+      "explanation": "Spyware is A type of malware which infects a computer to steal sensitive information and monitor the user, often to track personal information like passwords or location"
+    },
+    {
+      "question": "___ is a piece of software that creates a record of every key pressed on a computer and sends it back to a hacker",
+      "choices": [
+        "Spyware",
+        "Keylogger",
+        "Rootkit",
+        "Virus"
+      ],
+      "correct_index": 1,
+      "explanation": "A Keylogger logs keystrokes, usually to send records of everything back to the hacker who deployed it. This can be used to steal personal information or passwords."
+    },
+    {
+      "question": "A ___ is a type of malware that repeatedly copies itself across networks without any human interaction.",
+      "choices": [
+        "Trojan Horse",
+        "Brue Force Attack",
+        "Keylogger",
+        "Worm"
+      ],
+      "correct_index": 3,
+      "explanation": "A worm is a piece of malware that spreads and copies itself independently as it infects more machines"
+    },
+    {
+      "question": "___ is malware that locks a person's computer and demands some amount of money in exchange for the password to unlock it or else all their data is lost.",
+      "choices": [
+        "Phishing",
+        "Hostageware",
+        "Ransomware",
+        "Spyware"
+      ],
+      "correct_index": 2,
+      "explanation": "Ransomware takes over someone's computer and threatens to delete or release all of their files and information if the hacker who deployed the ransomware is not paid within an set amount of time."
+    },
+    {
+      "question": "A coordinated atttack which uses many computers at once to overwhelm and disrupt a network by flooding it with messages/traffic",
+      "choices": [
+        "Brute force attack",
+        "DDoS",
+        "Virus",
+        "Rootkit"
+      ],
+      "correct_index": 1,
+      "explanation": "A DDoS (Distributed Denial of Service) attack used large networks of computers (called botnets) to flood and overwhelm networks with the goal of preventing real people from accessing the network or anything in it"
+    },
+    {
+      "question": "Software designed to infect, damage, steal and destroy data and computer systems",
+      "choices": [
+        "Spam",
+        "Hacker",
+        "Phishing",
+        "Malware"
+      ],
+      "correct_index": 3,
+      "explanation": "Malware is a piece of software designed to damage, destroy or steal data or computer systems"
+    }    
   ]
 }

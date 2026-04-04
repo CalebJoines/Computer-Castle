@@ -109,6 +109,171 @@
       ],
       "correct_index": 1,
       "explanation": "Lots of content online is designed to make people angry because it's attention grabbing and easy to spread. It's important to stop and think about what you're looking at and why it might have been posted."
+    },
+    {
+      "question": "Someone famous or popular being paid to advertise something online is called a ____.",
+      "choices": [
+        "Sponsorship",
+        "Scam",
+        "Advertisement",
+        "Movie"
+      ],
+      "correct_index": 0,
+      "explanation": "Sponsorships are often used to sell products to fans of celebrities, and while they will usually mention that they are sponsored, it's important to remember that someone you like may not know everything about the thing they're advertising."
+    },
+    {
+      "question": "An ___ is a message that's meant to convince you to buy something.",
+      "choices": [
+        "Invitation",
+        "Advertisement",
+        "Scam",
+        "Phishing attack"
+      ],
+      "correct_index": 1,
+      "explanation": "Advertisements are created to persuade people to buy products, visit places, or try something. If something online is trying to get you to buy or do something, it might be and ad."
+    },
+    {
+      "question": "Sponsorships are a type of ___ meant to make a product more appealing",
+      "choices": [
+        "Scam",
+        "Special discount",
+        "Malware",
+        "Advertisement"
+      ],
+      "correct_index": 3,
+      "explanation": "Sponsorships are often used to sell products to fans of celebrities, and while they will usually mention that they are sponsored, it's important to remember that someone you like may not know everything about the thing they're advertising."
+    },
+    {
+      "question": "A headline or image that's meant to grab your attention and get you to click is called ___.",
+      "choices": [
+        "Advertising",
+        "Phishing",
+        "Spam",
+        "Clickbait"
+      ],
+      "correct_index": 3,
+      "explanation": "Clickbait is anything meant to grab viewers attention and get them to click on something. While not all clickbait is used to spread misinformation, many people use it to advertise or attention on something that people wouldn't click on otherwise."
+    },
+    {
+      "question": "Asking questions about the things you see and hear online is called ___.",
+      "choices": [
+        "Untrustworthiness",
+        "Critical thinking",
+        "Blind faith",
+        "Analysis"
+      ],
+      "correct_index": 1,
+      "explanation": "Critical thinking is important to navigating not just the internet, but life! It's important to always ask questions about why something is the way it is."
+    },
+    {
+      "question": "A photo that has been edited which is intended to trick people into beleiving it's real is known as a ___.",
+      "choices": [
+        "Doctored photo",
+        "Forgery",
+        "Clickbait",
+        "Advertisement"
+      ],
+      "correct_index": 0,
+      "explanation": "A doctored photo is a photo that has been edited for the purpose of fooling people into beleiving something untrue. Always look closely at photo's online for anything that doesn't seem right."
+    },
+    {
+      "question": "Things you see online are always made/written by ___.",
+      "choices": [
+        "Generative AI",
+        "Human experts",
+        "Random people",
+        "It could be any of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Anyone can upload things to the internet, even AI. It's important to always double check where something came from before beleiving it."
+    },
+    {
+      "question": "___ can use generative AI to create and post content to the internet",
+      "choices": [
+        "Computer experts",
+        "Companies",
+        "Anyone",
+        "You"
+      ],
+      "correct_index": 2,
+      "explanation": "Generative AI tools are accessible to everyone, and AI generated content is often not trustworthy as it is difficult to verify a source."
+    },
+    {
+      "question": "A ___ source is a source that is verified by evidence and other experts and considered trustworty",
+      "choices": [
+        "Credible",
+        "Non credible",
+        "Unverified",
+        "Honest"
+      ],
+      "correct_index": 0,
+      "explanation": "Sources that have been verified and are considered trustworthy by experts are called credible sources."
+    },
+    {
+      "question": "True or false, generative AI always uses trustworthy sources to answer questions.",
+      "choices": [
+        "TRUE",
+        "FALSE",
+        "Generative AI can't answer questions",
+        "There are no trustworthy sources"
+      ],
+      "correct_index": 1,
+      "explanation": "Generative AI can sometime pull information from unreliable sources or just make things up. Always verify the answers it gives"
+    },
+    {
+      "question": "Celebrities and wealthy peopla are ___.",
+      "choices": [
+        "Always telling the truth online",
+        "Always lying online",
+        "Normal people who can lie or be wrong",
+        "Not real people"
+      ],
+      "correct_index": 2,
+      "explanation": "Fame and money doesn't guarantee that someone know's what they are talking about. Never assume that someone's status makes them an expert."
+    },
+    {
+      "question": "When two people disagree online, ___.",
+      "choices": [
+        "One is right and one is wrong",
+        "They are both right",
+        "They are both wrong",
+        "Any of these are possible"
+      ],
+      "correct_index": 3,
+      "explanation": "People online are people, and people can be right and wrong all the time. It's important to consider where information is coming from and what proof someone is providing when fact checking information."
+    },
+    {
+      "question": "When multiple people look at the same thing online, they will ___ get the same message from it.",
+      "choices": [
+        "Always",
+        "Never",
+        "Not always",
+        "Almost always"
+      ],
+      "correct_index": 2,
+      "explanation": "Many people interpret messages online differently, depending on their perspective."
+    },
+    {
+      "question": "Posts online that make you angry or upset are often called ___.",
+      "choices": [
+        "Rage bait",
+        "Clickbait",
+        "Spam",
+        "Advertisement"
+      ],
+      "correct_index": 0,
+      "explanation": "'Rage Bait' is a common form of online content that is intended to grab attention by causing people to become angry and reply"
+    },
+    {
+      "question": "Attention and engagement online is often very ___, and many people will do anything to get it.",
+      "choices": [
+        "Annoying",
+        "Valuable",
+        "Expensive",
+        "Important"
+      ],
+      "correct_index": 1,
+      "explanation": "Online, getting attention is an extremely valuable thing for advertisers and people on social media, and they will often do dishonest or dangerous things to get as much as possible"
     }
   ]
 }
