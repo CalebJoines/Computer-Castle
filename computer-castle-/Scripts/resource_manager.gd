@@ -1,7 +1,7 @@
 extends Node
 
 # RESOURCE VALUES
-var volts : int = 5
+var volts : int = 0
 var data : int = 0
 var circuits : int = 0
 var bandwidth : int = 0
