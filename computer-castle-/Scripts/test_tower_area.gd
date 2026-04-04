@@ -21,16 +21,24 @@ func _process(_delta):
 
 func try_place():
 	print("trying to place")
-	for slot in get_tree().get_nodes_in_group("slots"):
-		if slot.can_place_tower() and slot.global_position.distance_to(global_position) < 32:
-			print("placed")
-			slot.place_tower(self)
-			dragging = false
-			can_shoot = true
-			modulate = Color(1,1,1,1)
-			return
 	
-	queue_free()
+	var closest_slot = null
+	var closest_distance = 32.0
+	
+	for slot in get_tree().get_nodes_in_group("slots"):
+		var dist = slot.global_position.distance_to(global_position)
+		if slot.can_place_tower() and dist < closest_distance:
+			closest_slot = slot
+			closest_distance = dist
+	if closest_slot:
+		print("placed")
+		dragging = false
+		global_position = closest_slot.global_position
+		closest_slot.place_tower(self)	
+		can_shoot = true
+		modulate = Color(1,1,1,1)
+		return
+		queue_free()
 
 func _input(event):
 	if dragging and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
