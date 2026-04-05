@@ -109,6 +109,171 @@
       ],
       "correct_index": 3,
       "explanation": "Unless you know the website you're using is safe, don't give it personal information. It's important to protect your privacy at all times."
+    },
+    {
+      "question": "If a website asks to use your camera when it doesn't seem like it should need it, you should ___.",
+      "choices": [
+        "Allow it to use your camera",
+        "Turn off your device",
+        "Deny the permissions and close the website",
+        "Point your camera at the floor so it can't see you"
+      ],
+      "correct_index": 2,
+      "explanation": "A website should only ask to use your camera if there is a clear reason, never give permissions to websites just because they ask."
+    },
+    {
+      "question": "Website URL's starting with https:// are ___.",
+      "choices": [
+        "Using encryption",
+        "Unsafe",
+        "Higher quality",
+        "Ad-free"
+      ],
+      "correct_index": 0,
+      "explanation": "A website starting with https:// has encryption enabled, which usually means it's trustworthy. Plenty of websites will try to look official, but not everything you find online is safe."
+    },
+    {
+      "question": "Scammers frequently use ___ to try and get you to follow their instructions",
+      "choices": [
+        "Threats",
+        "Fear",
+        "A sense of hurry/rush",
+        "All of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Scammers will often try to make you panic by telling you you're in trouble and need to follow their instructions without thinking. Stay calm when strangers tell you something scary, and tell an adult if you're not sure what to do."
+    },
+    {
+      "question": "If a phone number you don't recognize calls you and says you were accepted into something you didn't apply for, that is almost certainly a ___.",
+      "choices": [
+        "Scam",
+        "Spam",
+        "Threat",
+        "Advertisement"
+      ],
+      "correct_index": 0,
+      "explanation": "If you didn't apply for something, there's no reason you should be accepted into it. Scammers will often impersonate rewards programs or offer special deals/benefits to trick you."
+    },
+    {
+      "question": "A website ending in ___. is probably safe.",
+      "choices": [
+        ".net",
+        ".com",
+        ".org",
+        ".io"
+      ],
+      "correct_index": 2,
+      "explanation": ".org is a trusted domain used by professional organization to prove they are trustworthy, typically a website ending in .org is safe."
+    },
+    {
+      "question": "If a person you don't know asks to call or message you, there's a good chance they are ___.",
+      "choices": [
+        "Your friend",
+        "The government",
+        "AI",
+        "Not Trustworthy"
+      ],
+      "correct_index": 3,
+      "explanation": "It's a safe practice to be wary of strangers reaching out to you, especially if they want to convince you to call them or have a conversation."
+    },
+    {
+      "question": "If someone calls you claiming to be your bank and asks you to transfer or deposit money to a different account, what should you do?",
+      "choices": [
+        "Listen to them",
+        "Hang up and block the number",
+        "Ask them to prove they're really your bank",
+        "Offer to call back later"
+      ],
+      "correct_index": 1,
+      "explanation": "Your bank may call you for a number of reasons, but they will never ask you to give them a password or transfer money into a different account."
+    },
+    {
+      "question": "If someone sends you a link to download a movie or game for free, you should ___.",
+      "choices": [
+        "Send it to a friend to see what happens",
+        "Click on it",
+        "Not click on it",
+        "Ask them to prove it's real"
+      ],
+      "correct_index": 2,
+      "explanation": "NEVER click on links from people you don't recognize, no matter how legitimate they may seem."
+    },
+    {
+      "question": "If you accidentally click a suspicous link, what should you do?",
+      "choices": [
+        "Share it with friends",
+        "Call the police",
+        "Close it and keep browsing",
+        "Close it and tell a trusted adult or run an antivirus scan"
+      ],
+      "correct_index": 3,
+      "explanation": "Clicking a supicious link might happen, but the important thing to do when it does is to make sure you take steps to stop anything worse from happening."
+    },
+    {
+      "question": "If a website asks you for a password to a different app or site, you should be ___.",
+      "choices": [
+        "Skeptical",
+        "Trusting",
+        "Afraid",
+        "Angry"
+      ],
+      "correct_index": 0,
+      "explanation": "Websites shouldn't ask you for a password for an account used on another platform without a very clear reason. Be cautious giving up your password anywhere."
+    },
+    {
+      "question": "In general, you should ___ clicking on random pop ups",
+      "choices": [
+        "Enjoy",
+        "Always be",
+        "Avoid",
+        "None of these"
+      ],
+      "correct_index": 2,
+      "explanation": "It's a good practice to avoid clicking on pop ups in general. Even if they're just ads, you have no reason to pay attention to them."
+    },
+    {
+      "question": "If your friend sends you a link and tells you to click on it with no explanation, you should ___.",
+      "choices": [
+        "Click it",
+        "Contact them through some other method and ask about it",
+        "Tell some other friend to click it first",
+        "None of these"
+      ],
+      "correct_index": 1,
+      "explanation": "If someone you know sends you a strange message, it's possible their account has been stolen. Make sure you let them and anyone who might be contacted by their account know right away and don't reply."
+    },
+    {
+      "question": "Websites that look official are ___ legitimate.",
+      "choices": [
+        "Always",
+        "Not always",
+        "Never",
+        "Mostly"
+      ],
+      "correct_index": 1,
+      "explanation": "Plenty of websites look pretty and professional, but that doesn't make them trustworthy. Don't let presentation stand as proof that a website is safe."
+    },
+    {
+      "question": "If a person contacts you online claiming to be ___, it is safe to trust them.",
+      "choices": [
+        "Tech support looking to fix a problem",
+        "A government official",
+        "An employer offering a job you don't recognize",
+        "None of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Scammers will impersonate anyone they think you might respond to. If someone strange reaches out to you unexpectedly, you should always be skeptical."
+    },
+    {
+      "question": "Stealing someones personal informtion to impersonate (pretend to be) them is called what?",
+      "choices": [
+        "False Flag atttack",
+        "Phishing",
+        "Identity Theft",
+        "Cyberbullying"
+      ],
+      "correct_index": 2,
+      "explanation": "Identity theft is when someone steals your personal information to pretend to be you online, buying things under your name, accessing personal accounts, and other harmful things."
     }
   ]
 }

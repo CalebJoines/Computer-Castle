@@ -109,6 +109,171 @@
       ],
       "correct_index": 2,
       "explanation": "Leaving Bluetooth and WiFi on while you're not using them can expose your device to threats, so turn them off when they're not being used."
+    },
+    {
+      "question": "If you have to leave your computer alone while in public, make sure you __ before walking away.",
+      "choices": [
+        "Leave it open",
+        "Close all your tabs and apps",
+        "Plug it in",
+        "Log out and turn it off or close it"
+      ],
+      "correct_index": 3,
+      "explanation": "You should try to avoid leaving your computer alone out in public, but if you have to walk away for a few minutes for some reason, make sure to log out and turn off the computer so no one can access your account."
+    },
+    {
+      "question": "Which of these passwords is most secure?",
+      "choices": [
+        "ABC123",
+        "ApplePie",
+        "7$2WhL09%21",
+        "1993"
+      ],
+      "correct_index": 2,
+      "explanation": "A strong password should be difficult to guess but easy to remember. Include lots of numbers and symbols, and longer is stronger!"
+    },
+    {
+      "question": "Two factor authentication is useful for what?",
+      "choices": [
+        "Keeping your device safe even if you password is stolen",
+        "Keeping people from guessing your password",
+        "Making it harder to log in to your device",
+        "Nothing"
+      ],
+      "correct_index": 0,
+      "explanation": "Two Factor authentication adds an extra method of verifying your identity on top of a password, and helps keep your device extra secure."
+    },
+    {
+      "question": "Which of the following is NOT dangerous to do online.",
+      "choices": [
+        "Write your password in a message",
+        "Download Files from somewhere you don't recognize",
+        "Make a social media post",
+        "Make an account password something simple"
+      ],
+      "correct_index": 2,
+      "explanation": "Always be careful downloading files online, and make sure your personal information and passwords are secure and private."
+    },
+    {
+      "question": "Which of these passwords is most secure?",
+      "choices": [
+        "ILikeDogs",
+        "1010101",
+        "Passw0rd",
+        "&2WditF$%agL"
+      ],
+      "correct_index": 3,
+      "explanation": "A strong password should be difficult to guess but easy to remember. Include lots of numbers and symbols, and longer is stronger!"
+    },
+    {
+      "question": "Always ___ before leaving a public computer.",
+      "choices": [
+        "Hit the power button",
+        "Log out",
+        "Unplug",
+        "Do nothing"
+      ],
+      "correct_index": 1,
+      "explanation": "Always log out of all your accounts when you're done using public computers, as anyone can sit down and gain access to your account if you don't."
+    },
+    {
+      "question": "If you're not using ___ you should turn it off.",
+      "choices": [
+        "WiFi",
+        "Bluetooth",
+        "NFC",
+        "All of these"
+      ],
+      "correct_index": 3,
+      "explanation": "Leaving on Bluetooth, WiFi, and NFC while you're not using them can expose your device to threats, ensure you turn them off when they're not being used."
+    },
+    {
+      "question": "Which of these is NOT a useful security method for your mobile device?",
+      "choices": [
+        "Password",
+        "Fingerprint scan",
+        "Lock and key",
+        "Face ID"
+      ],
+      "correct_index": 2,
+      "explanation": "While some large computers can be protected with physical security like locks, they're not practical for your mobile device."
+    },
+    {
+      "question": "Which of these passwords is most secure?",
+      "choices": [
+        "B@SEB@LL",
+        "November2nd",
+        "5923",
+        "W0(24j^sfnaFS#"
+      ],
+      "correct_index": 3,
+      "explanation": "A strong password should be difficult to guess but easy to remember. Include lots of numbers and symbols, and longer is stronger!"
+    },
+    {
+      "question": "A ___ is a security tool that protects your device by hiding your real IP address",
+      "choices": [
+        "VPN",
+        "Antivirus",
+        "Update",
+        "Password"
+      ],
+      "correct_index": 0,
+      "explanation": "A VPN is a security tool that protects your device by hiding your real IP address, creating an encrypted \"tunnel\" between you and the things you connect to."
+    },
+    {
+      "question": "If an app asks you for permissions and you're not sure why, what should you do?",
+      "choices": [
+        "Give it the permissions and hope it's ok",
+        "Deny the permissions until you can figure out if the app is trustworthy",
+        "Uninstall immediately and tell all your friends it's unsafe",
+        "Turn off your device"
+      ],
+      "correct_index": 1,
+      "explanation": "If an app asks for permissions to access something it doesn't seem like it should need, it's best to try to understand why it's asking and verify that the app is safe before allowing it access."
+    },
+    {
+      "question": "___ is the process of turning readable text into something unreadable by humans for secure transmission",
+      "choices": [
+        "Encoding",
+        "Programming",
+        "Hiding",
+        "Encryption"
+      ],
+      "correct_index": 3,
+      "explanation": "Encryption uses math equations to turn readable text and data into random strings of numbers and letters humans can't read to protect it while it's being sent."
+    },
+    {
+      "question": "If your friend asks for your password, what should you do?",
+      "choices": [
+        "Give it to them",
+        "Stop being their friend",
+        "Tell them no and explain that you shouldn't share passwords",
+        "Call the police"
+      ],
+      "correct_index": 2,
+      "explanation": "Never share your passwords with anyone except trusted adults like your parents."
+    },
+    {
+      "question": "All of the following are a type of device security except ___.",
+      "choices": [
+        "PIN Number",
+        "Password",
+        "Hard Drive",
+        "Fingerprint scanner"
+      ],
+      "correct_index": 2,
+      "explanation": "A hard drive is the physical data storage device in your computer it doesn't keep anything secure on it's own."
+    },
+    {
+      "question": "It's important to ___ regularly to have the best possible device security.",
+      "choices": [
+        "Change your password",
+        "Log into your device",
+        "Connect to the internet",
+        "Check your emails"
+      ],
+      "correct_index": 0,
+      "explanation": "Changing your password regularly is a good way to maintain extra security."
     }
   ]
 }

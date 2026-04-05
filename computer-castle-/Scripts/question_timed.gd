@@ -1,26 +1,19 @@
 extends Control
-#buttons
+#script for quicktime questions scene
 @onready var answerA: AnimatedSprite2D = %"AnswerButton A"
 @onready var answerB: AnimatedSprite2D = %"AnswerButton B"
 @onready var answerC: AnimatedSprite2D = %"AnswerButton C"
 @onready var answerD: AnimatedSprite2D = %"AnswerButton D"
-@onready var subbutton: AnimatedSprite2D = %"SubmitButton"
-@onready var continue_button: AnimatedSprite2D =%ContinueButton
-#
+@onready var subbutton: AnimatedSprite2D = %SubmitButton
 @onready var question_label: Label = %QuestionText
-@onready var explanation_label: Label = %ExplanationLabel
 @onready var answer_a_text: Label = %ChoiceA
 @onready var answer_b_text: Label = %ChoiceB
 @onready var answer_c_text: Label = %ChoiceC
 @onready var answer_d_text: Label = %ChoiceD
-
-#button checks
 @onready var achecked : bool = false
 @onready var bchecked : bool = false
 @onready var cchecked : bool = false
 @onready var dchecked : bool = false
-
-@onready var scenepath: String = "res://Scenes/resource_picker.tscn"
 var current_question = {}
 var selected_answer = ""
 var sounds = {
@@ -31,8 +24,6 @@ var sounds = {
 
 func _ready():
 	subbutton.visible = false
-	explanation_label.visible = false
-	continue_button.visible = false
 	load_question()
 
 func playsound(name):
@@ -80,76 +71,22 @@ func reset_selection():
 	answerD.play("Unclicked")
 	subbutton.visible = false
 	
-func show_explanationI():
-	playsound("incorrect")
-	explanation_label.text = current_question["explanation"]
-	question_label.add_theme_color_override("font_color",Color("red"))
-	question_label.text = "Incorrect!"
-	explanation_label.visible = true
-	answerA.visible = false
-	answerB.visible = false
-	answerC.visible = false
-	answerD.visible = false
-	subbutton.visible = false
-	await get_tree().create_timer(5.0).timeout
-	continue_button.visible = true
-	
-func show_explanationC():
-	playsound("correct")
-	explanation_label.text = current_question["explanation"]
-	question_label.add_theme_color_override("font_color",Color("dark green"))
-	question_label.text = "Correct!"
-	explanation_label.visible = true
-	continue_button.visible = true
-	answerA.visible = false
-	answerB.visible = false
-	answerC.visible = false
-	answerD.visible = false
-	subbutton.visible = false
-
-'''
-	"MediaLiteracy": "volts",
-	"DigitalFootprint": "data",
-	"DigitalThreats": "circuits",
-	"Scams_and_links": "bandwidth",
-	"Security": "ai_cores"
-'''
-	
 func check_answer():
 	selected_answer = get_selected_answer()
 	var bank = QuestionManager.get_bank()
 	if selected_answer == -1:   
 		return
 	if selected_answer == current_question["correct_index"]:
-		print("Correct!")
-		if (bank == "DigitalFootprint"):
-			ResourceManager.add_data(10)
-		if (bank == "DigitalThreats"):
-			ResourceManager.add_circuits(10)
-		if (bank == "MediaLiteracy"):
-			ResourceManager.add_volts(10)
-		if (bank == "Scams_and_links"):
-			ResourceManager.add_bandwidth(10)
-		if (bank == "Security"):
-			ResourceManager.add_ai_cores(10)
-			
-		QuestionManager.remove_question(current_question)
-		show_explanationC()
+		playsound("correct")
+		#add function that resumes play
+		pass
 	else:
-		if (bank == "DigitalFootprint"):
-			ResourceManager.add_data(5)
-		if (bank == "DigitalThreats"):
-			ResourceManager.add_circuits(5)
-		if (bank == "MediaLiteracy"):
-			ResourceManager.add_volts(5)
-		if (bank == "Scams_and_links"):
-			ResourceManager.add_bandwidth(5)
-		if (bank == "Security"):
-			ResourceManager.add_ai_cores(5)
-		print("Incorrect! Try Reading the Explanation")
-		show_explanationI()
+		playsound("incorrect")
+		#add function that decrements health bar and resumes play
+		pass
+		
 
-func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
+func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			playsound("click")
@@ -169,7 +106,6 @@ func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				answerA.play("Unclicked")
 				achecked = false
 				subbutton.visible = false
-
 
 func _on_area_2d_b_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -192,6 +128,7 @@ func _on_area_2d_b_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				bchecked = false
 				subbutton.visible = false
 			
+
 func _on_area_2d_c_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -233,7 +170,6 @@ func _on_area_2d_d_input_event(viewport: Node, event: InputEvent, shape_idx: int
 				answerD.play("Unclicked")
 				dchecked = false
 				subbutton.visible = false
-	
 func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -248,9 +184,6 @@ func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx
 				print("Answered D")
 			check_answer()
 
-func _on_area_2d_continue_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			playsound("click")
-			await get_tree().create_timer(0.7).timeout
-			get_tree().change_scene_to_file(scenepath)
+func _on_question_timer_timeout() -> void:
+	playsound("incorrect")
+	#add function that decrements health bar and resumes play
