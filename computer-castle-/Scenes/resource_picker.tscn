@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ch3fckar38htm"]
 
-[ext_resource type="Texture2D" uid="uid://bej6r2emtay4" path="res://Sprites/Environment Sprites/Resource-picker-screen.png" id="1_6okmw"]
+[ext_resource type="Texture2D" uid="uid://cuqel6ehlg8yv" path="res://Sprites/Environment Sprites/Resource-picker-screenUPDATED.png" id="1_g3ufx"]
 [ext_resource type="PackedScene" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
 [ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="3_j7fta"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
@@ -18,7 +18,7 @@
 
 [node name="ResourceBackground" type="Sprite2D" parent="." unique_id=798987420]
 position = Vector2(0, -1)
-texture = ExtResource("1_6okmw")
+texture = ExtResource("1_g3ufx")
 
 [node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
 
