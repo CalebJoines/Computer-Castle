@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
 [ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="3_j7fta"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="4_g3ufx"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="5_sqw27"]
 [ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="6_6okmw"]
 [ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="7_6okmw"]
@@ -34,6 +35,16 @@ scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "MediaLiteracy"
 
+[node name="VoltsLabel" type="Label" parent="ClickableBoxes/Volts Sprite" unique_id=52433338]
+texture_filter = 1
+offset_left = -32.26017
+offset_top = 55.674805
+offset_right = 27.73983
+offset_bottom = 71.80489
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Volts"
+
 [node name="DataSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=220409759]
 position = Vector2(-3, -43)
 scale = Vector2(1.78125, 1.78125)
@@ -45,6 +56,26 @@ position = Vector2(-33.68421, -33.68421)
 scale = Vector2(1.6842105, 1.6842105)
 scene_path = "res://Scenes/question.tscn"
 bank = "Security"
+
+[node name="CoresLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=68388691]
+texture_filter = 1
+offset_left = 95.99999
+offset_top = 60.070175
+offset_right = 156.0
+offset_bottom = 76.20025
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Cores"
+
+[node name="SignalsLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=500233807]
+texture_filter = 1
+offset_left = 208.2807
+offset_top = 60.070175
+offset_right = 292.2807
+offset_bottom = 76.20025
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Signals"
 
 [node name="Sprite2D3" type="Sprite2D" parent="ClickableBoxes" unique_id=1971554782]
 position = Vector2(220, -43)
@@ -58,12 +89,15 @@ scale = Vector2(1.6410258, 1.6410258)
 scene_path = "res://Scenes/question.tscn"
 bank = "DigitalThreats"
 
-[node name="BackButton" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-517, -300)
-scale = Vector2(2.8, 1.6)
-scene_path = "res://Scenes/game.tscn"
-bank = "DigitalFootprint"
+[node name="DataLabel" type="Label" parent="ClickableBoxes/Sprite2D3" unique_id=1628861198]
+texture_filter = 1
+offset_left = -146.59828
+offset_top = 58.529915
+offset_right = -93.53845
+offset_bottom = 74.65999
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Data"
 
 [node name="CablesSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=634485076]
 position = Vector2(-210, -43)
@@ -76,6 +110,16 @@ position = Vector2(-31.219513, -29.658546)
 scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "MediaLiteracy"
+
+[node name="CablesLabel" type="Label" parent="ClickableBoxes/CablesSprite" unique_id=462190860]
+texture_filter = 1
+offset_left = -36.42277
+offset_top = 55.67481
+offset_right = 49.95123
+offset_bottom = 71.804886
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Cables"
 
 [node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes" unique_id=944468073]
 position = Vector2(440, -43)
