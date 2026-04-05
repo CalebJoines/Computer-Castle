@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://ch3fckar38htm"]
+[gd_scene format=3 uid="uid://dixy52t1u1xph"]
 
-[ext_resource type="Texture2D" uid="uid://dveluokyt1ylc" path="res://Sprites/Environment Sprites/Resource-background.png" id="1_53bys"]
-[ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
-[ext_resource type="Texture2D" uid="uid://b23cno7sihbm1" path="res://Sprites/ResourceSprites/Energy.png" id="3_8usdw"]
+[ext_resource type="Texture2D" uid="uid://bej6r2emtay4" path="res://Sprites/Environment Sprites/Resource-picker-screen.png" id="1_6okmw"]
+[ext_resource type="PackedScene" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
+[ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="3_j7fta"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="5_sqw27"]
 [ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="6_6okmw"]
 [ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="7_6okmw"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="8_6okmw"]
+[ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="8_6okmw"]
 
 [node name="ResourcePicker" type="Node2D" unique_id=1574587499]
 
@@ -15,80 +15,77 @@
 
 [node name="ResourceBackground" type="Sprite2D" parent="." unique_id=798987420]
 position = Vector2(0, -1)
-texture = ExtResource("1_53bys")
+texture = ExtResource("1_6okmw")
 
 [node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
 
-[node name="Volts Button" parent="ClickableBoxes" unique_id=584798666 instance=ExtResource("2_ywnrd")]
-position = Vector2(-266, -13)
+[node name="Volts Sprite" type="Sprite2D" parent="ClickableBoxes" unique_id=1102679792]
+position = Vector2(-434, -43)
+scale = Vector2(1.9218746, 1.9218746)
+texture = ExtResource("3_j7fta")
+
+[node name="Volts Button" parent="ClickableBoxes/Volts Sprite" unique_id=584798666 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-33.300827, -29.138226)
+scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "MediaLiteracy"
 
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Volts Button" unique_id=1102679792]
-position = Vector2(19.999996, 19.000002)
-scale = Vector2(0.6406249, 0.6406249)
-texture = ExtResource("3_8usdw")
+[node name="DataSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=220409759]
+position = Vector2(-3, -43)
+scale = Vector2(1.78125, 1.78125)
+texture = ExtResource("4_7857q")
 
-[node name="Cores" parent="ClickableBoxes" unique_id=120710478 instance=ExtResource("2_ywnrd")]
-position = Vector2(-35, -12)
+[node name="Cores" parent="ClickableBoxes/DataSprite" unique_id=120710478 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-33.68421, -33.68421)
+scale = Vector2(1.6842105, 1.6842105)
 scene_path = "res://Scenes/question.tscn"
 bank = "Security"
 
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Cores" unique_id=220409759]
-position = Vector2(20, 20)
-scale = Vector2(0.59375, 0.59375)
-texture = ExtResource("4_7857q")
+[node name="Sprite2D3" type="Sprite2D" parent="ClickableBoxes" unique_id=1971554782]
+position = Vector2(220, -43)
+scale = Vector2(1.828125, 1.828125)
+texture = ExtResource("5_sqw27")
 
-[node name="Data" parent="ClickableBoxes" unique_id=798968945 instance=ExtResource("2_ywnrd")]
-position = Vector2(195, -10)
+[node name="Data" parent="ClickableBoxes/Sprite2D3" unique_id=798968945 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.999992, -32.000004)
+scale = Vector2(1.6410258, 1.6410258)
 scene_path = "res://Scenes/question.tscn"
 bank = "DigitalThreats"
 
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Data" unique_id=1971554782]
-position = Vector2(19.5, 19.5)
-scale = Vector2(0.609375, 0.609375)
-texture = ExtResource("5_sqw27")
-
-[node name="Cables2" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
-position = Vector2(449, -276)
+[node name="BackButton" parent="ClickableBoxes" unique_id=1430342612 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-517, -300)
+scale = Vector2(2.8, 1.6)
 scene_path = "res://Scenes/game.tscn"
 bank = "DigitalFootprint"
 
-[node name="Label" type="Label" parent="ClickableBoxes/Cables2" unique_id=1923792619]
-offset_left = -209.0
-offset_top = 13.0
-offset_right = -9.0
-offset_bottom = 36.0
-text = "Go to Tower Defense map"
-metadata/_edit_use_anchors_ = true
+[node name="CablesSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=634485076]
+position = Vector2(-210, -43)
+scale = Vector2(1.9218746, 1.9218746)
+texture = ExtResource("6_6okmw")
 
-[node name="Label" type="Label" parent="ClickableBoxes" unique_id=1870096570]
-offset_left = -255.0
-offset_top = -100.0
-offset_right = 254.0
-offset_bottom = -77.0
-text = "\\/                    Click boxes to pull up question scene                    \\/"
-metadata/_edit_use_anchors_ = true
-
-[node name="Cables" parent="ClickableBoxes" unique_id=1475129865 instance=ExtResource("2_ywnrd")]
-position = Vector2(-153, -14)
+[node name="Cables" parent="ClickableBoxes/CablesSprite" unique_id=1475129865 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.219513, -29.658546)
+scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "MediaLiteracy"
 
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Cables" unique_id=634485076]
-position = Vector2(19.999996, 19.000002)
-scale = Vector2(0.6406249, 0.6406249)
-texture = ExtResource("6_6okmw")
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes" unique_id=944468073]
+position = Vector2(440, -43)
+scale = Vector2(1.9218746, 1.9218746)
+texture = ExtResource("7_6okmw")
 
-[node name="Cables3" parent="ClickableBoxes" unique_id=1346519469 instance=ExtResource("2_ywnrd")]
-position = Vector2(83, -13)
+[node name="Bandwidth" parent="ClickableBoxes/Sprite2D" unique_id=1346519469 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.219513, -29.658546)
+scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "Scams_and_links"
-
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/Cables3" unique_id=944468073]
-position = Vector2(19.999996, 19.000002)
-scale = Vector2(0.6406249, 0.6406249)
-texture = ExtResource("7_6okmw")
 
 [node name="Resource_Counters" parent="." unique_id=654333457 instance=ExtResource("8_6okmw")]
 offset_left = -79.0
