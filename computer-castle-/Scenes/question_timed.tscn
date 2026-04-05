@@ -280,7 +280,7 @@ offset_bottom = 314.0
 theme_override_colors/font_color = Color(0.75, 0.052499995, 0.15712474, 1)
 theme_override_fonts/font = ExtResource("6_c43h2")
 theme_override_font_sizes/font_size = 24
-text = "15.00"
+text = "10.00"
 
 [connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]
