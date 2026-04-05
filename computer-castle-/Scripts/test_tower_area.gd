@@ -31,14 +31,16 @@ func try_place():
 			closest_slot = slot
 			closest_distance = dist
 	if closest_slot:
-		print("placed")
-		dragging = false
-		global_position = closest_slot.global_position
-		closest_slot.place_tower(self)	
-		can_shoot = true
-		modulate = Color(1,1,1,1)
-		return
-		queue_free()
+		var success = closest_slot.place_tower(self)
+		if success:
+			print("placed")
+			dragging = false
+			global_position = closest_slot.global_position
+			can_shoot = true
+			modulate = Color(1,1,1,1)
+		else:
+			print("not enough resources")
+			queue_free()
 
 func _input(event):
 	if dragging and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:

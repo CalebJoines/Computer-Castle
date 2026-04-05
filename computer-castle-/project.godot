@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 QuestionManager="*uid://bj1hdmqnidl4e"
 ResourceManager="*uid://dne6mc2viljvh"
+LevelManager="*uid://dhvgk884fgimq"
 
 [physics]
 
