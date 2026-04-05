@@ -87,6 +87,8 @@ func attack(target: Area2D) -> void:
 	match tower_data.attack_type:
 		"projectile":
 			_fire_projectiles(target)
+		"aoe":
+			_fire_aoe(target)
 
 	await get_tree().create_timer(tower_data.attack_rate).timeout
 	can_shoot = true
@@ -113,6 +115,8 @@ func _fire_aoe(_target: Area2D) -> void:
 	for enemy in enemies_in_range:
 		if is_instance_valid(enemy) and enemy.has_method("take_damage"):
 			enemy.take_damage(tower_data.damage)
+		
+	print("all enemies have been damaged")
 
 func _on_area_entered(body: Area2D) -> void:
 	if body.is_in_group("enemies") and body not in enemies_in_range:

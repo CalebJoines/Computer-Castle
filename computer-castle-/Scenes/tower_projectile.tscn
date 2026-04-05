@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cpyyw3groinul"]
 
 [ext_resource type="Script" uid="uid://cbscx7k44w8vn" path="res://Scripts/tower_projectile.gd" id="1_l8dsa"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l8dsa"]
-size = Vector2(20, 10)
+[ext_resource type="Texture2D" uid="uid://cysqnmcl3qrun" path="res://Sprites/Tower Sprites/cannon-projectile.png" id="2_rmei8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8dsa"]
 size = Vector2(40, 20)
@@ -13,7 +11,7 @@ script = ExtResource("1_l8dsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=958434879]
 scale = Vector2(2, 2)
-texture = SubResource("PlaceholderTexture2D_l8dsa")
+texture = ExtResource("2_rmei8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1105342799]
 shape = SubResource("RectangleShape2D_l8dsa")
