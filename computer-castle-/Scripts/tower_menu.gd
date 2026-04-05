@@ -1,11 +1,19 @@
+		
 extends Control
-#tower menu
-@export var tower_scene: PackedScene 
 
+@export var base_tower_scene: PackedScene
+@export var available_towers: Array[TowerData]
 
 func _on_tower_buton_pressed() -> void:
-	if tower_scene:
-		var tower_instance = tower_scene.instantiate()
-		tower_instance.z_index = 100   
-		tower_instance.modulate = Color(1,1,1,0.5)  # semi-transparent preview
-		get_tree().current_scene.add_child(tower_instance)
+	if available_towers.size() > 0:
+		spawn_tower(available_towers[0])
+
+func spawn_tower(tower_data: TowerData) -> void:
+	if base_tower_scene == null or tower_data == null:
+		return
+
+	var tower_instance = base_tower_scene.instantiate()
+	tower_instance.tower_data = tower_data
+	tower_instance.z_index = 100
+	tower_instance.modulate = Color(1, 1, 1, 0.5)
+	get_tree().current_scene.add_child(tower_instance)

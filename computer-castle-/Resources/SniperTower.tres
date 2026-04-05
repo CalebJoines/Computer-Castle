@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://br2jvnrfy7mje"]
+
+[ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="1_10mhp"]
+
+[resource]
+script = ExtResource("1_10mhp")
+tower_name = "Sniper Tower"
+damage = 5
+attack_rate = 2.0
+range_radius = 300.0
+metadata/_custom_type_script = "uid://bf8gsn65re6v6"

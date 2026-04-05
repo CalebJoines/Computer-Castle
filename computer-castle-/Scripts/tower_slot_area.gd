@@ -1,3 +1,4 @@
+
 extends Area2D
 
 var is_occupied = false
@@ -9,7 +10,7 @@ var sounds = {
 
 func _ready():
 	add_to_group("slots")
-	
+
 func playsound(name):
 	var player = AudioStreamPlayer.new()
 	player.stream = sounds[name]
@@ -17,19 +18,22 @@ func playsound(name):
 	player.play()
 	player.finished.connect(player.queue_free)
 
-func can_place_tower() -> bool:
-	return not is_occupied
-
-func place_tower(tower):
-	if not can_place_tower():
+func can_place_tower(tower = null) -> bool:
+	if is_occupied:
 		return false
-	if ResourceManager.get_volts() >= 1:
-		playsound("place")
-		current_tower = tower
-		tower.global_position = global_position
-		is_occupied = true
-		ResourceManager.spend_volts(1)
-		return true
-	else:
+	if tower == null or tower.tower_data == null:
+		return false
+	return ResourceManager.get_volts() >= tower.tower_data.cost
+
+func place_tower(tower) -> bool:
+	if not can_place_tower(tower):
 		playsound("cantplace")
 		return false
+
+	playsound("place")
+	current_tower = tower
+	tower.global_position = global_position
+	is_occupied = true
+	ResourceManager.spend_volts(tower.tower_data.cost)
+	print("placed tower!")
+	return true
