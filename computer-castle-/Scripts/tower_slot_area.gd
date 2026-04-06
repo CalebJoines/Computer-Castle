@@ -24,7 +24,24 @@ func can_place_tower(tower = null) -> bool:
 		return false
 	if tower == null or tower.tower_data == null:
 		return false
-	return ResourceManager.get_volts() >= tower.tower_data.cost
+	for cost in tower.tower_data.cost:
+		match cost[1]:
+			"bandwidth":
+				if ResourceManager.get_bandwidth() < cost[0]:
+					return false
+			"volts":
+				if ResourceManager.get_volts() < cost[0]:
+					return false
+			"data":
+				if ResourceManager.get_data() < cost[0]:
+					return false
+			"circuits":
+				if ResourceManager.get_circuits() < cost[0]:
+					return false
+			"ai cores":
+				if ResourceManager.get_ai_cores() < cost[0]:
+					return false
+	return true
 
 func place_tower(tower) -> bool:
 	if not can_place_tower(tower):
@@ -39,6 +56,17 @@ func place_tower(tower) -> bool:
 	tower.scale = Vector2(2, 2)
 	is_occupied = true
 	Baseplate.visible=true
-	ResourceManager.spend_volts(tower.tower_data.cost)
+	for cost in tower.tower_data.cost:
+		match cost[1]:
+			"bandwidth":
+				ResourceManager.spend_bandwidth(cost[0])
+			"volts":
+				ResourceManager.spend_volts(cost[0])
+			"data":
+				ResourceManager.spend_data(cost[0])
+			"circuits":
+				ResourceManager.spend_circuits(cost[0])
+			"ai cores":
+				ResourceManager.spend_ai_cores(cost[0])
 	print("placed tower!")
 	return true

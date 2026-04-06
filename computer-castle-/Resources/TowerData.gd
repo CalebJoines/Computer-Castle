@@ -2,7 +2,7 @@ extends Resource
 class_name TowerData
 
 @export var tower_name: String = "Cannon Tower"
-@export var cost: int = 1
+@export var cost: Array[Array] = [[1, "volts"]]
 @export var damage: int = 1
 @export var attack_rate: float = 1.0
 @export var range_radius: float = 150.0
