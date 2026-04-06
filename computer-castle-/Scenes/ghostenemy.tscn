@@ -1,37 +1,36 @@
-[gd_scene format=3 uid="uid://cpefxcv7hbp3e"]
+[gd_scene format=3 uid="uid://c0ds3e6ucpj4w"]
 
-[ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_hghv2"]
-[ext_resource type="Texture2D" uid="uid://cl7j3awp88678" path="res://Sprites/Enemy Sprites/Knight-enemy-sprite.png" id="2_1f0kj"]
+[ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_mvdql"]
+[ext_resource type="Texture2D" uid="uid://cdlm71v48ymlj" path="res://Sprites/Enemy Sprites/ghost-enemy-sprite.png" id="2_mvdql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(18.75, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_afpow"]
-atlas = ExtResource("2_1f0kj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvdbr"]
+atlas = ExtResource("2_mvdql")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_287tu"]
-atlas = ExtResource("2_1f0kj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jni6"]
+atlas = ExtResource("2_mvdql")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0830c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_afpow")
+"texture": SubResource("AtlasTexture_dvdbr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_287tu")
+"texture": SubResource("AtlasTexture_8jni6")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Enemy" type="Area2D" unique_id=1902402437]
-script = ExtResource("1_hghv2")
-max_hp = 20
-move_speed = 40.0
+[node name="GhostEnemy" type="Area2D" unique_id=1902402437]
+script = ExtResource("1_mvdql")
+move_speed = 80.0
 damage_to_base = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698986685]
@@ -42,4 +41,4 @@ shape = SubResource("RectangleShape2D_ne65n")
 scale = Vector2(0.5, 1)
 sprite_frames = SubResource("SpriteFrames_0830c")
 autoplay = "default"
-frame_progress = 0.49857265
+frame_progress = 0.6315965

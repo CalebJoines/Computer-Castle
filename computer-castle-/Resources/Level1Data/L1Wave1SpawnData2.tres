@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://dlwntfi168nim"]
+
+[ext_resource type="PackedScene" uid="uid://c0ds3e6ucpj4w" path="res://Scenes/ghostenemy.tscn" id="1_o6dtq"]
+[ext_resource type="Script" uid="uid://3bvc7ulixw45" path="res://Resources/EnemySpawnData.gd" id="2_b3cfg"]
+
+[resource]
+script = ExtResource("2_b3cfg")
+enemy_scene = ExtResource("1_o6dtq")
+count = 10
+metadata/_custom_type_script = "uid://3bvc7ulixw45"

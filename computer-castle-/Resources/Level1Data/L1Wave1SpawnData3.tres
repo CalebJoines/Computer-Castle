@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://bh26grl1w4wvb"]
+
+[ext_resource type="PackedScene" uid="uid://cpefxcv7hbp3e" path="res://Scenes/enemy.tscn" id="1_sp5tn"]
+[ext_resource type="Script" uid="uid://3bvc7ulixw45" path="res://Resources/EnemySpawnData.gd" id="2_2ukdt"]
+
+[resource]
+script = ExtResource("2_2ukdt")
+enemy_scene = ExtResource("1_sp5tn")
+spawn_interval = 2.0
+metadata/_custom_type_script = "uid://3bvc7ulixw45"
