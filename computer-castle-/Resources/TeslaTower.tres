@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://cocr72ktjlim7"]
 
+[ext_resource type="Script" path="res://Resources/TowerData.gd" id="1_tgfu3"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="1_tgfu3"]
 [ext_resource type="PackedScene" uid="uid://nlgfxin3uy0s" path="res://Scenes/TowerAOE.tscn" id="1_xqdfo"]
 [ext_resource type="Texture2D" uid="uid://duc3by1belo28" path="res://Sprites/Tower Sprites/tezla-tower-sprite.png" id="2_y5kk5"]
