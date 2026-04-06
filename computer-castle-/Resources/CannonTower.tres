@@ -1,8 +1,6 @@
 [gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://jqvtyn35lgeb"]
 
 [ext_resource type="PackedScene" uid="uid://cpyyw3groinul" path="res://Scenes/tower_projectile.tscn" id="1_pagnn"]
-[ext_resource type="Script" path="res://Resources/TowerData.gd" id="1_qwh32"]
-[ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="3_wv7rj"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="1_qwh32"]
 [ext_resource type="Texture2D" uid="uid://baeqhpdx2nv24" path="res://Sprites/Tower Sprites/cannon-tower-sprite.png" id="3_pagnn"]
 
@@ -10,4 +8,5 @@
 script = ExtResource("1_qwh32")
 tower_texture = ExtResource("3_pagnn")
 projectile_scene = ExtResource("1_pagnn")
+shoot_audio = "res://Audio/Sound_effects/Tower_SFX/Turret_Shot_1.mp3"
 metadata/_custom_type_script = "uid://bf8gsn65re6v6"

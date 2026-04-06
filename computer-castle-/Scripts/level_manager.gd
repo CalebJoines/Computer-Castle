@@ -11,6 +11,9 @@ func get_current_level() -> String:
 	if current_level_index >= 0 and current_level_index < levels.size():
 		return levels[current_level_index]
 	return ""
+	
+func get_current_level_index():
+	return current_level_index
 
 #Call this when level is beaten
 func set_next_level() -> void:

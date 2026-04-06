@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cyeowlutw7fu1" path="res://Scripts/tower_menu.gd" id="1_on2a2"]
 [ext_resource type="Texture2D" uid="uid://baeqhpdx2nv24" path="res://Sprites/Tower Sprites/cannon-tower-sprite.png" id="2_i8h0h"]
 [ext_resource type="Texture2D" uid="uid://duc3by1belo28" path="res://Sprites/Tower Sprites/tezla-tower-sprite.png" id="3_71s0o"]
+[ext_resource type="Texture2D" uid="uid://ddq7iewrrhqqa" path="res://Sprites/Tower Sprites/Sniper-Tower.png" id="4_71s0o"]
 
 [node name="TowerMenu" type="Control" unique_id=1471395188]
 layout_mode = 3
@@ -28,5 +29,12 @@ layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("3_71s0o")
 
+[node name="TowerButon3" type="TextureButton" parent="VBoxContainer" unique_id=340919475]
+texture_filter = 1
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("4_71s0o")
+
 [connection signal="pressed" from="VBoxContainer/TowerButon" to="." method="_on_cannon_tower_buton_pressed"]
 [connection signal="pressed" from="VBoxContainer/TowerButon2" to="." method="_on_tesla_tower_buton_pressed"]
+[connection signal="pressed" from="VBoxContainer/TowerButon3" to="." method="_on_sniper_tower_buton_pressed"]

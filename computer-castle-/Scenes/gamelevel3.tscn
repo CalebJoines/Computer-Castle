@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_uovhl"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_lsjxf"]
 [ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="11_13tbd"]
+[ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="11_13tbd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_vfng6")
@@ -151,6 +152,8 @@ texture_filter = 1
 position = Vector2(1097, 211)
 scale = Vector2(2, 2)
 texture = ExtResource("11_13tbd")
+[node name="HealthBar" parent="." unique_id=1281284264 instance=ExtResource("11_13tbd")]
+position = Vector2(184, 296)
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="CanvasLayer/TowerMenu" method="_on_audio_stream_player_2d_finished"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]

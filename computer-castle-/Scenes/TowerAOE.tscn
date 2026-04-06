@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://nlgfxin3uy0s"]
+
+[ext_resource type="Script" uid="uid://xf5q218mugva" path="res://Scenes/tower_aoe.gd" id="1_bdojs"]
+[ext_resource type="Texture2D" uid="uid://80k5xbtj75ot" path="res://Sprites/Tower Sprites/tezla-tower-sprite-Sheet.png" id="1_v4dc7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdojs"]
+atlas = ExtResource("1_v4dc7")
+region = Rect2(0, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ioni"]
+atlas = ExtResource("1_v4dc7")
+region = Rect2(0, 130, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j0nq"]
+atlas = ExtResource("1_v4dc7")
+region = Rect2(0, 260, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3cyy"]
+atlas = ExtResource("1_v4dc7")
+region = Rect2(0, 390, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxv21"]
+atlas = ExtResource("1_v4dc7")
+region = Rect2(0, 520, 128, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4qe3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdojs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ioni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j0nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3cyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxv21")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TowerAoe" type="Area2D" unique_id=355147409]
+z_index = 5
+script = ExtResource("1_bdojs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638275470]
+sprite_frames = SubResource("SpriteFrames_i4qe3")
+frame_progress = 0.30884543
