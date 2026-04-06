@@ -115,6 +115,12 @@ func _fire_aoe(_target: Area2D) -> void:
 	for enemy in enemies_in_range:
 		if is_instance_valid(enemy) and enemy.has_method("take_damage"):
 			enemy.take_damage(tower_data.damage)
+			
+		if tower_data.projectile_scene:
+			var aoe = tower_data.projectile_scene.instantiate()
+			aoe.global_position = global_position
+			get_tree().current_scene.add_child(aoe)
+			
 		
 	print("all enemies have been damaged")
 
