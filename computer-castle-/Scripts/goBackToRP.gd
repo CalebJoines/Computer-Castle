@@ -18,5 +18,6 @@ func on_button_press(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			playsound("click")
+			ResourceManager.reset_resources()
 			await get_tree().create_timer(0.5).timeout
 			get_tree().change_scene_to_file(scenepath)

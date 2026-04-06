@@ -27,5 +27,5 @@ func on_button_press(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 				scenepath = "res://Scenes/game_win.tscn"
 			else:
 				LevelManager.set_next_level()
-				
+			ResourceManager.reset_resources()
 			get_tree().change_scene_to_file(scenepath)

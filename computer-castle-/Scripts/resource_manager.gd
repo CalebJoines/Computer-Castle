@@ -40,7 +40,7 @@ func add_energy(amount:int):
 func add_ai_cores(amount:int):
 	ai_cores += amount
 	print("AI Cores:", ai_cores)
-
+	
 
 # SPEND / REMOVE RESOURCES
 func spend_volts(amount:int) -> bool:
@@ -122,6 +122,15 @@ func get_ai_cores() -> int:
 
 func get_energy() -> int:
 	return energy
+	
+func reset_resources():
+	ai_cores=0
+	volts=0
+	circuits=0
+	bandwidth=0
+	data=0
+	health=max_health
+	energy = (LevelManager.get_current_level_index()*10)
 	
 #healthbar stuff
 func take_damage(damage:int):
