@@ -7,7 +7,13 @@ var circuits : int = 0
 var bandwidth : int = 0
 var ai_cores : int = 0
 var energy : int = 5
+var health: int = 23:
+	set(value):
+		health = clamp(value, 0, max_health) #ensures health doesn't go outside normal rangee
+		emit_signal("health_changed", health)
+var max_health: int = 23
 
+signal health_changed(new_health)
 # ADD RESOURCES
 func add_volts(amount:int):
 	volts += amount
@@ -116,3 +122,16 @@ func get_ai_cores() -> int:
 
 func get_energy() -> int:
 	return energy
+	
+#healthbar stuff
+func take_damage(damage:int):
+	if health > 0:
+		health = health - damage
+	else:
+		pass # add fail state
+
+func reset_health():
+	health = max_health
+	
+func get_health():
+	return health
