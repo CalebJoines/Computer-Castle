@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_qwh32")
+cost = Array[Array]([[5, "volts"], [5, "circuits"]])
 tower_texture = ExtResource("3_pagnn")
 projectile_scene = ExtResource("1_pagnn")
 shoot_audio = "res://Audio/Sound_effects/Tower_SFX/Turret_Shot_1.mp3"

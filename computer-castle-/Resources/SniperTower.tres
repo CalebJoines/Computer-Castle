@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_10mhp")
 tower_name = "Sniper Tower"
-cost = 2
+cost = Array[Array]([[5, "bandwidth"], [5, "data"]])
 damage = 2
 attack_rate = 2.0
 range_radius = 1000.0
