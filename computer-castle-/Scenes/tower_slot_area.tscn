@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://yadoxet0k4gn" path="res://Scripts/tower_slot_area.gd" id="1_81m5x"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="1_bxpw8"]
+[ext_resource type="Texture2D" uid="uid://3n6gbga1mqtb" path="res://Sprites/Tower Sprites/TowerBase.png" id="3_12xhb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81m5x"]
 size = Vector2(48, 48)
@@ -15,3 +16,9 @@ texture = ExtResource("1_bxpw8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715173360]
 shape = SubResource("RectangleShape2D_81m5x")
+
+[node name="plate" type="Sprite2D" parent="." unique_id=1950317025]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+texture = ExtResource("3_12xhb")

@@ -3,6 +3,7 @@ extends Area2D
 
 var is_occupied = false
 var current_tower = null
+@onready var Baseplate= %plate
 var sounds = {
 	"cantplace": preload("res://Audio/Sound_effects/Map_SFX/Not_Enough_Resources.mp3"),
 	"place": preload("res://Audio/Sound_effects/Tower_SFX/Build_Tower.mp3"),
@@ -32,8 +33,12 @@ func place_tower(tower) -> bool:
 
 	playsound("place")
 	current_tower = tower
+	tower.get_parent().remove_child(tower)
+	add_child(tower)	
 	tower.global_position = global_position
+	tower.scale = Vector2(2, 2)
 	is_occupied = true
+	Baseplate.visible=true
 	ResourceManager.spend_volts(tower.tower_data.cost)
 	print("placed tower!")
 	return true
