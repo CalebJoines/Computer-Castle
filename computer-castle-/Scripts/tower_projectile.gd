@@ -10,7 +10,6 @@ var direction: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	
 	print("projectile ready, target = ", target)
-	$Sprite2D.modulate = Color(1, 0, 0)
 
 	area_entered.connect(_on_area_entered)
 
