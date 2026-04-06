@@ -55,7 +55,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-33.68421, -33.68421)
 scale = Vector2(1.6842105, 1.6842105)
 scene_path = "res://Scenes/question.tscn"
-bank = "Security"
+bank = "DigitalFootprint"
 
 [node name="CoresLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=68388691]
 texture_filter = 1
@@ -67,7 +67,7 @@ theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
 text = "Cores"
 
-[node name="SignalsLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=500233807]
+[node name="BandwidthLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=500233807]
 texture_filter = 1
 offset_left = 208.2807
 offset_top = 60.070175
@@ -75,19 +75,19 @@ offset_right = 292.2807
 offset_bottom = 76.20025
 theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
-text = "Signals"
+text = "Bandwidth"
 
 [node name="Sprite2D3" type="Sprite2D" parent="ClickableBoxes" unique_id=1971554782]
 position = Vector2(220, -43)
 scale = Vector2(1.828125, 1.828125)
 texture = ExtResource("5_sqw27")
 
-[node name="Data" parent="ClickableBoxes/Sprite2D3" unique_id=798968945 instance=ExtResource("2_ywnrd")]
+[node name="Cores" parent="ClickableBoxes/Sprite2D3" unique_id=798968945 instance=ExtResource("2_ywnrd")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-31.999992, -32.000004)
 scale = Vector2(1.6410258, 1.6410258)
 scene_path = "res://Scenes/question.tscn"
-bank = "DigitalThreats"
+bank = "Security"
 
 [node name="DataLabel" type="Label" parent="ClickableBoxes/Sprite2D3" unique_id=1628861198]
 texture_filter = 1
@@ -109,7 +109,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-31.219513, -29.658546)
 scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
-bank = "MediaLiteracy"
+bank = "DigitalThreats"
 
 [node name="CablesLabel" type="Label" parent="ClickableBoxes/CablesSprite" unique_id=462190860]
 texture_filter = 1
