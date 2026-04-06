@@ -8,9 +8,9 @@
 script = ExtResource("1_10mhp")
 tower_name = "Sniper Tower"
 cost = 2
-damage = 5
+damage = 2
 attack_rate = 2.0
-range_radius = 300.0
+range_radius = 1000.0
 tower_texture = ExtResource("3_djuhq")
 projectile_scene = ExtResource("1_lx83b")
 metadata/_custom_type_script = "uid://bf8gsn65re6v6"
