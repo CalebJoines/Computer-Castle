@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_1phco"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_1phco"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_h4fw4"]
+[ext_resource type="Resource" uid="uid://br2jvnrfy7mje" path="res://Resources/SniperTower.tres" id="9_nb51f"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_ldgsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
@@ -84,7 +85,7 @@ offset_top = 24.0
 offset_right = 1112.0
 offset_bottom = 88.0
 base_tower_scene = ExtResource("5_o5yvi")
-available_towers = Array[ExtResource("6_rfjv2")]([ExtResource("7_1phco"), ExtResource("8_1phco")])
+available_towers = Array[ExtResource("6_rfjv2")]([ExtResource("7_1phco"), ExtResource("8_1phco"), ExtResource("9_nb51f")])
 
 [node name="towerslots" type="Node" parent="." unique_id=595770103]
 

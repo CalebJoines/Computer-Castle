@@ -22,3 +22,8 @@ func _on_tesla_tower_buton_pressed() -> void:
 func _on_cannon_tower_buton_pressed() -> void:
 	if available_towers.size() > 0:
 		spawn_tower(available_towers[0])
+
+
+func _on_sniper_tower_buton_pressed() -> void:
+	if available_towers.size() > 2:
+		spawn_tower(available_towers[2])
