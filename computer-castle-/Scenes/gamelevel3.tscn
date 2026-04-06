@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_vfng6"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_13tbd"]
 [ext_resource type="Texture2D" uid="uid://iiaq2qphee8c" path="res://Sprites/Environment Sprites/Environment Extended.png" id="3_2u2m6"]
-[ext_resource type="PackedScene" path="res://Scenes/tower_menu.tscn" id="4_0ixk2"]
+[ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="4_0ixk2"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="5_tkswy"]
 [ext_resource type="PackedScene" path="res://Scenes/spawner.tscn" id="6_r55dq"]
 [ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1.tres" id="7_2sahm"]
 [ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="8_pqnnw"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_uovhl"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_lsjxf"]
-[ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="11_13tbd"]
 [ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="11_13tbd"]
+[ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="12_2u2m6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_vfng6")
@@ -77,9 +77,9 @@ layer_0/tile_data = PackedInt32Array(65514, 131072, 0, 65515, 131072, 0, 65516, 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=23494926]
 
 [node name="TowerMenu" parent="CanvasLayer" unique_id=1471395188 instance=ExtResource("4_0ixk2")]
-offset_left = 1048.0
+offset_left = 1023.0
 offset_top = 24.0
-offset_right = 1112.0
+offset_right = 1087.0
 offset_bottom = 88.0
 
 [node name="towerslots" type="Node" parent="." unique_id=595770103]
@@ -151,9 +151,15 @@ script = ExtResource("10_lsjxf")
 texture_filter = 1
 position = Vector2(1097, 211)
 scale = Vector2(2, 2)
-texture = ExtResource("11_13tbd")
+
 [node name="HealthBar" parent="." unique_id=1281284264 instance=ExtResource("11_13tbd")]
 position = Vector2(184, 296)
+
+[node name="Castle" type="Sprite2D" parent="." unique_id=1033068467]
+texture_filter = 1
+position = Vector2(1100, 209)
+scale = Vector2(2, 2)
+texture = ExtResource("12_2u2m6")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="CanvasLayer/TowerMenu" method="_on_audio_stream_player_2d_finished"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]
