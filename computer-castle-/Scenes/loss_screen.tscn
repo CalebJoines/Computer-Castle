@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://crrilom5vlnyl"]
+
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="1_jhgxs"]
+[ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="2_k2ia7"]
+[ext_resource type="Script" uid="uid://bv2kxyigajpdj" path="res://Scripts/goBackToRP.gd" id="3_dbwqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
+atlas = ExtResource("2_k2ia7")
+region = Rect2(0, 0, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
+atlas = ExtResource("2_k2ia7")
+region = Rect2(0, 48, 256, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0bu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mstrt")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhl4r"]
+size = Vector2(256, 48)
+
+[node name="LossScreen" type="Node2D" unique_id=108959778]
+
+[node name="Failscreen" type="AnimatedSprite2D" parent="." unique_id=1510829317]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=574298421]
+position = Vector2(576, 328)
+
+[node name="Message" type="Label" parent="." unique_id=729979147]
+offset_left = 144.0
+offset_top = 112.0
+offset_right = 1008.0
+offset_bottom = 179.0
+theme_override_fonts/font = ExtResource("1_jhgxs")
+theme_override_font_sizes/font_size = 32
+text = "The castle was destroyed!!
+ Hit continue to try again."
+
+[node name="SubmitButton" type="AnimatedSprite2D" parent="." unique_id=1142735892]
+position = Vector2(576, 464)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_w0bu5")
+animation = &"Clicked"
+script = ExtResource("3_dbwqd")
+
+[node name="Continue" type="Label" parent="SubmitButton" unique_id=116938717]
+offset_left = -64.0
+offset_top = -11.0
+offset_right = 64.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jhgxs")
+text = "Continue"
+
+[node name="Area2d_Submit" type="Area2D" parent="SubmitButton" unique_id=1585831288]
+position = Vector2(352, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmitButton/Area2d_Submit" unique_id=1149266613]
+position = Vector2(-352, -104)
+shape = SubResource("RectangleShape2D_fhl4r")
+
+[connection signal="input_event" from="SubmitButton/Area2d_Submit" to="SubmitButton" method="on_button_press"]
