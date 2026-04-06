@@ -130,7 +130,7 @@ func reset_resources():
 	bandwidth=0
 	data=0
 	health=max_health
-	energy = (LevelManager.get_current_level_index()*10)
+	energy = ((LevelManager.get_current_level_index()+1)*10)
 	
 #healthbar stuff
 func take_damage(damage:int):
