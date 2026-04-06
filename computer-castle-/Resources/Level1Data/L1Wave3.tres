@@ -12,4 +12,5 @@ metadata/_custom_type_script = "uid://3bvc7ulixw45"
 [resource]
 script = ExtResource("1_n2dft")
 spawns = Array[ExtResource("2_gccr5")]([SubResource("Resource_q1of8")])
+delay_before_wave = 1.0
 metadata/_custom_type_script = "uid://d0ydva3gm4av0"
