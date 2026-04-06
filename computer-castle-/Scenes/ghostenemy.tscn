@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0ds3e6ucpj4w"]
 
 [ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_mvdql"]
+[ext_resource type="AudioStream" uid="uid://ch1hp6r8ry04r" path="res://Audio/Sound_effects/Enemy_SFX/Enemy_Death_Databurst.mp3" id="2_dvdbr"]
 [ext_resource type="Texture2D" uid="uid://cdlm71v48ymlj" path="res://Sprites/Enemy Sprites/ghost-enemy-sprite.png" id="2_mvdql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
@@ -32,6 +33,7 @@ animations = [{
 script = ExtResource("1_mvdql")
 move_speed = 80.0
 damage_to_base = 3
+diesound = ExtResource("2_dvdbr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698986685]
 position = Vector2(-1.625, -3)

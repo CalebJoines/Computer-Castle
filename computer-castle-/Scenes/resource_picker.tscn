@@ -170,7 +170,7 @@ offset_bottom = 236.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2058640785]
 stream = ExtResource("9_5wtfo")
-volume_db = -15.0
+volume_db = -10.0
 autoplay = true
 script = ExtResource("9_j7fta")
 

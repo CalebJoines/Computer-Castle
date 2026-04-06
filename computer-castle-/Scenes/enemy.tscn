@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_hghv2"]
 [ext_resource type="Texture2D" uid="uid://cl7j3awp88678" path="res://Sprites/Enemy Sprites/Knight-enemy-sprite.png" id="2_1f0kj"]
+[ext_resource type="AudioStream" uid="uid://w7vbb0vjxooc" path="res://Audio/Sound_effects/Enemy_SFX/Enemy_Death2.mp3" id="2_afpow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(18.75, 34)
@@ -33,6 +34,7 @@ script = ExtResource("1_hghv2")
 max_hp = 20
 move_speed = 40.0
 damage_to_base = 3
+diesound = ExtResource("2_afpow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698986685]
 position = Vector2(-1.625, -3)
