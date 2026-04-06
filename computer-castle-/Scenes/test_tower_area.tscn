@@ -11,6 +11,7 @@ radius = 40.0
 size = Vector2(64, 64)
 
 [node name="TestTowerArea" type="Area2D" unique_id=1143239560]
+z_index = 3
 script = ExtResource("1_7bet4")
 tower_data = ExtResource("2_eowl1")
 

@@ -13,4 +13,5 @@ attack_rate = 2.0
 range_radius = 1000.0
 tower_texture = ExtResource("3_djuhq")
 projectile_scene = ExtResource("1_lx83b")
+shoot_audio = "res://Audio/Sound_effects/Tower_SFX/Turret_Shot_2.mp3"
 metadata/_custom_type_script = "uid://bf8gsn65re6v6"

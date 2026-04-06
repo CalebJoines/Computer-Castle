@@ -8,4 +8,5 @@
 script = ExtResource("1_qwh32")
 tower_texture = ExtResource("3_pagnn")
 projectile_scene = ExtResource("1_pagnn")
+shoot_audio = "res://Audio/Sound_effects/Tower_SFX/Turret_Shot_1.mp3"
 metadata/_custom_type_script = "uid://bf8gsn65re6v6"

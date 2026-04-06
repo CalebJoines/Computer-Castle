@@ -7,4 +7,5 @@ func _ready() -> void:
 	animated_sprite.animation_finished.connect(_on_animation_finished)
 
 func _on_animation_finished() -> void:
+	animated_sprite.stop()
 	queue_free()

@@ -9,6 +9,7 @@ class_name TowerData
 
 @export var tower_texture: Texture2D
 @export var projectile_scene: PackedScene
+@export var shoot_audio: String
 
 @export var targeting_mode: String = "first"
 @export var attack_type: String = "projectile"

@@ -11,8 +11,13 @@ var enemies_in_range: Array[Area2D] = []
 var can_shoot := false
 var dragging := true
 
+var sounds = {}
+
 func _ready() -> void:
 	_apply_tower_data()
+	sounds = {
+		"shoot": load(tower_data.shoot_audio)
+	}
 
 func _process(_delta: float) -> void:
 	if dragging:
@@ -90,6 +95,8 @@ func attack(target: Area2D) -> void:
 		"aoe":
 			_fire_aoe(target)
 
+	playsound("shoot")
+	
 	await get_tree().create_timer(tower_data.attack_rate).timeout
 	can_shoot = true
 
@@ -131,3 +138,10 @@ func _on_area_entered(body: Area2D) -> void:
 func _on_area_exited(body: Area2D) -> void:
 	if body in enemies_in_range:
 		enemies_in_range.erase(body)
+		
+func playsound(name):
+	var player = AudioStreamPlayer.new()
+	player.stream = sounds[name]
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)

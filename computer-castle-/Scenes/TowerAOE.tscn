@@ -41,12 +41,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cxv21")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
 [node name="TowerAoe" type="Area2D" unique_id=355147409]
+z_index = 5
 script = ExtResource("1_bdojs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638275470]
