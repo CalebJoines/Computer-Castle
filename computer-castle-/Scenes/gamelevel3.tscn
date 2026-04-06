@@ -77,9 +77,9 @@ layer_0/tile_data = PackedInt32Array(65514, 131072, 0, 65515, 131072, 0, 65516, 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=23494926]
 
 [node name="TowerMenu" parent="CanvasLayer" unique_id=1471395188 instance=ExtResource("4_0ixk2")]
-offset_left = 1048.0
+offset_left = 1023.0
 offset_top = 24.0
-offset_right = 1112.0
+offset_right = 1087.0
 offset_bottom = 88.0
 
 [node name="towerslots" type="Node" parent="." unique_id=595770103]
@@ -151,9 +151,15 @@ script = ExtResource("10_lsjxf")
 texture_filter = 1
 position = Vector2(1097, 211)
 scale = Vector2(2, 2)
-texture = ExtResource("11_13tbd")
+
 [node name="HealthBar" parent="." unique_id=1281284264 instance=ExtResource("11_13tbd")]
 position = Vector2(184, 296)
+
+[node name="Castle" type="Sprite2D" parent="." unique_id=1033068467]
+texture_filter = 1
+position = Vector2(1100, 209)
+scale = Vector2(2, 2)
+texture = ExtResource("12_2u2m6")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="CanvasLayer/TowerMenu" method="_on_audio_stream_player_2d_finished"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]

@@ -14,12 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="4_756xa"]
 [ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="5_dadt0"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="5_h6ihr"]
-[ext_resource type="PackedScene" uid="uid://evmuvp8nw6ds" path="res://Scenes/spawner.tscn" id="6_dadt0"]
+[ext_resource type="PackedScene" path="res://Scenes/spawner.tscn" id="6_dadt0"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="6_mqikh"]
 [ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1Data/Level1.tres" id="7_mqikh"]
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_umlxw"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_rwvjd"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="8_umlxw"]
+[ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="8_umlxw"]
 [ext_resource type="Resource" uid="uid://br2jvnrfy7mje" path="res://Resources/SniperTower.tres" id="9_k8ihs"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_rwvjd"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_k8ihs"]
@@ -89,10 +89,10 @@ layer_0/tile_data = PackedInt32Array(65514, 131072, 0, 65515, 131072, 0, 65516, 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=23494926]
 
 [node name="TowerMenu" parent="CanvasLayer" unique_id=1471395188 instance=ExtResource("4_756xa")]
-offset_left = 1048.0
-offset_top = 24.0
-offset_right = 1112.0
-offset_bottom = 88.0
+offset_left = 1024.0
+offset_top = 22.0
+offset_right = 1088.0
+offset_bottom = 86.0
 base_tower_scene = ExtResource("5_dadt0")
 available_towers = Array[ExtResource("6_mqikh")]([ExtResource("7_umlxw"), ExtResource("8_rwvjd"), ExtResource("9_k8ihs")])
 
@@ -165,9 +165,15 @@ script = ExtResource("10_k8ihs")
 texture_filter = 1
 position = Vector2(1108, 214)
 scale = Vector2(2, 2)
-texture = ExtResource("11_3a15e")
+
 [node name="HealthBar" parent="." unique_id=1281284264 instance=ExtResource("11_3a15e")]
 position = Vector2(184, 296)
+
+[node name="Castle" type="Sprite2D" parent="." unique_id=99836703]
+texture_filter = 1
+position = Vector2(1103, 215)
+scale = Vector2(2, 2)
+texture = ExtResource("17_umlxw")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="CanvasLayer/TowerMenu" method="_on_audio_stream_player_2d_finished"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]

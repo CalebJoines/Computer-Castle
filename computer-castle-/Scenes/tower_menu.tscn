@@ -2,20 +2,43 @@
 
 [ext_resource type="Script" uid="uid://cyeowlutw7fu1" path="res://Scripts/tower_menu.gd" id="1_on2a2"]
 [ext_resource type="Texture2D" uid="uid://baeqhpdx2nv24" path="res://Sprites/Tower Sprites/cannon-tower-sprite.png" id="2_i8h0h"]
+[ext_resource type="Texture2D" uid="uid://df2cqh08gmays" path="res://Sprites/menuSprites/simple_background_stretchable.png" id="2_uyk5o"]
 [ext_resource type="Texture2D" uid="uid://duc3by1belo28" path="res://Sprites/Tower Sprites/tezla-tower-sprite.png" id="3_71s0o"]
 [ext_resource type="Texture2D" uid="uid://ddq7iewrrhqqa" path="res://Sprites/Tower Sprites/Sniper-Tower.png" id="4_71s0o"]
+[ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="6_tcynq"]
+[ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="7_aa08k"]
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="8_ydo0e"]
+[ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="9_o5l6a"]
+[ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="10_2c1vl"]
+[ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="11_b5roc"]
 
 [node name="TowerMenu" type="Control" unique_id=1471395188]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 80.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
 script = ExtResource("1_on2a2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1942973742]
+process_mode = 4
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 61.0
+offset_bottom = 224.0
+texture = ExtResource("2_uyk5o")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1871581944]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 64.0
+offset_bottom = 200.0
 
 [node name="TowerButon" type="TextureButton" parent="VBoxContainer" unique_id=1118031082]
 texture_filter = 1
@@ -34,6 +57,113 @@ texture_filter = 1
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("4_71s0o")
+
+[node name="Volts" type="Sprite2D" parent="." unique_id=1617269621]
+texture_filter = 1
+position = Vector2(26, 52)
+scale = Vector2(0.18749997, 0.18749997)
+texture = ExtResource("6_tcynq")
+
+[node name="CableSymbol" type="Sprite2D" parent="." unique_id=1257129016]
+texture_filter = 1
+position = Vector2(42.5, 51.5)
+scale = Vector2(0.16406268, 0.16406268)
+texture = ExtResource("7_aa08k")
+
+[node name="5" type="RichTextLabel" parent="." unique_id=525923886]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 13.5
+offset_top = 48.5
+offset_right = 22.5
+offset_bottom = 56.5
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2031461454]
+position = Vector2(27.000002, 111.5)
+scale = Vector2(0.1523438, 0.1523438)
+texture = ExtResource("9_o5l6a")
+
+[node name="Volts2" type="Sprite2D" parent="." unique_id=1562997169]
+texture_filter = 1
+position = Vector2(44.500004, 110.50001)
+scale = Vector2(0.18749997, 0.18749997)
+texture = ExtResource("6_tcynq")
+
+[node name="Volts3" type="Sprite2D" parent="." unique_id=545715020]
+texture_filter = 1
+position = Vector2(25.000002, 182.50002)
+scale = Vector2(0.18749997, 0.18749997)
+texture = ExtResource("10_2c1vl")
+
+[node name="Volts4" type="Sprite2D" parent="." unique_id=533779539]
+texture_filter = 1
+position = Vector2(46.500004, 184)
+scale = Vector2(0.18749997, 0.18749997)
+texture = ExtResource("11_b5roc")
+
+[node name="6" type="RichTextLabel" parent="." unique_id=1640461631]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 31.0
+offset_top = 48.5
+offset_right = 40.0
+offset_bottom = 56.5
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
+
+[node name="7" type="RichTextLabel" parent="." unique_id=599585175]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 13.5
+offset_top = 107.5
+offset_right = 22.5
+offset_bottom = 115.5
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
+
+[node name="8" type="RichTextLabel" parent="." unique_id=1422668589]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 32.0
+offset_top = 107.5
+offset_right = 41.0
+offset_bottom = 115.5
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
+
+[node name="9" type="RichTextLabel" parent="." unique_id=1815666837]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 179.5
+offset_right = 21.0
+offset_bottom = 187.5
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
+
+[node name="10" type="RichTextLabel" parent="." unique_id=1574936514]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 32.5
+offset_top = 180.0
+offset_right = 41.5
+offset_bottom = 188.0
+theme_override_fonts/normal_font = ExtResource("8_ydo0e")
+theme_override_font_sizes/normal_font_size = 8
+text = "5"
 
 [connection signal="pressed" from="VBoxContainer/TowerButon" to="." method="_on_cannon_tower_buton_pressed"]
 [connection signal="pressed" from="VBoxContainer/TowerButon2" to="." method="_on_tesla_tower_buton_pressed"]
