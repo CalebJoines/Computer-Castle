@@ -68,3 +68,5 @@ position = Vector2(352, 104)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SubmitButton/Area2d_Submit" unique_id=1149266613]
 position = Vector2(-352, -104)
 shape = SubResource("RectangleShape2D_fhl4r")
+
+[connection signal="input_event" from="SubmitButton/Area2d_Submit" to="SubmitButton" method="on_button_press"]
