@@ -40,6 +40,7 @@ func _spawn_enemy(enemy_scene: PackedScene) -> void:
 
 	# Example if using PathFollow2D
 	var path_follow := PathFollow2D.new()
+	path_follow.loop = false
 	path.add_child(path_follow)
 	path_follow.add_child(enemy)
 
