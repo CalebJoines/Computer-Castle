@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dydes32ebcrxc" path="res://Scripts/healthbar.gd" id="1_8yii0"]
 [ext_resource type="Texture2D" uid="uid://ckkubjx632tg6" path="res://Sprites/Environment Sprites/Health Bar-Sheet.png" id="2_52cko"]
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="3_52cko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8yii0"]
 atlas = ExtResource("2_52cko")
@@ -178,6 +179,15 @@ script = ExtResource("1_8yii0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2014458917]
 unique_name_in_owner = true
 position = Vector2(168, 368)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_6176p")
 animation = &"Damage"
+
+[node name="Label" type="Label" parent="." unique_id=297297614]
+offset_left = -248.0
+offset_top = 352.0
+offset_right = -24.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("3_52cko")
+theme_override_font_sizes/font_size = 32
+text = "Health:"

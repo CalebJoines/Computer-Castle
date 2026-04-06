@@ -9,7 +9,6 @@ func _ready() -> void:
 	ResourceManager.connect('health_changed', on_health_changed)
 	on_health_changed(ResourceManager.health)
 	await get_tree().create_timer(5.0).timeout
-	ResourceManager.take_damage(5)
 
 func on_health_changed(new_health: int):
 	var max_frames = healthbar.sprite_frames.get_frame_count("Damage") - 1
