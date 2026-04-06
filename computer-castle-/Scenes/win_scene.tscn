@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cg6adpywqdif0"]
+[gd_scene format=3 uid="uid://3sjf8pbettwb"]
 
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="1_b5jpj"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="2_knexo"]
-[ext_resource type="Script" uid="uid://44woy1ne28fr" path="res://Scripts/goForwardToRP.gd" id="3_b5jpj"]
+[ext_resource type="Script" path="res://Scripts/goForwardToRP.gd" id="3_b5jpj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
 atlas = ExtResource("2_knexo")

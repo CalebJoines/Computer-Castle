@@ -2,7 +2,7 @@ extends Area2D
 class_name Enemy
 
 @export var max_hp: int = 10
-@export var move_speed: float = 350.0
+@export var move_speed: float = 50
 @export var damage_to_base: int = 1
 
 var path_follow

@@ -19,6 +19,7 @@ func playsound(name):
 func on_button_press(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			print("clicked")
 			playsound("click")
 			await get_tree().create_timer(0.5).timeout
 			var level_index = LevelManager.get_current_level_index()
