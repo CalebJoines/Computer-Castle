@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="1_jhgxs"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="2_k2ia7"]
 [ext_resource type="Script" uid="uid://bv2kxyigajpdj" path="res://Scripts/goBackToRP.gd" id="3_dbwqd"]
+[ext_resource type="Texture2D" uid="uid://dbosk4vkassjm" path="res://Sprites/menuSprites/loss-screen-sprite.png" id="4_k2ia7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
 atlas = ExtResource("2_k2ia7")
@@ -30,8 +31,6 @@ animations = [{
 size = Vector2(256, 48)
 
 [node name="LossScreen" type="Node2D" unique_id=108959778]
-
-[node name="Failscreen" type="AnimatedSprite2D" parent="." unique_id=1510829317]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=574298421]
 position = Vector2(576, 328)
@@ -68,5 +67,11 @@ position = Vector2(352, 104)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SubmitButton/Area2d_Submit" unique_id=1149266613]
 position = Vector2(-352, -104)
 shape = SubResource("RectangleShape2D_fhl4r")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1722149151]
+z_index = -3
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_k2ia7")
 
 [connection signal="input_event" from="SubmitButton/Area2d_Submit" to="SubmitButton" method="on_button_press"]
