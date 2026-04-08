@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://pjv04cun7rhw"]
+
+[ext_resource type="Script" uid="uid://d0ydva3gm4av0" path="res://Resources/WaveData.gd" id="1_ox46r"]
+[ext_resource type="Script" uid="uid://3bvc7ulixw45" path="res://Resources/EnemySpawnData.gd" id="2_ler23"]
+[ext_resource type="Resource" uid="uid://dcslh04yphk2l" path="res://Resources/Level2Data/L2Wave1SpawnData2.tres" id="3_a0yhs"]
+[ext_resource type="Resource" uid="uid://dklwh07na0ayl" path="res://Resources/Level2Data/L2Wave1SpawnData1.tres" id="4_hovie"]
+[ext_resource type="Resource" uid="uid://d00obmgvrvc22" path="res://Resources/Level2Data/L2Wave1SpawnData3.tres" id="5_ecs3u"]
+
+[resource]
+script = ExtResource("1_ox46r")
+spawns = Array[ExtResource("2_ler23")]([ExtResource("3_a0yhs"), ExtResource("4_hovie"), ExtResource("3_a0yhs"), ExtResource("5_ecs3u")])
+delay_before_wave = 1.0
+metadata/_custom_type_script = "uid://d0ydva3gm4av0"

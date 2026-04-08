@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://dcslh04yphk2l"]
+
+[ext_resource type="PackedScene" uid="uid://c0ds3e6ucpj4w" path="res://Scenes/ghostenemy.tscn" id="1_5yhtj"]
+[ext_resource type="Script" uid="uid://3bvc7ulixw45" path="res://Resources/EnemySpawnData.gd" id="2_etcqd"]
+
+[resource]
+script = ExtResource("2_etcqd")
+enemy_scene = ExtResource("1_5yhtj")
+count = 12
+spawn_interval = 0.75
+metadata/_custom_type_script = "uid://3bvc7ulixw45"

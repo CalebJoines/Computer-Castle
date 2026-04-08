@@ -8,15 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="6_rfjv2"]
-[ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1Data/Level1.tres" id="6_v158k"]
 [ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_1phco"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_1phco"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_h4fw4"]
 [ext_resource type="Resource" uid="uid://br2jvnrfy7mje" path="res://Resources/SniperTower.tres" id="9_nb51f"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_ldgsr"]
+[ext_resource type="Resource" uid="uid://caytd205upavu" path="res://Resources/Level2Data/Level2.tres" id="12_umlxw"]
 [ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="15_nb51f"]
-[ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
+[ext_resource type="PackedScene" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")
@@ -139,7 +139,7 @@ scale = Vector2(2.9617023, 1.026604)
 curve = SubResource("Curve2D_i6g32")
 
 [node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("5_1l0tm")]
-level_data = ExtResource("6_v158k")
+level_data = ExtResource("12_umlxw")
 path = NodePath("../Path2D")
 
 [node name="Resource_Counters" parent="." unique_id=654333457 instance=ExtResource("7_1l0tm")]
