@@ -1,12 +1,13 @@
 extends Node
+@onready var scenepath= "res://Scenes/loss_screen.tscn"
 
 # RESOURCE VALUES
-var volts : int = 5
+var volts : int = 0
 var data : int = 0
 var circuits : int = 0
 var bandwidth : int = 0
 var ai_cores : int = 0
-var energy : int = 5
+var energy : int = 10
 var health: int = 23:
 	set(value):
 		health = clamp(value, 0, max_health) #ensures health doesn't go outside normal rangee
@@ -137,7 +138,7 @@ func take_damage(damage:int):
 	if health > 0:
 		health = health - damage
 	else:
-		pass # add fail state
+		get_tree().change_scene_to_file(scenepath)
 
 func reset_health():
 	health = max_health

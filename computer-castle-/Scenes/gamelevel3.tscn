@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_ldgsr"]
 [ext_resource type="Resource" uid="uid://caytd205upavu" path="res://Resources/Level2Data/Level2.tres" id="12_pqnnw"]
 [ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="15_nb51f"]
-[ext_resource type="PackedScene" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
+[ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")
@@ -150,7 +150,7 @@ offset_bottom = 632.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=78109420]
 stream = ExtResource("9_h4fw4")
-volume_db = -5.0
+volume_db = 3.0
 autoplay = true
 script = ExtResource("10_ldgsr")
 
