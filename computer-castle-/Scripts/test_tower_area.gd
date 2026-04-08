@@ -142,6 +142,7 @@ func _on_area_exited(body: Area2D) -> void:
 func playsound(name):
 	var player = AudioStreamPlayer.new()
 	player.stream = sounds[name]
+	player.volume_db = -10 
 	add_child(player)
 	player.play()
 	player.finished.connect(player.queue_free)
