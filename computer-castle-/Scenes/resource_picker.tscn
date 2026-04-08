@@ -50,6 +50,7 @@ position = Vector2(0, -1)
 texture = ExtResource("1_g3ufx")
 
 [node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
+unique_name_in_owner = true
 
 [node name="Volts Sprite" type="Sprite2D" parent="ClickableBoxes" unique_id=1102679792]
 position = Vector2(-434, -43)
