@@ -37,9 +37,9 @@ position = Vector2(576, 328)
 
 [node name="Message" type="Label" parent="." unique_id=729979147]
 offset_left = 144.0
-offset_top = 112.0
+offset_top = 172.0
 offset_right = 1008.0
-offset_bottom = 179.0
+offset_bottom = 239.0
 theme_override_fonts/font = ExtResource("1_jhgxs")
 theme_override_font_sizes/font_size = 32
 text = "The castle was destroyed!!
