@@ -1,5 +1,5 @@
 extends Node
-@onready var levels = [
+var levels = [
 	"res://Scenes/game.tscn", 
 	"res://Scenes/gamelevel2.tscn",
 	"res://Scenes/gamelevel3.tscn"
@@ -17,7 +17,7 @@ func get_current_level_index():
 
 #Call this when level is beaten
 func set_next_level() -> void:
-	if current_level_index < levels.size() - 1:
+	if current_level_index < levels.size() -1 :
 		current_level_index += 1
 	else:
 		print("Already at last level")

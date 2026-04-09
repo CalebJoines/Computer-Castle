@@ -23,7 +23,7 @@ func on_button_press(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			playsound("click")
 			await get_tree().create_timer(0.5).timeout
 			var level_index = LevelManager.get_current_level_index()
-			if level_index >=1:
+			if level_index >=2:
 				scenepath = "res://Scenes/game_win.tscn"
 			else:
 				LevelManager.set_next_level()
