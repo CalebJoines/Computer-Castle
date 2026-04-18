@@ -13,6 +13,7 @@ var health: int = 23:
 		health = clamp(value, 0, max_health) #ensures health doesn't go outside normal rangee
 		emit_signal("health_changed", health)
 var max_health: int = 23
+var in_tutorial = true
 
 signal health_changed(new_health)
 # ADD RESOURCES
@@ -145,3 +146,9 @@ func reset_health():
 	
 func get_health():
 	return health
+	
+func exit_tutorial():
+	in_tutorial = false
+	
+func in_Tutorial():
+	return in_tutorial

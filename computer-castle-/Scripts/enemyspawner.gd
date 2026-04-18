@@ -3,7 +3,7 @@ class_name EnemySpawner
 
 @export var level_data: LevelData
 @export var path: Path2D
-
+var inTutorial = ResourceManager.in_Tutorial()
 var current_wave := 0
 var wave_in_progress := false
 
@@ -22,8 +22,10 @@ func _run_all_waves() -> void:
 
 		# Optional: wait until all enemies from this wave are dead
 		await _wait_until_wave_cleared()
-
-	get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
+	if inTutorial == true:
+		get_tree().change_scene_to_file("res://Scenes/TitleScreen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
 
 func _run_wave(wave: WaveData) -> void:
 	wave_in_progress = true

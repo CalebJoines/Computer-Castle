@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cx6xtmhd8h2kv"]
+
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="1_n15yj"]
+[ext_resource type="Texture2D" uid="uid://cbvesdfsi3pvx" path="res://Sprites/menuSprites/Castle Win Scene.png" id="2_emot1"]
+[ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="3_i5sur"]
+[ext_resource type="Script" uid="uid://cd4kjf32l75ym" path="res://Scripts/skiptutorial.gd" id="4_n15yj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
+atlas = ExtResource("3_i5sur")
+region = Rect2(0, 0, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
+atlas = ExtResource("3_i5sur")
+region = Rect2(0, 48, 256, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0bu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mstrt")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhl4r"]
+size = Vector2(256, 48)
+
+[node name="WinScene" type="Node2D" unique_id=108959778]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=574298421]
+position = Vector2(576, 328)
+
+[node name="Message" type="Label" parent="." unique_id=729979147]
+offset_left = 106.0
+offset_top = 205.0
+offset_right = 1066.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0.3019608, 0.85490197, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+theme_override_font_sizes/font_size = 64
+text = "Computer Castle"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=987883409]
+z_index = -8
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_emot1")
+
+[node name="StartButton" type="AnimatedSprite2D" parent="." unique_id=1142735892]
+unique_name_in_owner = true
+position = Vector2(577.5, 387)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_w0bu5")
+animation = &"Clicked"
+
+[node name="Start" type="Label" parent="StartButton" unique_id=116938717]
+texture_filter = 1
+offset_left = -79.33325
+offset_top = -11.0
+offset_right = 80.66675
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+text = "Start Game"
+
+[node name="Area2d_Submit" type="Area2D" parent="StartButton" unique_id=1585831288]
+position = Vector2(352, 104)
+
+[node name="CollisionStart" type="CollisionShape2D" parent="StartButton/Area2d_Submit" unique_id=1149266613]
+position = Vector2(-352, -104)
+shape = SubResource("RectangleShape2D_fhl4r")
+
+[node name="SkipButton" type="AnimatedSprite2D" parent="." unique_id=897699809]
+unique_name_in_owner = true
+position = Vector2(577.5, 514)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_w0bu5")
+animation = &"Clicked"
+script = ExtResource("4_n15yj")
+
+[node name="Skip" type="Label" parent="SkipButton" unique_id=1242483669]
+texture_filter = 1
+offset_left = -104.6667
+offset_top = -10.0
+offset_right = 103.3333
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+text = "Skip Tutorial"
+
+[node name="Area2d_Skip" type="Area2D" parent="SkipButton" unique_id=187174736]
+position = Vector2(352, 104)
+
+[node name="CollisionSkip" type="CollisionShape2D" parent="SkipButton/Area2d_Skip" unique_id=2141229732]
+position = Vector2(-352.6667, -104)
+shape = SubResource("RectangleShape2D_fhl4r")
+
+[connection signal="input_event" from="SkipButton/Area2d_Skip" to="SkipButton" method="_on_area_2d_skip_input_event"]
