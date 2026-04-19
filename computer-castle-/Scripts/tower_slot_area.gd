@@ -8,6 +8,7 @@ var sounds = {
 	"cantplace": preload("res://Audio/Sound_effects/Map_SFX/Not_Enough_Resources.mp3"),
 	"place": preload("res://Audio/Sound_effects/Tower_SFX/Build_Tower.mp3"),
 }
+signal tower_placed(tower)
 
 func _ready():
 	add_to_group("slots")
@@ -68,6 +69,8 @@ func place_tower(tower) -> bool:
 				"ai cores":
 					ResourceManager.spend_ai_cores(cost[0])
 		print("placed tower!")
+		if ResourceManager.in_Tutorial():
+			emit_signal("tower_placed", tower)
 		return true
 	else:
 		playsound("cantplace")
