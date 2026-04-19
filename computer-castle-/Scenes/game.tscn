@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://br2jvnrfy7mje" path="res://Resources/SniperTower.tres" id="9_nb51f"]
 [ext_resource type="Script" uid="uid://c6juqreprpeo" path="res://Scripts/songreplayTD.gd" id="10_ldgsr"]
 [ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="15_nb51f"]
-[ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
+[ext_resource type="PackedScene" path="res://Scenes/Healthbar.tscn" id="16_nnt18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("1_qxrlw")
