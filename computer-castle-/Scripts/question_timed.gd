@@ -1,5 +1,4 @@
 extends Control
-#script for quicktime questions scene
 @onready var answerA: AnimatedSprite2D = %"AnswerButton A"
 @onready var answerB: AnimatedSprite2D = %"AnswerButton B"
 @onready var answerC: AnimatedSprite2D = %"AnswerButton C"
@@ -21,7 +20,9 @@ var sounds = {
 	"correct": preload("res://Audio/Sound_effects/Question_SFX/CorrectDing.mp3"),
 	"incorrect":preload("res://Audio/Sound_effects/Question_SFX/IncorrectDing.mp3")
 }
-
+@onready var blocker= %Blocker
+@onready var textC= %Text2C
+@onready var textI= %Text2I
 func _ready():
 	subbutton.visible = false
 	load_question()
@@ -78,12 +79,16 @@ func check_answer():
 		return
 	if selected_answer == current_question["correct_index"]:
 		playsound("correct")
-		#add function that resumes play
-		pass
+		blocker.visible=true
+		textC.visible=true
+		await get_tree().create_timer(7).timeout
+		get_tree().change_scene_to_file("")
 	else:
 		playsound("incorrect")
-		#add function that decrements health bar and resumes play
-		pass
+		blocker.visible=true
+		textI.visible=true
+		await get_tree().create_timer(7).timeout
+		get_tree().change_scene_to_file("")
 		
 
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

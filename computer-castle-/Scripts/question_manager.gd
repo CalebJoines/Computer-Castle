@@ -7,7 +7,7 @@ var current_questions = []
 
 func _ready():
 	load_all_banks()	
-	set_bank("Security") # delete this, only here for testing
+	set_bank("Tutorial")
 
 func load_all_banks():
 	var dir = DirAccess.open("res://Questions")

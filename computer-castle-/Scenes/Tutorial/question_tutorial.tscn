@@ -1,24 +1,26 @@
 [gd_scene format=3 uid="uid://bmpok5svhwtu"]
 
-[ext_resource type="Texture2D" uid="uid://bie1x8g2dyomf" path="res://Sprites/menuSprites/bgsprite.png" id="1_f7iyw"]
-[ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="2_b3vw4"]
-[ext_resource type="Script" uid="uid://dhtt0vnrnrip3" path="res://Scripts/question_timed.gd" id="2_f7iyw"]
-[ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="4_c43h2"]
+[ext_resource type="Script" uid="uid://cyi7aj4dv1thw" path="res://Scripts/question_tutorial.gd" id="1_4ca4o"]
+[ext_resource type="Texture2D" uid="uid://bie1x8g2dyomf" path="res://Sprites/menuSprites/bgsprite.png" id="1_wn5br"]
+[ext_resource type="Script" uid="uid://dhtt0vnrnrip3" path="res://Scripts/question_timed.gd" id="2_4ca4o"]
+[ext_resource type="Texture2D" uid="uid://cqcqvky8d8upi" path="res://Sprites/menuSprites/buttons.png" id="3_n4hye"]
+[ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="4_tyykt"]
+[ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="6_n4hye"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0yn7"]
-atlas = ExtResource("4_c43h2")
+atlas = ExtResource("3_n4hye")
 region = Rect2(0, 144, 544, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk8gh"]
-atlas = ExtResource("4_c43h2")
+atlas = ExtResource("3_n4hye")
 region = Rect2(0, 0, 544, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fru62"]
-atlas = ExtResource("4_c43h2")
+atlas = ExtResource("3_n4hye")
 region = Rect2(0, 144, 544, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfn73"]
-atlas = ExtResource("4_c43h2")
+atlas = ExtResource("3_n4hye")
 region = Rect2(0, 144, 544, 144)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g5b5r"]
@@ -55,11 +57,11 @@ animations = [{
 size = Vector2(543.75, 142.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
-atlas = ExtResource("2_b3vw4")
+atlas = ExtResource("4_tyykt")
 region = Rect2(0, 0, 256, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mstrt"]
-atlas = ExtResource("2_b3vw4")
+atlas = ExtResource("4_tyykt")
 region = Rect2(0, 48, 256, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8qmu4"]
@@ -79,14 +81,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fru62"]
 size = Vector2(256, 48)
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_4ca4o"]
+
 [node name="Question" type="Node2D" unique_id=1482724301]
+script = ExtResource("1_4ca4o")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=451233767]
 
 [node name="PopupBackground" type="Sprite2D" parent="." unique_id=2128939606]
 texture_filter = 1
 position = Vector2(-1, 1)
-texture = ExtResource("1_f7iyw")
+texture = ExtResource("1_wn5br")
 
 [node name="QuestionText" type="Label" parent="PopupBackground" unique_id=1281579116]
 unique_name_in_owner = true
@@ -107,7 +112,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("2_f7iyw")
+script = ExtResource("2_4ca4o")
 
 [node name="AnswerButton A" type="AnimatedSprite2D" parent="Answer Buttons" unique_id=430882022]
 unique_name_in_owner = true
@@ -259,6 +264,69 @@ text = "Submit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer Buttons/SubmitButton/Area2d_Submit" unique_id=376302596]
 shape = SubResource("RectangleShape2D_fru62")
+
+[node name="Box1" type="Node" parent="." unique_id=1929027214]
+
+[node name="Blocker" type="TextureRect" parent="Box1" unique_id=1384882698]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.8509804)
+z_index = 1
+offset_left = -552.0
+offset_top = -288.0
+offset_right = 552.0
+offset_bottom = 296.0
+mouse_filter = 0
+texture = SubResource("CanvasTexture_4ca4o")
+
+[node name="Text" type="Label" parent="Box1" unique_id=1913049363]
+unique_name_in_owner = true
+z_index = 2
+offset_left = -304.0
+offset_top = -144.0
+offset_right = 304.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n4hye")
+theme_override_font_sizes/font_size = 32
+text = "Answering questions doesn't just help you learn, it also helps you gather more resources. Try answering this question!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Text2C" type="Label" parent="Box1" unique_id=216616489]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+offset_left = -304.0
+offset_top = -144.0
+offset_right = 304.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n4hye")
+theme_override_font_sizes/font_size = 32
+text = "Great Job! In the future, you'll get to see explanations to help you better understand the answer. For now let's move on."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Text2I" type="Label" parent="Box1" unique_id=1108943798]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+offset_left = -304.0
+offset_top = -144.0
+offset_right = 304.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n4hye")
+theme_override_font_sizes/font_size = 32
+text = "Oops! Looks like you missed that one. No worries, in the future  you'll get to see explanations to help you better understand the answer. For now let's move on."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="input_event" from="Answer Buttons/AnswerButton A/Area2D_A" to="Answer Buttons/AnswerController" method="_on_area_2d_a_input_event"]
 [connection signal="input_event" from="Answer Buttons/AnswerButton B/Area2D_B" to="Answer Buttons/AnswerController" method="_on_area_2d_b_input_event"]

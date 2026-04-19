@@ -45,7 +45,7 @@ func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx
 				button.play("Unclicked")
 			else:
 				await get_tree().create_timer(7).timeout
-				get_tree().change_scene_to_file("res://Scenes/TitleScreen.tscn")
+				get_tree().change_scene_to_file("res://Scenes/Tutorial/question_tutorial.tscn")
 							
 			
 func set_next_text():
