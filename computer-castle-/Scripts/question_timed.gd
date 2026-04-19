@@ -82,13 +82,13 @@ func check_answer():
 		blocker.visible=true
 		textC.visible=true
 		await get_tree().create_timer(7).timeout
-		get_tree().change_scene_to_file("")
+		get_tree().change_scene_to_file("res://Scenes/Tutorial/tutoriallevelcutscene.tscn")
 	else:
 		playsound("incorrect")
 		blocker.visible=true
 		textI.visible=true
 		await get_tree().create_timer(7).timeout
-		get_tree().change_scene_to_file("")
+		get_tree().change_scene_to_file("res://Scenes/Tutorial/tutoriallevelcutscene.tscn")
 		
 
 func _on_area_2d_a_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

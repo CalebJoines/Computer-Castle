@@ -1,6 +1,6 @@
 extends AnimatedSprite2D
 @onready var skippath: String = "res://Scenes/resource_picker.tscn"
-
+@onready var scenepath: String = "res://Scenes/Tutorial/towercutscene.tscn"
 @onready var start= %StartButton
 @onready var skip = %SkipButton
 var sound= {
@@ -14,6 +14,7 @@ func playsound(name):
 	player.finished.connect(player.queue_free)
 
 
+
 func _on_area_2d_skip_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:		
@@ -24,3 +25,12 @@ func _on_area_2d_skip_input_event(viewport: Node, event: InputEvent, shape_idx: 
 			get_tree().change_scene_to_file(skippath)		
 	
 	
+
+
+func _on_area_2d_submit_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:		
+			playsound("click")
+			start.play("Clicked")
+			await get_tree().create_timer(1).timeout
+			get_tree().change_scene_to_file(scenepath)

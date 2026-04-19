@@ -59,6 +59,8 @@ sources/0 = SubResource("TileSetAtlasSource_3dryh")
 sources/1 = SubResource("TileSetAtlasSource_wowpa")
 sources/2 = SubResource("TileSetAtlasSource_h4fw4")
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_o1376"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4msfg"]
 atlas = ExtResource("14_vg2nh")
 region = Rect2(0, 0, 32, 64)
@@ -210,99 +212,111 @@ texture = ExtResource("13_addx6")
 
 [node name="Text" type="Node" parent="." unique_id=1955022159]
 
+[node name="Blocker" type="TextureRect" parent="Text" unique_id=1588838514]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.8509804)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 880.0
+offset_bottom = 512.0
+mouse_filter = 0
+texture = SubResource("CanvasTexture_o1376")
+
 [node name="1" type="Label" parent="Text" unique_id=485470575]
 unique_name_in_owner = true
-offset_left = 360.0
-offset_top = 224.0
-offset_right = 816.0
-offset_bottom = 396.0
-theme_override_colors/font_color = Color(0.3372549, 1, 1, 1)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 888.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "Lets take a quick look at everything to get you up to speed!"
+text = "Welcome to Computer Castle!
+
+Lets take a quick look at everything to get you up to speed!"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="2" type="Label" parent="Text" unique_id=796046926]
 unique_name_in_owner = true
 visible = false
-offset_left = 320.0
-offset_top = 208.0
-offset_right = 869.0
-offset_bottom = 380.0
-theme_override_colors/font_color = Color(0.3372549, 1, 1, 1)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 888.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
 text = "These are your resources, used to buy towers to protect computer castle."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Arrow2" type="AnimatedSprite2D" parent="Text/2" unique_id=55782749]
-position = Vector2(248, 456)
+position = Vector2(296, 536)
 rotation = -1.5707964
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.6212722
+frame_progress = 0.61065084
 
 [node name="3" type="Label" parent="Text" unique_id=1218081199]
 unique_name_in_owner = true
 visible = false
-offset_left = 312.0
-offset_top = 200.0
-offset_right = 861.0
-offset_bottom = 407.0
-theme_override_colors/font_color = Color(0.3372549, 1, 1, 1)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 888.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "This is your tower menu, where you buy the towers to defend computer castle"
+text = "This is your tower menu, where you buy the towers to defend computer castle. The resource costs are listed below the tower."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Arrow3" type="AnimatedSprite2D" parent="Text/3" unique_id=198730593]
-position = Vector2(736, -120)
+position = Vector2(776, -65)
 rotation = -1.5707964
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.88562715
+frame_progress = 0.87500346
 
 [node name="4" type="Label" parent="Text" unique_id=398906555]
 unique_name_in_owner = true
 visible = false
-offset_left = 312.0
-offset_top = 208.0
-offset_right = 861.0
-offset_bottom = 415.0
-theme_override_colors/font_color = Color(0.3372549, 1, 1, 1)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 880.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "Click and drag a tower to a tower slot like this one to place it. Try placing a tower."
+text = "Click and drag a tower to a tower slot like this one to place it. Here are some resources, try placing a tower."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Arrow4" type="AnimatedSprite2D" parent="Text/4" unique_id=921594347]
-position = Vector2(-152, -24)
+position = Vector2(-112, 64)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.7898977
+frame_progress = 0.7792734
 
 [node name="5" type="Label" parent="Text" unique_id=1298947068]
 unique_name_in_owner = true
 visible = false
-offset_left = 320.0
-offset_top = 208.0
-offset_right = 869.0
-offset_bottom = 415.0
-theme_override_colors/font_color = Color(0.3372549, 1, 1, 1)
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 880.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
 text = "Great! Now let's go over how to gather more resources."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Continue" type="AnimatedSprite2D" parent="." unique_id=1227755779]

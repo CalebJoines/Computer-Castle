@@ -23,7 +23,7 @@ func _run_all_waves() -> void:
 		# Optional: wait until all enemies from this wave are dead
 		await _wait_until_wave_cleared()
 	if inTutorial == true:
-		get_tree().change_scene_to_file("res://Scenes/TitleScreen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Tutorial/tutorialcomplete.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
 

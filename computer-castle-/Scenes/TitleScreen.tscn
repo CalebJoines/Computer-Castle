@@ -101,4 +101,5 @@ position = Vector2(352, 104)
 position = Vector2(-352.6667, -104)
 shape = SubResource("RectangleShape2D_fhl4r")
 
+[connection signal="input_event" from="StartButton/Area2d_Submit" to="SkipButton" method="_on_area_2d_submit_input_event"]
 [connection signal="input_event" from="SkipButton/Area2d_Skip" to="SkipButton" method="_on_area_2d_skip_input_event"]
