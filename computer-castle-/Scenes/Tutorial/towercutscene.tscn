@@ -224,6 +224,7 @@ texture = SubResource("CanvasTexture_o1376")
 
 [node name="1" type="Label" parent="Text" unique_id=485470575]
 unique_name_in_owner = true
+visible = false
 offset_left = 272.0
 offset_top = 128.0
 offset_right = 888.0
@@ -239,14 +240,13 @@ autowrap_mode = 2
 
 [node name="2" type="Label" parent="Text" unique_id=796046926]
 unique_name_in_owner = true
-visible = false
 offset_left = 272.0
 offset_top = 128.0
 offset_right = 888.0
 offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "These are your resources, used to buy towers to protect computer castle. Each one is associated with a question topic."
+text = "The lightning here is your energy, and to the right of it is all your resources. Spend energy to answer questions and resources to build towers!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -258,7 +258,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.10761075
+frame_progress = 0.6978141
 
 [node name="3" type="Label" parent="Text" unique_id=1218081199]
 unique_name_in_owner = true
@@ -281,7 +281,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.371973
+frame_progress = 0.9621751
 
 [node name="4" type="Label" parent="Text" unique_id=398906555]
 unique_name_in_owner = true
@@ -303,7 +303,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.27624238
+frame_progress = 0.8664177
 
 [node name="5" type="Label" parent="Text" unique_id=1298947068]
 unique_name_in_owner = true
@@ -314,7 +314,7 @@ offset_right = 880.0
 offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "Great! Now let's go over how to gather more resources."
+text = "Great, but we need more resources than this to protect the castle. Lets go try answering a question!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
