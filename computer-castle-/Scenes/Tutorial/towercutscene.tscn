@@ -246,7 +246,7 @@ offset_right = 888.0
 offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("13_j2nt2")
 theme_override_font_sizes/font_size = 32
-text = "These are your resources, used to buy towers to protect computer castle."
+text = "These are your resources, used to buy towers to protect computer castle. Each one is associated with a question topic."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -258,7 +258,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.61065084
+frame_progress = 0.26913223
 
 [node name="3" type="Label" parent="Text" unique_id=1218081199]
 unique_name_in_owner = true
@@ -281,7 +281,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.87500346
+frame_progress = 0.53349525
 
 [node name="4" type="Label" parent="Text" unique_id=398906555]
 unique_name_in_owner = true
@@ -303,7 +303,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.7792734
+frame_progress = 0.43776202
 
 [node name="5" type="Label" parent="Text" unique_id=1298947068]
 unique_name_in_owner = true
