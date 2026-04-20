@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d3v02qgdras0r" path="res://Scripts/spentchecker.gd" id="1_wklta"]
 [ext_resource type="PackedScene" uid="uid://chduusndy8aig" path="res://Scenes/clickable_box.tscn" id="2_ywnrd"]
 [ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="3_j7fta"]
+[ext_resource type="Script" uid="uid://be1h41fv5wygf" path="res://Scripts/ResourceDesc.gd" id="3_oot3j"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="4_7857q"]
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="4_g3ufx"]
 [ext_resource type="Texture2D" uid="uid://bekw3fgtjbpjh" path="res://Sprites/ResourceSprites/ai_cores.png" id="5_sqw27"]
@@ -14,6 +15,11 @@
 [ext_resource type="Script" uid="uid://741oawsuywix" path="res://Scenes/songreplayResource.gd" id="9_j7fta"]
 [ext_resource type="Texture2D" uid="uid://5schfk5a0kpc" path="res://Sprites/menuSprites/submits.png" id="12_80q24"]
 [ext_resource type="Script" uid="uid://ovnyfqdycehl" path="res://Scripts/load_level.gd" id="13_wklta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wklta"]
+size = Vector2(63.276424, 63.117897)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_oot3j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g00bq"]
 atlas = ExtResource("12_80q24")
@@ -52,12 +58,21 @@ texture = ExtResource("1_g3ufx")
 [node name="ClickableBoxes" type="Node2D" parent="." unique_id=830775954]
 unique_name_in_owner = true
 
-[node name="Volts Sprite" type="Sprite2D" parent="ClickableBoxes" unique_id=1102679792]
-position = Vector2(-434, -43)
+[node name="VoltsArea" type="Area2D" parent="ClickableBoxes" unique_id=229271319]
+position = Vector2(-432, -32)
 scale = Vector2(1.9218746, 1.9218746)
+script = ExtResource("3_oot3j")
+description_text = "Question Topic: Media Literacy\\n\\nUsed in: Cannon, Tesla"
+
+[node name="VoltsCollison" type="CollisionShape2D" parent="ClickableBoxes/VoltsArea" unique_id=1973733771]
+position = Vector2(1.1444092e-05, -4.7683716e-07)
+shape = SubResource("RectangleShape2D_wklta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/VoltsArea" unique_id=1102679792]
+position = Vector2(-1.0406494, -5.7235775)
 texture = ExtResource("3_j7fta")
 
-[node name="Volts Button" parent="ClickableBoxes/Volts Sprite" unique_id=584798666 instance=ExtResource("2_ywnrd")]
+[node name="Volts Button" parent="ClickableBoxes/VoltsArea/Sprite2D" unique_id=584798666 instance=ExtResource("2_ywnrd")]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(-33.300827, -29.138226)
@@ -65,103 +80,164 @@ scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "MediaLiteracy"
 
-[node name="VoltsLabel" type="Label" parent="ClickableBoxes/Volts Sprite" unique_id=52433338]
+[node name="VoltsLabel" type="Label" parent="ClickableBoxes/VoltsArea/Sprite2D" unique_id=52433338]
 texture_filter = 1
-offset_left = -32.26017
-offset_top = 64.000015
-offset_right = 27.73983
-offset_bottom = 80.130104
+offset_left = -30.699196
+offset_top = 59.83741
+offset_right = 29.300804
+offset_bottom = 75.9675
 theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
 text = "Volts"
 
-[node name="DataSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=220409759]
-position = Vector2(219, -34)
-scale = Vector2(1.78125, 1.78125)
+[node name="DataArea" type="Area2D" parent="ClickableBoxes" unique_id=418039500]
+position = Vector2(217.99998, -31.999998)
+scale = Vector2(1.9218746, 1.9218746)
+script = ExtResource("3_oot3j")
+description_text = "Question Topic: Digital Footprint\\n\\nUsed in: Sniper"
+
+[node name="DataCollision" type="CollisionShape2D" parent="ClickableBoxes/DataArea" unique_id=820143861]
+position = Vector2(-1.5497208e-06, 1.0406456)
+shape = SubResource("RectangleShape2D_wklta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/DataArea" unique_id=220409759]
+position = Vector2(0.52033234, -3.8146973e-06)
+scale = Vector2(0.92682946, 0.92682946)
 texture = ExtResource("4_7857q")
 
-[node name="Cores" parent="ClickableBoxes/DataSprite" unique_id=120710478 instance=ExtResource("2_ywnrd")]
+[node name="Cores" parent="ClickableBoxes/DataArea/Sprite2D" unique_id=120710478 instance=ExtResource("2_ywnrd")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-33.68421, -33.68421)
 scale = Vector2(1.6842105, 1.6842105)
 scene_path = "res://Scenes/question.tscn"
 bank = "DigitalFootprint"
 
-[node name="DataLabel" type="Label" parent="ClickableBoxes/DataSprite" unique_id=1628861198]
+[node name="DataLabel" type="Label" parent="ClickableBoxes/DataArea/Sprite2D" unique_id=1628861198]
 texture_filter = 1
-offset_left = -24.14035
-offset_top = 59.508774
-offset_right = 28.91948
+offset_left = -25.824562
+offset_top = 59.50877
+offset_right = 23.01754
 offset_bottom = 75.63884
 theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
 text = "Data"
 
-[node name="Sprite2D3" type="Sprite2D" parent="ClickableBoxes" unique_id=1971554782]
+[node name="CoresArea" type="Area2D" parent="ClickableBoxes" unique_id=1576927003]
 position = Vector2(440.00003, -40)
-scale = Vector2(1.828125, 1.828125)
+scale = Vector2(1.9218748, 1.9218748)
+script = ExtResource("3_oot3j")
+description_text = "Question Topic: Security Best Practices\\n\\nUsed in: Tesla"
+
+[node name="CoresCollision" type="CollisionShape2D" parent="ClickableBoxes/CoresArea" unique_id=1292877842]
+position = Vector2(-2.2888184e-05, 1.9073486e-06)
+shape = SubResource("RectangleShape2D_wklta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/CoresArea" unique_id=1971554782]
+scale = Vector2(0.9512197, 0.9512197)
 texture = ExtResource("5_sqw27")
 
-[node name="Cores" parent="ClickableBoxes/Sprite2D3" unique_id=798968945 instance=ExtResource("2_ywnrd")]
+[node name="Cores" parent="ClickableBoxes/CoresArea/Sprite2D" unique_id=798968945 instance=ExtResource("2_ywnrd")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-31.999992, -32.000004)
 scale = Vector2(1.6410258, 1.6410258)
 scene_path = "res://Scenes/question.tscn"
 bank = "Security"
 
-[node name="CoresLabel" type="Label" parent="ClickableBoxes/Sprite2D3" unique_id=68388691]
+[node name="CoresLabel" type="Label" parent="ClickableBoxes/CoresArea/Sprite2D" unique_id=68388691]
 texture_filter = 1
-offset_left = -30.632484
-offset_top = 61.264957
-offset_right = 29.367516
-offset_bottom = 77.395035
+offset_left = -30.085472
+offset_top = 61.811962
+offset_right = 29.914528
+offset_bottom = 74.39316
 theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
 text = "Cores"
 
-[node name="CablesSprite" type="Sprite2D" parent="ClickableBoxes" unique_id=634485076]
-position = Vector2(-210, -43)
-scale = Vector2(1.9218746, 1.9218746)
-texture = ExtResource("6_6okmw")
+[node name="BandwidthArea" type="Area2D" parent="ClickableBoxes" unique_id=770407191]
+position = Vector2(-216.00003, -40.000008)
+scale = Vector2(1.9218749, 1.9218749)
+script = ExtResource("3_oot3j")
+description_text = "Question Topic: Online Scams\\n\\nUsed in: Sniper"
 
-[node name="Cables" parent="ClickableBoxes/CablesSprite" unique_id=1475129865 instance=ExtResource("2_ywnrd")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-31.219513, -29.658546)
-scale = Vector2(1.5609759, 1.5609759)
-scene_path = "res://Scenes/question.tscn"
-bank = "DigitalThreats"
+[node name="BandwidthCollision" type="CollisionShape2D" parent="ClickableBoxes/BandwidthArea" unique_id=719538487]
+position = Vector2(112.39025, 4.1626053)
+shape = SubResource("RectangleShape2D_wklta")
 
-[node name="CablesLabel" type="Label" parent="ClickableBoxes/CablesSprite" unique_id=462190860]
-texture_filter = 1
-offset_left = -44.74798
-offset_top = 59.83741
-offset_right = 41.626022
-offset_bottom = 75.96748
-theme_override_fonts/font = ExtResource("4_g3ufx")
-theme_override_font_sizes/font_size = 12
-text = "Cables"
-
-[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes" unique_id=944468073]
-position = Vector2(0, -32)
-scale = Vector2(1.9218746, 1.9218746)
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/BandwidthArea" unique_id=944468073]
+position = Vector2(110.8293, 2.081304)
+scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("7_6okmw")
 
-[node name="Bandwidth" parent="ClickableBoxes/Sprite2D" unique_id=1346519469 instance=ExtResource("2_ywnrd")]
+[node name="Bandwidth" parent="ClickableBoxes/BandwidthArea/Sprite2D" unique_id=1346519469 instance=ExtResource("2_ywnrd")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-31.219513, -29.658546)
 scale = Vector2(1.5609759, 1.5609759)
 scene_path = "res://Scenes/question.tscn"
 bank = "Scams_and_links"
 
-[node name="BandwidthLabel" type="Label" parent="ClickableBoxes/Sprite2D" unique_id=500233807]
+[node name="BandwidthLabel" type="Label" parent="ClickableBoxes/BandwidthArea/Sprite2D" unique_id=500233807]
 texture_filter = 1
-offset_left = -49.95125
-offset_top = 54.11383
-offset_right = 58.04875
-offset_bottom = 70.243904
+offset_left = -52.552864
+offset_top = 57.235786
+offset_right = 55.447136
+offset_bottom = 73.36586
 theme_override_fonts/font = ExtResource("4_g3ufx")
 theme_override_font_sizes/font_size = 12
 text = "Bandwidth"
+
+[node name="CablesArea" type="Area2D" parent="ClickableBoxes" unique_id=787995877]
+position = Vector2(-216, -40.000004)
+scale = Vector2(1.9218749, 1.9218749)
+script = ExtResource("3_oot3j")
+description_text = "Question Topic:Types of Digital Threats\\n\\nUsed in: Cannon"
+
+[node name="CablesCollision" type="CollisionShape2D" parent="ClickableBoxes/CablesArea" unique_id=2139225009]
+position = Vector2(0, 2.3841858e-06)
+shape = SubResource("RectangleShape2D_wklta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ClickableBoxes/CablesArea" unique_id=634485076]
+position = Vector2(3.1219482, -1.5609741)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("6_6okmw")
+
+[node name="Cables" parent="ClickableBoxes/CablesArea/Sprite2D" unique_id=1475129865 instance=ExtResource("2_ywnrd")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.219513, -29.658546)
+scale = Vector2(1.5609759, 1.5609759)
+scene_path = "res://Scenes/question.tscn"
+bank = "DigitalThreats"
+
+[node name="CablesLabel" type="Label" parent="ClickableBoxes/CablesArea/Sprite2D" unique_id=462190860]
+texture_filter = 1
+offset_left = -39.024403
+offset_top = 59.83741
+offset_right = 32.975597
+offset_bottom = 75.96748
+theme_override_fonts/font = ExtResource("4_g3ufx")
+theme_override_font_sizes/font_size = 12
+text = "Cables"
+
+[node name="Description" type="Label" parent="ClickableBoxes" unique_id=634794094 groups=["Description"]]
+z_index = 2
+offset_left = -200.0
+offset_top = -312.0
+offset_right = 200.0
+offset_bottom = -208.0
+theme_override_fonts/font = ExtResource("4_g3ufx")
+text = "Click on a resource to answer a question! Hover to read descriptions."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Backbox" type="TextureRect" parent="ClickableBoxes" unique_id=1803731133]
+modulate = Color(0, 0, 0, 0.8509804)
+z_index = 1
+offset_left = -224.0
+offset_top = -312.0
+offset_right = 224.0
+offset_bottom = -208.0
+mouse_filter = 0
+texture = SubResource("CanvasTexture_oot3j")
 
 [node name="Resource_Counters" parent="." unique_id=654333457 instance=ExtResource("8_6okmw")]
 offset_left = -79.0
