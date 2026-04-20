@@ -258,7 +258,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.26913223
+frame_progress = 0.10761075
 
 [node name="3" type="Label" parent="Text" unique_id=1218081199]
 unique_name_in_owner = true
@@ -281,7 +281,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.53349525
+frame_progress = 0.371973
 
 [node name="4" type="Label" parent="Text" unique_id=398906555]
 unique_name_in_owner = true
@@ -303,7 +303,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_usqrk")
 animation = &"Point"
 autoplay = "Point"
-frame_progress = 0.43776202
+frame_progress = 0.27624238
 
 [node name="5" type="Label" parent="Text" unique_id=1298947068]
 unique_name_in_owner = true

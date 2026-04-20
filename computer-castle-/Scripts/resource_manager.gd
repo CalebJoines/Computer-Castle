@@ -7,7 +7,7 @@ var data : int = 0
 var circuits : int = 0
 var bandwidth : int = 0
 var ai_cores : int = 0
-var energy : int = 10
+var energy : int = 5
 var health: int = 23:
 	set(value):
 		health = clamp(value, 0, max_health) #ensures health doesn't go outside normal rangee
@@ -132,7 +132,7 @@ func reset_resources():
 	bandwidth=0
 	data=0
 	health=max_health
-	energy = ((LevelManager.get_current_level_index()+1)*10)
+	energy = ((LevelManager.get_current_level_index()+1)*5)
 	
 #healthbar stuff
 func take_damage(damage:int):
