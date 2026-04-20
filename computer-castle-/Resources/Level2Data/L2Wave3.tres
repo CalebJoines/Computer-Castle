@@ -5,9 +5,10 @@
 [ext_resource type="Resource" uid="uid://d00obmgvrvc22" path="res://Resources/Level2Data/L2Wave1SpawnData3.tres" id="3_48261"]
 [ext_resource type="Resource" uid="uid://dklwh07na0ayl" path="res://Resources/Level2Data/L2Wave1SpawnData1.tres" id="4_vbhx7"]
 [ext_resource type="Resource" uid="uid://dcslh04yphk2l" path="res://Resources/Level2Data/L2Wave1SpawnData2.tres" id="5_t3jhi"]
+[ext_resource type="Resource" uid="uid://cr3ffmslmyap3" path="res://Resources/Level2Data/L2Wave1SpawnData4.tres" id="5_vbhx7"]
 
 [resource]
 script = ExtResource("1_rkkew")
-spawns = Array[ExtResource("2_8bgm4")]([ExtResource("3_48261"), ExtResource("4_vbhx7"), ExtResource("5_t3jhi"), ExtResource("5_t3jhi"), ExtResource("4_vbhx7")])
+spawns = Array[ExtResource("2_8bgm4")]([ExtResource("3_48261"), ExtResource("4_vbhx7"), ExtResource("5_vbhx7"), ExtResource("5_t3jhi"), ExtResource("5_t3jhi"), ExtResource("4_vbhx7"), ExtResource("5_vbhx7")])
 delay_before_wave = 1.0
 metadata/_custom_type_script = "uid://d0ydva3gm4av0"
