@@ -15,7 +15,7 @@ var sounds = {}
 
 func _ready() -> void:
 	_apply_tower_data()
-	sounds = {
+	self.sounds = {
 		"shoot": load(tower_data.shoot_audio)
 	}
 
@@ -37,6 +37,7 @@ func _apply_tower_data() -> void:
 		sprite.texture = tower_data.tower_texture
 
 	if range_shape and range_shape.shape is CircleShape2D:
+		range_shape.shape = range_shape.shape.duplicate()
 		range_shape.shape.radius = tower_data.range_radius
 
 func _input(event: InputEvent) -> void:
