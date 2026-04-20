@@ -5,7 +5,6 @@ extends Area2D
 
 @onready var sprite = $Sprite2D
 @onready var label = get_tree().get_first_node_in_group("Description")
-@onready var box = %"Backbox"
 var original_scale := Vector2.ONE
 
 func _ready():
