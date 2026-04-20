@@ -23,6 +23,7 @@ func on_button_press(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			playsound("click")
 			if ResourceManager.in_Tutorial(): 
 				ResourceManager.exit_tutorial()
+				ResourceManager.reset_resources()
 				get_tree().change_scene_to_file(scenepath)
 			else:
 				await get_tree().create_timer(0.5).timeout
