@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="GhostEnemy" type="Area2D" unique_id=1902402437]
+texture_filter = 1
 script = ExtResource("1_mvdql")
 move_speed = 80.0
 damage_to_base = 3

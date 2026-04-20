@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="Enemy" type="Area2D" unique_id=1902402437]
+texture_filter = 1
 script = ExtResource("1_hghv2")
 max_hp = 20
 move_speed = 40.0
