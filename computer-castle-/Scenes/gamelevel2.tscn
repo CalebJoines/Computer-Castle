@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://iiaq2qphee8c" path="res://Sprites/Environment Sprites/Environment Extended.png" id="3_v158k"]
-[ext_resource type="PackedScene" uid="uid://evmuvp8nw6ds" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="6_rfjv2"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_1phco"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_1phco"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_h4fw4"]
@@ -62,9 +62,9 @@ sources/2 = SubResource("TileSetAtlasSource_h4fw4")
 
 [sub_resource type="Curve2D" id="Curve2D_i6g32"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -8, 373.8415, 0, 0, 0, 0, 27.11494, 371.8933, 0, 0, 0, 0, 27.11494, 62.134148, 0, 0, 0, 0, 59.528732, 62.134148, 0, 0, 0, 0, 59.528732, 560.86584, 0, 0, 0, 0, 167.5747, 560.86584, 0, 0, 0, 0, 167.5747, 124.47561, 0, 0, 0, 0, 135.1609, 124.47561, 0, 0, 0, 0, 135.1609, 467.35367, 0, 0, 0, 0, 102.747116, 467.35367, 0, 0, 0, 0, 102.747116, 30.963413, 0, 0, 0, 0, 199.9885, 30.963413, 0, 0, 0, 0, 199.9885, 560.86584, 0, 0, 0, 0, 232.40228, 560.86584, 0, 0, 0, 0, 232.40228, 373.8415, 0, 0, 0, 0, 264.81607, 373.8415, 0, 0, 0, 0, 264.81607, 186.81708, 0, 0, 0, 0, 232.40228, 186.81708, 0, 0, 0, 0, 232.40228, 30.963413, 0, 0, 0, 0, 318.83905, 30.963413, 0, 0, 0, 0, 318.83905, 467.35367, 0, 0, 0, 0, 264.81607, 467.35367, 0, 0, 0, 0, 264.81607, 568.65857, 0, 0, 0, 0, 362.05743, 560.86584, 0, 0, 0, 0, 362.05743, 280.32928, 0, 0, 0, 0, 378.26434, 280.32928, 0, 0, 0, 0, 402.57468, 311.5)
+"points": PackedVector2Array(0, 0, 0, 0, -8, 373.8415, 0, 0, 0, 0, 27.11494, 371.8933, 0, 0, 0, 0, 79.30638, 367.8551, 0, 0, 0, 0, 83.30638, 62.11019, 0, 0, 0, 0, 175.30638, 62.11019, 0, 0, 0, 0, 172.30638, 365.90768, 0, 0, 0, 0, 181.30638, 561.62335, 0, 0, 0, 0, 493.3064, 559.67596, 0, 0, 0, 0, 493.3064, 128.32246, 0, 0, 0, 0, 400.3064, 126.375046, 0, 0, 0, 0, 401.3064, 465.22607, 0, 0, 0, 0, 301.3064, 462.30496, 0, 0, 0, 0, 308.3064, 29.004055, 0, 0, 0, 0, 587.3064, 30.951475, 0, 0, 0, 0, 595.3064, 561.62335, 0, 0, 0, 0, 691.3064, 557.7285, 0, 0, 0, 0, 688.3064, 371.74994, 0, 0, 0, 0, 787.3064, 372.72363, 0, 0, 0, 0, 779.3064, 184.79764, 0, 0, 0, 0, 692.3064, 182.85022, 0, 0, 0, 0, 687.3064, 26.082924, 0, 0, 0, 0, 942.3064, 35.820023, 0, 0, 0, 0, 948.3064, 469.1209, 0, 0, 0, 0, 785.3064, 466.1998, 0, 0, 0, 0, 782.3064, 556.7548, 0, 0, 0, 0, 1073.3064, 558.7022, 0, 0, 0, 0, 1076.3064, 283.14233, 0, 0, 0, 0, 1174.3064, 277.30008)
 }
-point_count = 27
+point_count = 28
 
 [node name="Game" type="Node2D" unique_id=228898979]
 
@@ -135,7 +135,7 @@ position = Vector2(926, 489)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=340484906]
 position = Vector2(-96.30638, -39.787163)
-scale = Vector2(2.9617023, 1.026604)
+scale = Vector2(1, 1.027)
 curve = SubResource("Curve2D_i6g32")
 
 [node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("5_1l0tm")]

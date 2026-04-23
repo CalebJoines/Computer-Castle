@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://iiaq2qphee8c" path="res://Sprites/Environment Sprites/Environment Extended.png" id="3_v158k"]
-[ext_resource type="PackedScene" uid="uid://evmuvp8nw6ds" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="6_rfjv2"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_1phco"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_1phco"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_h4fw4"]
@@ -62,7 +62,7 @@ sources/2 = SubResource("TileSetAtlasSource_h4fw4")
 
 [sub_resource type="Curve2D" id="Curve2D_i6g32"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -8, 373.8415, 0, 0, 0, 0, 27.11494, 373.8415, 0, 0, 0, 0, 27.11494, 62.134148, 0, 0, 0, 0, 275.62067, 62.134148, 0, 0, 0, 0, 275.62067, 529.6951, 0, 0, 0, 0, 91.94252, 529.6951, 0, 0, 0, 0, 91.94252, 249.15854, 0, 0, 0, 0, 210.79309, 249.15854, 0, 0, 0, 0, 210.79309, 342.67075, 0, 0, 0, 0, 124.35631, 342.67075, 0, 0, 0, 0, 124.35631, 436.18295, 0, 0, 0, 0, 243.20688, 436.18295, 0, 0, 0, 0, 243.20688, 155.64633, 0, 0, 0, 0, 59.528732, 155.64633, 0, 0, 0, 0, 59.528732, 623.20734, 0, 0, 0, 0, 308.03445, 623.20734, 0, 0, 0, 0, 308.03445, 62.134148, 0, 0, 0, 0, 340.44824, 62.134148, 0, 0, 0, 0, 340.44824, 280.32928, 0, 0, 0, 0, 378.26434, 280.32928)
+"points": PackedVector2Array(0, 0, 0, 0, -8, 373.8415, 0, 0, 0, 0, 82.30638, 373.69736, 0, 0, 0, 0, 84.30638, 62.11019, 0, 0, 0, 0, 819.3064, 68.92616, 0, 0, 0, 0, 816.3064, 532.41205, 0, 0, 0, 0, 272.3064, 532.41205, 0, 0, 0, 0, 262.3064, 258.7996, 0, 0, 0, 0, 617.3064, 255.87845, 0, 0, 0, 0, 629.3064, 340.59122, 0, 0, 0, 0, 377.3064, 342.53864, 0, 0, 0, 0, 372.3064, 437.9622, 0, 0, 0, 0, 716.3064, 432.11993, 0, 0, 0, 0, 720.3064, 158.50746, 0, 0, 0, 0, 176.30638, 150.71779, 0, 0, 0, 0, 179.30638, 623.9408, 0, 0, 0, 0, 917.3064, 622.9671, 0, 0, 0, 0, 914.3064, 59.189064, 0, 0, 0, 0, 1009.3064, 62.11019, 0, 0, 0, 0, 1015.3064, 273.40524, 0, 0, 0, 0, 1179.3064, 278.27377)
 }
 point_count = 20
 
@@ -135,7 +135,7 @@ position = Vector2(224, 264)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=340484906]
 position = Vector2(-96.30638, -39.787163)
-scale = Vector2(2.9617023, 1.026604)
+scale = Vector2(1, 1.027)
 curve = SubResource("Curve2D_i6g32")
 
 [node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("5_1l0tm")]
@@ -156,7 +156,7 @@ script = ExtResource("10_ldgsr")
 
 [node name="Castle" type="Sprite2D" parent="." unique_id=1019861744]
 texture_filter = 1
-position = Vector2(1093, 246)
+position = Vector2(1086, 206)
 scale = Vector2(2, 2)
 texture = ExtResource("15_nb51f")
 

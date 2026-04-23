@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cvv4dk1pd2jkl"]
+
+[ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_2xq65"]
+[ext_resource type="Texture2D" uid="uid://divicet2dqyox" path="res://Sprites/Enemy Sprites/Red-Knight-Enemy-Animation.png" id="2_ayssd"]
+[ext_resource type="PackedScene" uid="uid://5hf6ul3oswjh" path="res://tower_hit_affect.tscn" id="2_f3xpq"]
+[ext_resource type="Texture2D" uid="uid://bd6yqe30x01yf" path="res://Sprites/Enemy Sprites/Death Animation.png" id="3_f3xpq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rogq"]
+size = Vector2(18.75, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hatm"]
+atlas = ExtResource("2_ayssd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp5xl"]
+atlas = ExtResource("2_ayssd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2d452"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hatm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp5xl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcbit"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyaom"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whll7"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5x4t"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sxuma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcbit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyaom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whll7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5x4t")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="RedKnight" type="Area2D" unique_id=1905282737]
+script = ExtResource("1_2xq65")
+tower_hit_affect = ExtResource("2_f3xpq")
+metadata/_custom_type_script = "uid://cbfa38bdqqvyu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2100626930]
+position = Vector2(-1.625, -3)
+shape = SubResource("RectangleShape2D_5rogq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=75738091]
+texture_filter = 1
+scale = Vector2(1, 2)
+sprite_frames = SubResource("SpriteFrames_2d452")
+autoplay = "default"
+frame = 1
+frame_progress = 0.90492386
+
+[node name="death" type="AnimatedSprite2D" parent="." unique_id=619564901]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_sxuma")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0

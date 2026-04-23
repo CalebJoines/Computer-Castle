@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://bt8o3twbusjci" path="res://Sprites/Environment Sprites/Paths Spritesheet.png" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://brudjts5cxjux" path="res://Sprites/Environment Sprites/outlet tile.png" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://iiaq2qphee8c" path="res://Sprites/Environment Sprites/Environment Extended.png" id="3_v158k"]
-[ext_resource type="PackedScene" uid="uid://evmuvp8nw6ds" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/spawner.tscn" id="5_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://27okq7sh52dx" path="res://Scenes/tower_menu.tscn" id="5_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dpup33lh2kg7o" path="res://Scenes/test_tower_area.tscn" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="6_1l0tm"]
 [ext_resource type="Script" uid="uid://bf8gsn65re6v6" path="res://Resources/TowerData.gd" id="6_rfjv2"]
 [ext_resource type="Resource" uid="uid://1exdepnf04vf" path="res://Resources/Level1Data/Level1.tres" id="6_v158k"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" path="res://Scenes/Resource_Counters.tscn" id="7_1l0tm"]
 [ext_resource type="Resource" uid="uid://jqvtyn35lgeb" path="res://Resources/CannonTower.tres" id="7_1phco"]
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_1phco"]
 [ext_resource type="AudioStream" uid="uid://blo3a7o51jgwe" path="res://Audio/Music/TD_Theme.mp3" id="9_h4fw4"]
@@ -62,7 +62,7 @@ sources/2 = SubResource("TileSetAtlasSource_h4fw4")
 
 [sub_resource type="Curve2D" id="Curve2D_i6g32"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -8, 373.8415, 0, 0, 0, 0, 48.724136, 373.8415, 0, 0, 0, 0, 48.724136, 186.81708, 0, 0, 0, 0, 81.137924, 186.81708, 0, 0, 0, 0, 81.137924, 592.0366, 0, 0, 0, 0, 113.55171, 592.0366, 0, 0, 0, 0, 113.55171, 186.81708, 0, 0, 0, 0, 145.9655, 186.81708, 0, 0, 0, 0, 145.9655, 592.0366, 0, 0, 0, 0, 178.3793, 592.0366, 0, 0, 0, 0, 178.3793, 186.81708, 0, 0, 0, 0, 210.79309, 186.81708, 0, 0, 0, 0, 210.79309, 592.0366, 0, 0, 0, 0, 243.20688, 592.0366, 0, 0, 0, 0, 240.50574, 93.30488, 0, 0, 0, 0, 48.724136, 93.30488, 0, 0, 0, 0, 48.724136, -0.20732117, 0, 0, 0, 0, 275.62067, -0.20732117, 0, 0, 0, 0, 275.62067, 592.0366, 0, 0, 0, 0, 308.03445, 592.0366, 0, 0, 0, 0, 308.03445, -0.20732117, 0, 0, 0, 0, 340.44824, -0.20732117, 0, 0, 0, 0, 340.44824, 592.0366, 0, 0, 0, 0, 372.86203, 592.0366, 0, 0, 0, 0, 372.86203, 311.5, 0, 0, 0, 0, 402.57468, 311.5)
+"points": PackedVector2Array(0, 0, 0, 0, -37.69362, 386.78717, 0, 0, 0, 0, 143.30638, 380.78717, 0, 0, 0, 0, 142.30638, 192.78717, 0, 0, 0, 0, 238.30638, 192.78717, 0, 0, 0, 0, 243.30638, 603.7872, 0, 0, 0, 0, 335.3064, 606.7872, 0, 0, 0, 0, 340.3064, 193.78717, 0, 0, 0, 0, 427.3064, 192.78717, 0, 0, 0, 0, 428.3064, 604.7872, 0, 0, 0, 0, 527.3064, 611.7872, 0, 0, 0, 0, 533.3064, 191.78717, 0, 0, 0, 0, 625.3064, 189.78717, 0, 0, 0, 0, 621.3064, 609.7872, 0, 0, 0, 0, 714.3064, 602.7872, 0, 0, 0, 0, 716.3064, 96.78716, 0, 0, 0, 0, 148.30638, 98.78716, 0, 0, 0, 0, 149.30638, 2.7871628, 0, 0, 0, 0, 809.3064, 2.7871628, 0, 0, 0, 0, 817.3064, 605.7872, 0, 0, 0, 0, 914.3064, 604.7872, 0, 0, 0, 0, 916.3064, -3.2128372, 0, 0, 0, 0, 1006.3064, -1.2128372, 0, 0, 0, 0, 1012.3064, 604.7872, 0, 0, 0, 0, 1103.3064, 608.7872, 0, 0, 0, 0, 1108.3064, 316.78717, 0, 0, 0, 0, 1174.3064, 310.78717)
 }
 point_count = 26
 
@@ -135,7 +135,6 @@ position = Vector2(960, 520)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=340484906]
 position = Vector2(-96.30638, -39.787163)
-scale = Vector2(2.9617023, 1.026604)
 curve = SubResource("Curve2D_i6g32")
 
 [node name="Spawner" parent="." unique_id=924887762 node_paths=PackedStringArray("path") instance=ExtResource("5_1l0tm")]

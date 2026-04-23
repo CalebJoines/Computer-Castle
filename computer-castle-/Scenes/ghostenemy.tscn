@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_mvdql"]
 [ext_resource type="AudioStream" uid="uid://ch1hp6r8ry04r" path="res://Audio/Sound_effects/Enemy_SFX/Enemy_Death_Databurst.mp3" id="2_dvdbr"]
 [ext_resource type="Texture2D" uid="uid://cdlm71v48ymlj" path="res://Sprites/Enemy Sprites/ghost-enemy-sprite.png" id="2_mvdql"]
+[ext_resource type="PackedScene" uid="uid://5hf6ul3oswjh" path="res://tower_hit_affect.tscn" id="3_ka2bq"]
+[ext_resource type="Texture2D" uid="uid://de88f6mij5sfu" path="res://Sprites/Enemy Sprites/ghost-death-animation-Sheet.png" id="4_8jni6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(18.75, 34)
@@ -29,19 +31,69 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka2bq"]
+atlas = ExtResource("4_8jni6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kky6m"]
+atlas = ExtResource("4_8jni6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duufx"]
+atlas = ExtResource("4_8jni6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ou1d"]
+atlas = ExtResource("4_8jni6")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hadkj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka2bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kky6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duufx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ou1d")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="GhostEnemy" type="Area2D" unique_id=1902402437]
 texture_filter = 1
 script = ExtResource("1_mvdql")
 move_speed = 80.0
 damage_to_base = 3
 diesound = ExtResource("2_dvdbr")
+tower_hit_affect = ExtResource("3_ka2bq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698986685]
 position = Vector2(-1.625, -3)
 shape = SubResource("RectangleShape2D_ne65n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393164481]
-scale = Vector2(0.5, 1)
+scale = Vector2(0.7, 1.4)
 sprite_frames = SubResource("SpriteFrames_0830c")
 autoplay = "default"
 frame_progress = 0.6315965
+
+[node name="death" type="AnimatedSprite2D" parent="." unique_id=267608028]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_hadkj")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
