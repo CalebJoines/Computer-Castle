@@ -11,7 +11,9 @@ func spawn_tower(tower_data: TowerData) -> void:
 	var tower_instance = base_tower_scene.instantiate()
 	tower_instance.tower_data = tower_data
 	tower_instance.z_index = 100
-	tower_instance.modulate = Color(1, 1, 1, 0.5)
+	tower_instance.scale = Vector2(2, 2)
+	tower_instance.modulate = Color(1, 1, 1, .7)
+	
 	get_tree().current_scene.add_child(tower_instance)
 
 
