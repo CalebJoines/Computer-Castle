@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cvv4dk1pd2jkl"]
+[gd_scene format=3 uid="uid://bfglviqd5bd53"]
 
 [ext_resource type="Script" uid="uid://cbfa38bdqqvyu" path="res://Scripts/enemy.gd" id="1_2xq65"]
 [ext_resource type="Texture2D" uid="uid://divicet2dqyox" path="res://Sprites/Enemy Sprites/Red-Knight-Enemy-Animation.png" id="2_ayssd"]

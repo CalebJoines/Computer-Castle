@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d0ydva3gm4av0" path="res://Resources/WaveData.gd" id="1_ut7og"]
 [ext_resource type="Script" uid="uid://3bvc7ulixw45" path="res://Resources/EnemySpawnData.gd" id="2_3m2gw"]
+[ext_resource type="Resource" uid="uid://cr3ffmslmyap3" path="res://Resources/Level2Data/L2Wave1SpawnData4.tres" id="3_3m2gw"]
 [ext_resource type="Resource" uid="uid://dklwh07na0ayl" path="res://Resources/Level2Data/L2Wave1SpawnData1.tres" id="3_tllbv"]
 [ext_resource type="Resource" uid="uid://dcslh04yphk2l" path="res://Resources/Level2Data/L2Wave1SpawnData2.tres" id="4_21v84"]
 [ext_resource type="Resource" uid="uid://d00obmgvrvc22" path="res://Resources/Level2Data/L2Wave1SpawnData3.tres" id="5_6tkd8"]
 
 [resource]
 script = ExtResource("1_ut7og")
-spawns = Array[ExtResource("2_3m2gw")]([ExtResource("3_tllbv"), ExtResource("4_21v84"), ExtResource("5_6tkd8"), ExtResource("4_21v84")])
+spawns = Array[ExtResource("2_3m2gw")]([ExtResource("3_3m2gw"), ExtResource("3_tllbv"), ExtResource("4_21v84"), ExtResource("5_6tkd8"), ExtResource("4_21v84"), ExtResource("3_3m2gw")])
 metadata/_custom_type_script = "uid://d0ydva3gm4av0"
