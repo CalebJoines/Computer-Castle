@@ -13,6 +13,14 @@ region = Rect2(0, 0, 256, 48)
 atlas = ExtResource("3_i5sur")
 region = Rect2(0, 48, 256, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n15yj"]
+atlas = ExtResource("3_i5sur")
+region = Rect2(0, 48, 256, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emot1"]
+atlas = ExtResource("3_i5sur")
+region = Rect2(0, 0, 256, 48)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_w0bu5"]
 animations = [{
 "frames": [{
@@ -25,12 +33,25 @@ animations = [{
 "loop": false,
 "name": &"Clicked",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n15yj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emot1")
+}],
+"loop": false,
+"name": &"Unclicked",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhl4r"]
 size = Vector2(256, 48)
 
-[node name="WinScene" type="Node2D" unique_id=108959778]
+[sub_resource type="CanvasTexture" id="CanvasTexture_n15yj"]
+
+[node name="Title" type="Node2D" unique_id=108959778]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=574298421]
 position = Vector2(576, 328)
@@ -94,12 +115,85 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_n15yj")
 text = "Skip Tutorial"
 
-[node name="Area2d_Skip" type="Area2D" parent="SkipButton" unique_id=187174736]
+[node name="SkipTutorial" type="Area2D" parent="SkipButton" unique_id=187174736]
 position = Vector2(352, 104)
 
-[node name="CollisionSkip" type="CollisionShape2D" parent="SkipButton/Area2d_Skip" unique_id=2141229732]
+[node name="CollisionSkip" type="CollisionShape2D" parent="SkipButton/SkipTutorial" unique_id=2141229732]
 position = Vector2(-352.6667, -104)
 shape = SubResource("RectangleShape2D_fhl4r")
 
+[node name="Are you sure?" type="TextureRect" parent="." unique_id=2038162088]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0, 0, 0, 0.92156863)
+offset_left = 274.0
+offset_top = 172.0
+offset_right = 882.0
+offset_bottom = 556.0
+texture = SubResource("CanvasTexture_n15yj")
+
+[node name="Label" type="Label" parent="Are you sure?" unique_id=653545273]
+texture_filter = 1
+layout_mode = 0
+offset_right = 605.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+theme_override_font_sizes/font_size = 32
+text = "Are you sure you want to skip the tutorial?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Yes_Skip" type="AnimatedSprite2D" parent="Are you sure?" unique_id=893862397]
+unique_name_in_owner = true
+z_index = 3
+position = Vector2(158, 330)
+sprite_frames = SubResource("SpriteFrames_w0bu5")
+animation = &"Clicked"
+
+[node name="YSkip" type="Label" parent="Are you sure?/Yes_Skip" unique_id=914509253]
+texture_filter = 1
+offset_left = -102.66666
+offset_top = -10.0
+offset_right = 105.33334
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+text = "Yes, I'm sure"
+
+[node name="Area2d_Skip" type="Area2D" parent="Are you sure?/Yes_Skip" unique_id=1612361400]
+position = Vector2(352, 104)
+
+[node name="YCollisionSkip" type="CollisionShape2D" parent="Are you sure?/Yes_Skip/Area2d_Skip" unique_id=1511893831]
+position = Vector2(-352.6667, -104.66667)
+shape = SubResource("RectangleShape2D_fhl4r")
+
+[node name="No_Don\'t" type="AnimatedSprite2D" parent="Are you sure?" unique_id=1653657270]
+unique_name_in_owner = true
+z_index = 3
+position = Vector2(448, 330)
+sprite_frames = SubResource("SpriteFrames_w0bu5")
+animation = &"Clicked"
+
+[node name="NSkip" type="Label" parent="Are you sure?/No_Don\'t" unique_id=1057998592]
+texture_filter = 1
+offset_left = -102.66666
+offset_top = -10.0
+offset_right = 105.33334
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n15yj")
+text = " No, go back"
+
+[node name="Area2d_Don\'tSkip" type="Area2D" parent="Are you sure?/No_Don\'t" unique_id=2141458542]
+position = Vector2(352, 104)
+
+[node name="YCollisionSkip" type="CollisionShape2D" parent="Are you sure?/No_Don\'t/Area2d_Don\'tSkip" unique_id=1755022419]
+position = Vector2(-352.6667, -104.66667)
+shape = SubResource("RectangleShape2D_fhl4r")
+
 [connection signal="input_event" from="StartButton/Area2d_Submit" to="SkipButton" method="_on_area_2d_submit_input_event"]
-[connection signal="input_event" from="SkipButton/Area2d_Skip" to="SkipButton" method="_on_area_2d_skip_input_event"]
+[connection signal="input_event" from="SkipButton/SkipTutorial" to="SkipButton" method="_on_skip_tutorial_input_event"]
+[connection signal="input_event" from="Are you sure?/Yes_Skip/Area2d_Skip" to="SkipButton" method="_on_area_2d_skip_input_event"]
+[connection signal="input_event" from="Are you sure?/No_Don\'t/Area2d_Don\'tSkip" to="SkipButton" method="_on_area_2d_dont_skip_input_event"]
