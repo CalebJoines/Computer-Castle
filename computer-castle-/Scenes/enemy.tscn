@@ -69,7 +69,7 @@ animations = [{
 "texture": null
 }],
 "loop": false,
-"name": &"default",
+"name": &"death",
 "speed": 5.0
 }]
 
@@ -94,6 +94,5 @@ frame_progress = 0.49857265
 [node name="death" type="AnimatedSprite2D" parent="." unique_id=873846380]
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_8uf12")
-autoplay = "default"
-frame = 5
-frame_progress = 1.0
+animation = &"death"
+autoplay = "death"
