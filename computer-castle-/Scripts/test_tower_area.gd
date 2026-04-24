@@ -6,7 +6,7 @@ class_name BaseTower
 
 @onready var range_shape: CollisionShape2D = $TowerRange
 @onready var sprite: Sprite2D = $Sprite2D
-
+var nope = preload("res://Audio/Sound_effects/Map_SFX/Not_Enough_Resources.mp3")
 var enemies_in_range: Array[Area2D] = []
 var can_shoot := false
 var dragging := true
@@ -40,9 +40,10 @@ func _apply_tower_data() -> void:
 		range_shape.shape = range_shape.shape.duplicate()
 		range_shape.shape.radius = tower_data.range_radius
 
-func _input(event: InputEvent) -> void:
-	if dragging and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-		try_place()
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+		if dragging:
+			try_place()
 
 func try_place() -> void:
 	var closest_slot = null
@@ -62,8 +63,12 @@ func try_place() -> void:
 			can_shoot = true
 			modulate = Color(1, 1, 1, 1)
 		else:
+			playnope()
+			await get_tree().create_timer(0.6).timeout
 			queue_free()
 	else:
+		playnope()
+		await get_tree().create_timer(0.6).timeout
 		queue_free()
 
 func _get_target() -> Area2D:
@@ -143,6 +148,14 @@ func _on_area_exited(body: Area2D) -> void:
 func playsound(name):
 	var player = AudioStreamPlayer.new()
 	player.stream = sounds[name]
+	player.volume_db = -10 
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
+	
+func playnope():
+	var player = AudioStreamPlayer.new()
+	player.stream = nope
 	player.volume_db = -10 
 	add_child(player)
 	player.play()

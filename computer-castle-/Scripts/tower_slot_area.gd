@@ -5,7 +5,7 @@ var is_occupied = false
 var current_tower = null
 @onready var Baseplate= %plate
 var sounds = {
-	"cantplace": preload("res://Audio/Sound_effects/Map_SFX/Not_Enough_Resources.mp3"),
+	"cant": preload("res://Audio/Sound_effects/Map_SFX/Not_Enough_Resources.mp3"),
 	"place": preload("res://Audio/Sound_effects/Tower_SFX/Build_Tower.mp3"),
 }
 signal tower_placed(tower)
@@ -19,7 +19,7 @@ func playsound(name):
 	add_child(player)
 	await get_tree().process_frame
 	player.play()
-	player.finished.connect(player.queue_free)
+	player.finished.connect(func(): player.queue_free())
 
 func can_place_tower(tower = null) -> bool:
 	if is_occupied:
@@ -47,7 +47,6 @@ func can_place_tower(tower = null) -> bool:
 
 func place_tower(tower) -> bool:
 	if can_place_tower(tower):
-	
 		playsound("place")
 		current_tower = tower
 		tower.get_parent().remove_child(tower)
@@ -73,5 +72,4 @@ func place_tower(tower) -> bool:
 			emit_signal("tower_placed", tower)
 		return true
 	else:
-		playsound("cantplace")
 		return false
