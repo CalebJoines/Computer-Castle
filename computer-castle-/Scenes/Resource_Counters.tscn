@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://cw0ib1cqjj7p"]
+[gd_scene format=3 uid="uid://ij6wxncpngfb"]
 
 [ext_resource type="Script" uid="uid://bv44snd02hlm0" path="res://Scripts/ResourceHUD.gd" id="1_0ru6n"]
 [ext_resource type="Texture2D" uid="uid://b23cno7sihbm1" path="res://Sprites/ResourceSprites/Energy.png" id="2_65vgh"]
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="3_65vgh"]
 [ext_resource type="Texture2D" uid="uid://b78lay1d02mx5" path="res://Sprites/ResourceSprites/Bandwidth.png" id="4_8ggkb"]
+[ext_resource type="Texture2D" uid="uid://bkcnurx6vs1ma" path="res://Sprites/ResourceSprites/resource-divider-bar.png" id="4_fsk48"]
 [ext_resource type="Texture2D" uid="uid://dhitel0oagl54" path="res://Sprites/ResourceSprites/volts.png" id="4_hgfry"]
 [ext_resource type="Texture2D" uid="uid://crtdr2frnms0k" path="res://Sprites/ResourceSprites/circuit-export.png" id="5_8ggkb"]
 [ext_resource type="Texture2D" uid="uid://c5tbksqfq33g4" path="res://Sprites/ResourceSprites/Data.png" id="5_fsk48"]
@@ -109,10 +110,11 @@ theme_override_fonts/font = ExtResource("3_65vgh")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=225680477]
 z_index = 1
+texture_filter = 1
 layout_mode = 0
 offset_left = -12.0
 offset_top = -18.0
-offset_right = 633.0
+offset_right = 643.0
 offset_bottom = 82.0
 texture = ExtResource("9_8ggkb")
 region_rect = Rect2(0, 0, 64, 64)
@@ -120,3 +122,9 @@ patch_margin_left = 10
 patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=410811180]
+z_index = 3
+position = Vector2(104.5, 33)
+scale = Vector2(0.625, 1.8235292)
+texture = ExtResource("4_fsk48")
