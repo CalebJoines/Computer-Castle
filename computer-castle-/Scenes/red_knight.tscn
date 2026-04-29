@@ -8,6 +8,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rogq"]
 size = Vector2(18.75, 34)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xghsx"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ie4o"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp183"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bibtd"]
+atlas = ExtResource("3_f3xpq")
+region = Rect2(192, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hatm"]
 atlas = ExtResource("2_ayssd")
 region = Rect2(0, 0, 64, 64)
@@ -20,6 +36,23 @@ region = Rect2(64, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xghsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ie4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp183")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bibtd")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_4hatm")
 }, {
 "duration": 1.0,
@@ -28,48 +61,6 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcbit"]
-atlas = ExtResource("3_f3xpq")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jyaom"]
-atlas = ExtResource("3_f3xpq")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_whll7"]
-atlas = ExtResource("3_f3xpq")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5x4t"]
-atlas = ExtResource("3_f3xpq")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_sxuma"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vcbit")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jyaom")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_whll7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q5x4t")
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": false,
-"name": &"default",
-"speed": 3.0
 }]
 
 [node name="RedKnight" type="Area2D" unique_id=1905282737]
@@ -85,13 +76,5 @@ shape = SubResource("RectangleShape2D_5rogq")
 texture_filter = 1
 scale = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_2d452")
+animation = &"death"
 autoplay = "default"
-frame = 1
-frame_progress = 0.90492386
-
-[node name="death" type="AnimatedSprite2D" parent="." unique_id=619564901]
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_sxuma")
-autoplay = "default"
-frame = 5
-frame_progress = 1.0

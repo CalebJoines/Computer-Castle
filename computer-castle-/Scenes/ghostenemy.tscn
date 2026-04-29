@@ -9,28 +9,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(18.75, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dvdbr"]
-atlas = ExtResource("2_mvdql")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jni6"]
-atlas = ExtResource("2_mvdql")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0830c"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dvdbr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8jni6")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka2bq"]
 atlas = ExtResource("4_8jni6")
 region = Rect2(0, 0, 64, 64)
@@ -47,12 +25,17 @@ region = Rect2(128, 0, 64, 64)
 atlas = ExtResource("4_8jni6")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hadkj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvdbr"]
+atlas = ExtResource("2_mvdql")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jni6"]
+atlas = ExtResource("2_mvdql")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0830c"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": null
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ka2bq")
 }, {
@@ -64,13 +47,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5ou1d")
-}, {
-"duration": 1.0,
-"texture": null
 }],
 "loop": false,
 "name": &"death",
-"speed": 2.0
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvdbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jni6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="GhostEnemy" type="Area2D" unique_id=1902402437]
@@ -88,11 +79,5 @@ shape = SubResource("RectangleShape2D_ne65n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393164481]
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_0830c")
-autoplay = "default"
-frame_progress = 0.6315965
-
-[node name="death" type="AnimatedSprite2D" parent="." unique_id=267608028]
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_hadkj")
 animation = &"death"
-autoplay = "death"
+autoplay = "default"
