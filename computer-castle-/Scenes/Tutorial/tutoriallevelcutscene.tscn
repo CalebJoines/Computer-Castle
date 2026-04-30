@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://cocr72ktjlim7" path="res://Resources/TeslaTower.tres" id="8_cm44n"]
 [ext_resource type="Resource" uid="uid://br2jvnrfy7mje" path="res://Resources/SniperTower.tres" id="9_05tf6"]
 [ext_resource type="PackedScene" uid="uid://1wmo8smiwhii" path="res://Scenes/tower_slot_area.tscn" id="10_ko5fl"]
-[ext_resource type="PackedScene" uid="uid://cw0ib1cqjj7p" path="res://Scenes/Resource_Counters.tscn" id="13_wda3p"]
+[ext_resource type="PackedScene" uid="uid://ij6wxncpngfb" path="res://Scenes/Resource_Counters.tscn" id="13_wda3p"]
 [ext_resource type="Texture2D" uid="uid://c50vrfv4ucf3l" path="res://Sprites/Environment Sprites/Castle.png" id="14_8lquq"]
 [ext_resource type="FontFile" uid="uid://b888lr52k04li" path="res://Fonts/PressStart2P-Regular.ttf" id="14_alp45"]
 [ext_resource type="PackedScene" uid="uid://cn4klwgwskljm" path="res://Scenes/Healthbar.tscn" id="15_bhgnr"]

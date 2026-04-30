@@ -2,11 +2,11 @@ extends Node
 @onready var scenepath= "res://Scenes/loss_screen.tscn"
 
 # RESOURCE VALUES
-var volts : int = 90
-var data : int = 90
-var circuits : int = 90
-var bandwidth : int = 90
-var ai_cores : int = 90
+var volts : int = 0
+var data : int = 0
+var circuits : int = 00
+var bandwidth : int = 0
+var ai_cores : int = 0
 var energy : int = 5
 var health: int = 23:
 	set(value):
@@ -132,7 +132,7 @@ func reset_resources():
 	bandwidth=0
 	data=0
 	health=max_health
-	energy = ((LevelManager.get_current_level_index())*5)+10
+	energy = ((LevelManager.get_current_level_index())*5)+5
 	
 #healthbar stuff
 func take_damage(damage:int):
